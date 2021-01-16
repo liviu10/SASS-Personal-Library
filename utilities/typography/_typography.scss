@@ -3,9 +3,7 @@
 @import "../box_model/_box_model";
 
 
-@mixin font-size ($var_font_size) {
-  font-size: font-size($var_font-size);
-}
+
 @mixin letter-spacing ($var_letter_spacing) {
   letter-spacing: letter-spacing($var_letter_spacing);
 }
