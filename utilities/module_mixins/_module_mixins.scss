@@ -1,8 +1,9 @@
-@import "../box_model/_box_model";
-@import "../flexbox/_flexbox";
-@import "../global_functions/_global_functions.scss";
-@import "../global_variables/_global_variables";
-@import "../typography/_typography";
+@import '../global_functions/_global_functions.scss';
+@import '../global_variables/_global_variables';
+@import '../box_model/_horizontal-vertical-margin';
+@import '../box_model/_width';
+@import '../box_model/_all-margin';
+@import '../flexbox/flex-center';
 
 @mixin display-components {
   width: 100%;
@@ -69,11 +70,6 @@
       @include width($breakpoint);
     }
   }
-  // @each $breakpoint in $component_breakpoints-landscape {
-  //   @media only screen and (max-width: $breakpoint) and (orientation: landscape) {
-  //     @include width($breakpoint);
-  //   }
-  // }
 }
 /* BOOTSTRAP MODULES */
 @mixin navbar {
