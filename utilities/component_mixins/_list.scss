@@ -1,2 +1,90 @@
 @import '../global_functions/_global_functions';
 @import '../global_variables/_global_variables';
+@import '../box_model/_all-margin';
+@import '../box_model/_all-padding';
+@import '../box_model/_width';
+@import '../box_model/_height';
+@import '../box_model/_horizontal-vertical-padding';
+@import '../flexbox/flex-center-left';
+@import '../typography/p-typography';
+@import '../typography/_font-size';
+
+@mixin list {
+    @include all-margin(10px, 0px, 0px, 0px);
+    width: auto;
+    height: auto;
+    &__unordered, &__ordered {
+        @include all-padding(0px, 0px, 0px, 25px);
+        @include width(275px);
+    }
+    &__element {
+        width: auto;
+        height: auto;
+    }
+    &__text {
+        @include p-typography;
+        @include height(20px);
+        @include font-size(18px);
+    }
+    &__type1, &__type2 {
+        @include all-margin(0px, 0px, 0px, 0px);
+        @include width(300px);
+    }
+    &__element-type1 {
+        @include all-margin(0px, 0px, 0px, 0px);
+        width: auto;
+        @include height(50px);
+        color: #000000;
+        background-color: #E6E6E6;
+        border-color: #CCCCCC;
+        list-style-type: none;
+        &:hover {
+            background-color: #D9D9D9;
+            cursor: pointer;
+        }
+    }
+    &__text-type1 {
+        @include p-typography;
+        @include all-margin(0px, 0px, 0px, 0px);
+        @include horizontal-vertical-padding(0px, 10px, 0px, 10px);
+        @include width(280px);
+        @include height(50px);
+        @include font-size(18px);
+        @include flex-center-left-center();
+    }
+    &__type2 {
+        counter-reset: list-counter;
+    }
+    &__element-type2 {
+        @include all-margin(0px, 0px, 0px, 0px);
+        width: auto;
+        @include height(50px);
+        color: #000000;
+        background-color: #E6E6E6;
+        border-color: #CCCCCC;
+        @include flex-center-left-center();
+        &:hover {
+            background-color: #D9D9D9;
+            cursor: pointer;
+        }
+        &::before {
+            content: counter(list-counter);
+            counter-increment: list-counter;
+            @include horizontal-vertical-padding(0px, 6px, 0px, 6px);
+            @include width(35px);
+            @include height(50px);
+            color: #000000;
+            font-weight: bold;
+            text-align: center;
+            @include flex-center();
+        }
+    }
+    &__text-type2 {
+        @include p-typography;
+        @include all-margin(0px, 0px, 0px, 0px);
+        @include width(280px);
+        @include height(50px);
+        @include font-size(18px);
+        @include flex-center-left-center();
+    }
+}
