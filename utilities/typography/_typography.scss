@@ -2,19 +2,7 @@
 @import "../global_variables/_global_variables";
 @import "../box_model/_box_model";
 
-@mixin standard_typography {
-  font-family: "Times New Roman", Times, serif;
-  font-style: normal;
-  font-variant: normal;
-  font-weight: normal;
-  text-align: left;
-  text-decoration: none;
-  text-overflow: hidden;
-  text-transform: normal;
-  white-space: normal;
-  word-break: normal;
-  word-spacing: normal;
-}
+
 @mixin font-size ($var_font_size) {
   font-size: font-size($var_font-size);
 }
