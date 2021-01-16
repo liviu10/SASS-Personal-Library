@@ -1,3 +1,14 @@
 @import '../global_function/_global_functions';
 @import '../global_variables/_global_variables';
 @import '../box_model/_box_model';
+
+@mixin h5-typography {
+    @include horizontal-vertical-margin(12px, 0px, 12px, 0px);
+    @include all-padding(0px, 0px, 0px, 0px);
+    width: 100%;
+    @include height(16px);
+    @include font-size(14px);
+    @include text-indent(0px);
+    @include standard_typography;
+    text-align: center;
+}
