@@ -3,9 +3,7 @@
 
 
 
-@mixin box-shadow ($var_h-offset, $var_v-offset, $var_blur, $var_color) {
-  box-shadow: box-shadow($var_h-offset, $var_v-offset, $var_blur, $var_color);
-}
+
 @mixin all-border ($var_border_top_width, $var_border_right_width, $var_border_bottom_width, $var_border_left_width) {
   @if 
   $var_border_top_width !=0 and ($var_border_bottom_width == 0 and $var_border_right_width == 0 and $var_border_left_width == 0) {
