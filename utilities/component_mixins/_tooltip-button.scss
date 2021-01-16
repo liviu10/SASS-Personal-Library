@@ -1,2 +1,61 @@
 @import '../global_functions/_global_functions';
 @import '../global_variables/_global_variables';
+@import '../box_model/_all-margin';
+@import '../box_model/_all-padding';
+@import '../box_model/_width';
+@import '../box_model/_height';
+@import '../box_model/_all-border';
+@import '../box_model/_border-radius';
+@import '../box_model/_horizontal-vertical-margin';
+@import '../typography/_btn-typography';
+@import '../typography/_p-typography';
+
+
+@mixin tooltip-button {
+    position: relative;
+    display: inline-block;
+    & .btn {
+        @include all-margin(0px, 0px, 0px, 0px);
+        @include all-padding(0px, 0px, 0px, 0px);
+        @include width(150px);
+        @include height(50px);
+        &__text {
+            @include btn-typography;
+        }
+        &--standard {
+            @include all-border(1px, 1px, 1px, 1px);
+            background-color: #E6E6E6;
+            border-color: #CCCCCC;
+        }
+        &:hover {
+            cursor: pointer;
+            opacity: 0.85;
+        }
+        &:focus {
+            outline: none;
+        }
+    }
+    .tooltip-content {
+        @include width(148px);
+        height: auto;
+        background-color: #E6E6E6;
+        @include all-border(1px, 1px, 1px, 1px);
+        border-color: #CCCCCC;
+        @include border-radius(5px, 5px, 5px, 5px);
+        box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+        display: none;
+        position: absolute;
+        top: 55px;
+        z-index: 1;
+        // clip-path: polygon(50% 0%, 60% 20%, 100% 20%, 100% 100%, 0 100%, 0 20%, 40% 20%);
+        & .p-typography {
+            @include p-typography;
+            @include horizontal-vertical-margin(8px, 0px, 5px, 0px);
+            text-align: center;
+            user-select: none;
+        }
+    }
+    &:hover .tooltip-content {
+        display: block;
+    }
+}
