@@ -5,9 +5,7 @@
 
 
 
-@mixin line-height ($var_line_height) {
-  line-height: line-height($var_line_height);
-}
+
 @mixin text-indent ($var_text-indent) {
   text-indent: text-indent($var_text-indent);
 }
