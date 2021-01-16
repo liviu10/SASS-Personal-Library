@@ -1,2 +1,7 @@
 @import '../global_functions/_global_functions';
 @import '../global_variables/_global_variables';
+
+@mixin right-border-radius ($var_border_top_right_radius, $var_border_bottom_right_radius) {
+    border#{-top-right}-radius: right-border-radius($var_border_top_right_radius, $var_border_bottom_right_radius);
+    border#{-bottom-right}-radius: right-border-radius($var_border_top_right_radius, $var_border_bottom_right_radius);
+}

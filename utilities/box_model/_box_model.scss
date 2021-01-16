@@ -7,10 +7,7 @@
 
 
 
-@mixin right-border-radius ($var_border_top_right_radius, $var_border_bottom_right_radius) {
-  border#{-top-right}-radius: right-border-radius($var_border_top_right_radius, $var_border_bottom_right_radius);
-  border#{-bottom-right}-radius: right-border-radius($var_border_top_right_radius, $var_border_bottom_right_radius);
-}
+
 @mixin all-padding ($var_padding_top, $var_padding_right, $var_padding_bottom, $var_padding_left) {
   @if 
   $var_padding_top != 0 and ($var_padding_right == 0 and $var_padding_bottom == 0 and $var_padding_left == 0) {
