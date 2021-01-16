@@ -6,9 +6,7 @@
 
 
 
-@mixin text-indent ($var_text-indent) {
-  text-indent: text-indent($var_text-indent);
-}
+
 @mixin h1-typography {
   @include horizontal-vertical-margin(11px, 0px, 11px, 0px);
   @include all-padding(0px, 0px, 0px, 0px);

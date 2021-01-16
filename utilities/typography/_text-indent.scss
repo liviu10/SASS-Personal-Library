@@ -1,3 +1,7 @@
 @import '../global_function/_global_functions';
 @import '../global_variables/_global_variables';
 @import '../box_model/_box_model';
+
+@mixin text-indent ($var_text-indent) {
+    text-indent: text-indent($var_text-indent);
+}
