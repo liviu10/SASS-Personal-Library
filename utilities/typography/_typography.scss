@@ -9,16 +9,7 @@
 
 
 
-@mixin h3-typography {
-  @include horizontal-vertical-margin(9px, 0px, 9px, 0px);
-  @include all-padding(0px, 0px, 0px, 0px);
-  width: 100%;
-  @include height(20px);
-  @include font-size(18px);
-  @include text-indent(0px);
-  @include standard_typography;
-  text-align: center;
-}
+
 @mixin h4-typography {
   @include horizontal-vertical-margin(11px, 0px, 11px, 0px);
   @include all-padding(0px, 0px, 0px, 0px);
