@@ -14,27 +14,7 @@
 
 
 
-@mixin a-typography {
-  @include horizontal-vertical-margin(8px, 0px, 8px, 0px);
-  @include all-padding(0px, 0px, 0px, 0px);
-  width: 100%;
-  @include height (18px);
-  @include font-size (16px);
-  @include text-indent(0px);
-  @include standard_typography;
-  color: #007BFF;
-  text-decoration: underline;
-  &:visited {
-    color: #007BFF;
-  }
-  &:hover {
-    color: #007BFF;
-    cursor: pointer;
-  }
-  &:active {
-    color: #007BFF;
-  }
-}
+
 @mixin btn-typography {
   @include font-size (16px);
   @include letter-spacing (2px);
