@@ -11,6 +11,10 @@
     @import 'utilities/box_model/_right-border-radius';
     @import 'utilities/box_model/_width';
 
+/* INCLUDING ALL THE FLEXBOX MIXINS */
+    @import 'utilities/flexbox/flex-center-left';
+    @import 'utilities/flexbox/flex-center';
+    @import 'utilities/flexbox/flex-center-right';
 
 @import "utilities/component_mixins/_component_mixins";
 @import "utilities/module_mixins/_module_mixins";
