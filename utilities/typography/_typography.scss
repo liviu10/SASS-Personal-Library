@@ -15,10 +15,3 @@
 
 
 
-@mixin btn-typography {
-  @include font-size (16px);
-  @include letter-spacing (2px);
-  @include text-indent(0px);
-  @include standard_typography;
-  user-select: none;
-}
