@@ -10,14 +10,7 @@
 
 
 
-@mixin width ($var_width) {
-  @if $var_width == 0#{"px"} {
-    width: width($var_width);
-  }
-  @else if $var_width != 0#{"px"} {
-    width: width($var_width);
-  }
-}
+
 @mixin height ($var_height) {
   @if $var_height == 0#{"px"} {
     height: height($var_height);
