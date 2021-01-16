@@ -7,16 +7,7 @@
 
 
 
-@mixin h1-typography {
-  @include horizontal-vertical-margin(11px, 0px, 11px, 0px);
-  @include all-padding(0px, 0px, 0px, 0px);
-  width: 100%;
-  @include height(40px);
-  @include font-size(35px);
-  @include text-indent(0px);
-  @include standard_typography;
-  text-align: center;
-}
+
 @mixin h2-typography {
   @include horizontal-vertical-margin(10px, 0px, 10px, 0px);
   @include all-padding(0px, 0px, 0px, 0px);
