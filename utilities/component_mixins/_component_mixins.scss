@@ -14,10 +14,7 @@
 
 
 
-@mixin input-group {
-  @include flex-center();
-  flex-direction: column;
-}
+
 @mixin list {
   @include all-margin(10px, 0px, 0px, 0px);
   width: auto;
