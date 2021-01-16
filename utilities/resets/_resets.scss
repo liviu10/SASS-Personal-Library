@@ -1,8 +1,8 @@
 @import '../global_functions/_global_functions';
 @import '../global_variables/_global_variables';
-@import '../box_mode/_all-margin';
-@import '../box_mode/_all-padding';
-@import '../box_mode/_all-border';
+@import '../box_model/_all-margin';
+@import '../box_model/_all-padding';
+@import '../box_model/_all-border';
 
 html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
@@ -17,9 +17,9 @@ article, aside, canvas, details, embed,
 figure, figcaption, footer, header, hgroup, 
 menu, nav, output, ruby, section, summary,
 time, mark, audio, video {
-  @include all-margin (0px, 0px, 0px, 0px);
-  @include all-padding (0px, 0px, 0px, 0px);
-  @include all-border (0px, 0px, 0px, 0px);
+	@include all-margin (0px, 0px, 0px, 0px);
+	@include all-padding (0px, 0px, 0px, 0px);
+	@include all-border (0px, 0px, 0px, 0px);
 }
 blockquote, q {
 	quotes: none;
