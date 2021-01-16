@@ -1,3 +1,17 @@
+/* INCLUDING ALL THE BOX MODEL MIXINS */
+    @import '_all-border';
+    @import '_all-margin';
+    @import '_all-padding';
+    @import '_border-radius';
+    @import '_box-shadow';
+    @import '_height';
+    @import '_horizontal-vertical-margin';
+    @import '_horizontal-vertical-padding';
+    @import '_left-border-radius';
+    @import '_right-border-radius';
+    @import '_width';
+
+
 @import "utilities/component_mixins/_component_mixins";
 @import "utilities/module_mixins/_module_mixins";
 @import "utilities/resets/_resets";
