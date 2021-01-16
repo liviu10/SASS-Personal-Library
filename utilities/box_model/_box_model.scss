@@ -5,17 +5,7 @@
 
 
 
-@mixin border-radius ($var_border_top_left_radius, $var_border_top_right_radius, $var_border_bottom_right_radius, $var_border_bottom_left_radius) {
-  @if 
-  ($var_border_top_left_radius != 0 and $var_border_bottom_right_radius != 0 and $var_border_top_right_radius != 0 and $var_border_bottom_left_radius != 0) and
-  ($var_border_top_left_radius == $var_border_bottom_right_radius and $var_border_top_left_radius == $var_border_top_right_radius and $var_border_top_left_radius == $var_border_bottom_left_radius) {
-    border-radius: border-radius($var_border_top_left_radius, $var_border_top_right_radius, $var_border_bottom_right_radius, $var_border_bottom_left_radius);
-  }
-  @else if
-  $var_border_top_left_radius == 0 and $var_border_top_right_radius == 0 and $var_border_bottom_right_radius == 0 and $var_border_bottom_left_radius == 0 {
-    border-radius: border-radius($var_border_top_left_radius, $var_border_top_right_radius, $var_border_bottom_right_radius, $var_border_bottom_left_radius);
-  }
-}
+
 @mixin left-border-radius ($var_border_top_left_radius, $var_border_bottom_left_radius) {
   border#{-top-left}-radius: left-border-radius($var_border_top_left_radius, $var_border_bottom_left_radius);
   border#{-bottom-left}-radius: left-border-radius($var_border_top_left_radius, $var_border_bottom_left_radius);
