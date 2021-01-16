@@ -1,3 +1,6 @@
+/* INCLUDING THE RESET FILE */
+    @import 'utilities/resets/_resets';
+
 /* INCLUDING ALL THE BOX MODEL MIXINS */
     @import 'utilities/box_model/_all-border';
     @import 'utilities/box_model/_all-margin';
@@ -32,8 +35,7 @@
     @import 'utilities/typography/_standard-typography';
     @import 'utilities/typography/_text-indent';
 
-/* INCLUDING THE RESET FILE */
-    @import 'utilities/resets/_resets';
+
 
 
 @import "utilities/component_mixins/_component_mixins";
