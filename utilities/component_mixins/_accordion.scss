@@ -1,2 +1,83 @@
 @import '../global_functions/_global_functions';
 @import '../global_variables/_global_variables';
+@import '../box_model/_all-margin';
+@import '../box_model/_all-border';
+@import '../box_model/_horizontal-vertical-margin';
+@import '../box_model/_horizontal-vertical-padding';
+@import '../box_model/_width';
+@import '../box_model/_height';
+@import '../typography/_btn-typography';
+@import '../typography/_p-typography';
+@import '../typography/_font-size';
+
+@mixin accordion-btn {
+    @include all-margin(0px, 0px, 0px, 0px);
+    @include horizontal-vertical-padding(0px, 16px, 0px, 16px);
+    @include width(1000px);
+    @include height(50px);
+    cursor: pointer;
+    &--btn {
+        background-color: #EEEEEE;
+        @include all-border(0px, 0px, 0px, 0px);
+        color: #444444;
+    }
+    &__text {
+        @include btn-typography;
+        width: 98%;
+        @include font-size(18px);
+        display: inline-block;
+        @each $breakpoint in $component_breakpoints {
+            @media only screen and (max-width: $breakpoint) {
+                @include width($breakpoint - 50px);
+            }
+        }
+    }
+    &::after {
+        content: '\002B';
+        color: #777777;
+        font-weight: bold;
+        float: right;
+        @include all-margin(0px, 0px, 0px, 5px);
+    }
+    &--active::after {
+        content: "\2212";
+    }
+    @each $breakpoint in $component_breakpoints {
+        @media only screen and (max-width: $breakpoint) {
+            @include width($breakpoint);
+        }
+    }
+}
+
+@mixin accordion-panel {
+    width: auto;
+    background-color: #EEEEEE;
+    height: auto;
+    max-height: 0px;
+    overflow: hidden;
+    transition: max-height 0.2s ease-out;
+    & .p-typography {
+        @include p-typography;
+        @include horizontal-vertical-padding(10px, 16px, 10px, 16px);
+        @include width(968px);
+        @include font-size(18px);
+        height: auto;
+        @each $breakpoint in $component_breakpoints {
+            @if $breakpoint <= 1024px {
+                @media only screen and (max-width: $breakpoint) {
+                    @include width($breakpoint - 32px);
+                    text-align: justify;
+                }
+            } @else {
+                @media only screen and (max-width: $breakpoint) {
+                    @include width($breakpoint - 32px);
+                }
+            }
+        }
+    }
+    @each $breakpoint in $component_breakpoints {
+        @media only screen and (max-width: $breakpoint) {
+            @include width($breakpoint);
+        }
+    }
+}
