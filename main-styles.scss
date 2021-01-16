@@ -31,11 +31,14 @@
     @import 'utilities/typography/_p-typography';
     @import 'utilities/typography/_standard-typography';
     @import 'utilities/typography/_text-indent';
-    
+
+/* INCLUDING THE RESET FILE */
+    @import 'utilities/resets/_resets';
+
 
 @import "utilities/component_mixins/_component_mixins";
 @import "utilities/module_mixins/_module_mixins";
-@import "utilities/resets/_resets";
+
 
 /* INCLUDE HTML MIXIN COMPONENTS */
   .accordion {@include accordion-btn;}
