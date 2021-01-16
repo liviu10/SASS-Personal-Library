@@ -4,9 +4,7 @@
 
 
 
-@mixin letter-spacing ($var_letter_spacing) {
-  letter-spacing: letter-spacing($var_letter_spacing);
-}
+
 @mixin line-height ($var_line_height) {
   line-height: line-height($var_line_height);
 }
