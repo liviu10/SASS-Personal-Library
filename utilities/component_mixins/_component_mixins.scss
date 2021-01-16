@@ -5,48 +5,7 @@
 @import "../typography/_typography";
 
 
-@mixin alert {
-  @include width(1000px);
-  @include height(50px);
-  @include flex-center-left-center();
-  &__text {
-    @include p-typography;
-    @include all-padding(0px, 0px, 0px, 10px);
-    @include height(30px);
-    @include font-size(20px);
-    user-select: none;
-    @include flex-center-left-center();
-  }
-  @each $class, $properties in $alert_classes {
-    &--#{$class} {
-      color: map-get($map: $properties, $key: color);
-      background-color: map-get($map: $properties, $key: background-color);
-      @include all-border(1px, 1px, 1px, 1px);
-      border-color: map-get($map: $properties, $key: border-color);
-    }
-  }
-  &:hover {
-    opacity: 0.85;
-    cursor: pointer;
-  }
-  @each $breakpoint in $component_breakpoints {
-    @if $breakpoint <= 412px {
-      @media only screen and (max-width: $breakpoint) and (orientation: portrait) {
-        @include width($breakpoint - 2px);
-        @include height(125px);
-      }
-    } @else if $breakpoint > 412px {
-      @media only screen and (max-width: $breakpoint) and (orientation: portrait) {
-        @include width($breakpoint - 2px);
-      } 
-    }
-  }
-  // @each $breakpoint in $component_breakpoints-landscape {
-  //   @media only screen and (max-width: $breakpoint) and (orientation: landscape) {
-  //     @include width($breakpoint - 2px);
-  //   }
-  // }
-}
+
 @mixin button-group {
   @include flex-center-left-center();
   & .btn {
