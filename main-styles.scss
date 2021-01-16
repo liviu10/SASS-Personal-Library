@@ -14,6 +14,26 @@
     @import 'utilities/box_model/_right-border-radius';
     @import 'utilities/box_model/_width';
 
+/* INCLUDING ALL THE HTML COMPONENTS */
+    @import 'utilities/component_mixins/_accordion';
+    @import 'utilities/component_mixins/_alert';
+    @import 'utilities/component_mixins/_btn';
+    @import 'utilities/component_mixins/_button-group';
+    @import 'utilities/component_mixins/_cards';
+    @import 'utilities/component_mixins/_dropdown-button';
+    @import 'utilities/component_mixins/_fa-icons';
+    @import 'utilities/component_mixins/_hero-image';
+    @import 'utilities/component_mixins/_img-logo';
+    @import 'utilities/component_mixins/_input-group';
+    @import 'utilities/component_mixins/_list-group';
+    @import 'utilities/component_mixins/_list-search';
+    @import 'utilities/component_mixins/_list';
+    @import 'utilities/component_mixins/_pagination-group';
+    @import 'utilities/component_mixins/_table';
+    @import 'utilities/component_mixins/_text-group';
+    @import 'utilities/component_mixins/_tooltip-button';
+    @import 'utilities/component_mixins/_user-input';
+
 /* INCLUDING ALL THE FLEXBOX MIXINS */
     @import 'utilities/flexbox/flex-center-left';
     @import 'utilities/flexbox/flex-center';
@@ -38,7 +58,7 @@
 
 
 
-@import "utilities/component_mixins/_component_mixins";
+
 @import "utilities/module_mixins/_module_mixins";
 
 
