@@ -1,2 +1,51 @@
 @import '../global_functions/_global_functions';
 @import '../global_variables/_global_variables';
+@import '../box_model/_width';
+@import '../box_model/_height';
+@import '../flexbox/_flex-center';
+
+@mixin img-logo {
+    width: auto;
+    height: auto;
+    @each $img-class, $properties in $img-logo {
+        &--#{$img-class} {
+            @include width(map-get($map: $properties, $key: logo-width));
+            @include height(map-get($map: $properties, $key: logo-height));
+            @include flex-center();
+            @each $breakpoint in $component_breakpoints {
+                @if $breakpoint <= 412px {
+                    @media only screen and (max-width: $breakpoint) {
+                        width: auto;
+                    }
+                }
+            }
+            & img {
+                @include width(map-get($map: $properties, $key: img-width));
+                @include height(map-get($map: $properties, $key: img-height));
+            }
+            @if $img-class == "logo-100px" {
+                @each $breakpoint in $component_breakpoints {
+                    @if $breakpoint <= 375px {
+                        @media only screen and (max-width: $breakpoint) {
+                            @include width($breakpoint - 20px);
+                            & img {
+                                @include width($breakpoint - 20px);
+                            }
+                        }
+                    }
+                }
+            } @else if $img-class == "logo-75px" {
+                @each $breakpoint in $component_breakpoints {
+                    @if $breakpoint <= 360px {
+                        @media only screen and (max-width: $breakpoint) {
+                            @include width($breakpoint - 20px);
+                            & img {
+                                @include width($breakpoint - 20px);
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

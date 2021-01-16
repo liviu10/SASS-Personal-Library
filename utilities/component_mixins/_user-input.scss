@@ -1,2 +1,92 @@
 @import '../global_functions/_global_functions';
 @import '../global_variables/_global_variables';
+@import '../box_model/_all-margin';
+@import '../box_model/_horizontal-vertical-padding';
+@import '../box_model/_width';
+@import '../box_model/_height';
+@import '../box_model/_all-border';
+@import '../box_model/_all-padding';
+@import '../flexbox/_flex-center';
+@import '../typography/_p-typography';
+
+@mixin input {
+    @include all-margin(0px, 0px, 0px, 0px);
+    @include horizontal-vertical-padding(5px, 0px, 5px, 0px);
+    width: auto;
+    height: auto;
+    @include flex-center;
+    &--cbx-radio {
+        @each $breakpoint in $component_breakpoints {
+                @if $breakpoint <= 412px {
+                    @media only screen and (max-width: $breakpoint) and (orientation: portrait) {
+                        width: auto;
+                        @include flex-center();
+                        flex-direction: row !important;
+                }
+            }
+        }
+    }
+    @each $class in $input-classes {
+        @if $class == "check" {
+            &__#{$class} {
+                @include all-margin(0px, 10px, 0px, 0px);
+                @include width(20px);
+                @include height(20px);
+            }
+        } @else if $class == "control" {
+            &__#{$class} {
+                @include all-border(1px, 1px, 1px, 1px);
+                @include all-padding(0px, 0px, 0px, 5px);
+                @include width(300px);
+                @include height(30px);
+            }
+        } @else if $class == "text" {
+            &__#{$class} {
+                @include p-typography;
+                @include height(20px);
+                user-select: none;
+                &:hover {
+                    cursor: pointer;
+                }
+            }
+        } @else if $class == "label" {
+            &__#{$class} {
+                @include p-typography;
+                @include width(120px);
+                @include height(30px);
+                user-select: none;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+            }
+        } @else if $class == "textarea" {
+            &__#{$class} {
+                @include all-border(1px, 1px, 1px, 1px);
+                @include all-padding(0px, 0px, 0px, 5px);
+                @include width(300px);
+                @include height(200px);
+                resize: none;
+            }
+        } @else {
+            &__#{$class} {
+                @include all-margin(0px, 0px, 0px, 0px);
+                @include all-border(1px, 1px, 1px, 1px);
+                @include all-padding(0px, 0px, 0px, 0px);
+            }
+        }
+    }
+    &__dropdown {
+        @include all-border(1px, 1px, 1px, 1px);
+        @include all-padding(0px, 0px, 0px, 5px);
+        @include width(309px);
+        @include height(32px);
+    }
+    @each $breakpoint in $component_breakpoints {
+        @if $breakpoint <= 412px {
+            @media only screen and (max-width: $breakpoint) and (orientation: portrait) {
+                @include width($breakpoint);
+                flex-direction: column;
+            }
+        }
+    }
+}
