@@ -1,0 +1,201 @@
+@import "../global_functions/_global_functions";
+@import "../global_variables/_global_variables";
+
+@mixin all-margin ($var_margin_top, $var_margin_right, $var_margin_bottom, $var_margin_left) {
+  @if 
+  $var_margin_top != 0 and ($var_margin_right == 0 and $var_margin_bottom == 0 and $var_margin_left == 0) {
+    margin#{-top}: all-margin($var_margin_top, $var_margin_right, $var_margin_bottom, $var_margin_left);
+    margin#{-bottom}: ($margin_bottom/$var_base_font_size) * 1rem;
+  }
+  @else if 
+  $var_margin_right != 0 and ($var_margin_top == 0 and $var_margin_bottom == 0 and $var_margin_left == 0) {
+    margin#{-right}: all-margin($var_margin_top, $var_margin_right, $var_margin_bottom, $var_margin_left);
+    margin#{-top}: ($margin_top/$var_base_font_size) * 1rem;
+    margin#{-bottom}: ($margin_bottom/$var_base_font_size) * 1rem;
+  }
+  @else if 
+  $var_margin_bottom != 0 and ($var_margin_right == 0 and $var_margin_top == 0 and $var_margin_left == 0) {
+    margin#{-bottom}: all-margin($var_margin_top, $var_margin_right, $var_margin_bottom, $var_margin_left);
+    margin#{-top}: ($margin_top/$var_base_font_size) * 1rem;
+  }
+  @else if 
+  $var_margin_left != 0 and ($var_margin_right == 0 and $var_margin_bottom == 0 and $var_margin_top == 0) {
+    margin#{-left}: all-margin($var_margin_top, $var_margin_right, $var_margin_bottom, $var_margin_left);
+    margin#{-top}: ($margin_top/$var_base_font_size) * 1rem;
+    margin#{-bottom}: ($margin_bottom/$var_base_font_size) * 1rem;
+  }
+  @else if 
+  $var_margin_top == 0 and $var_margin_right == 0 and $var_margin_bottom == 0 and $var_margin_left == 0 {
+    margin: all-margin($var_margin_top, $var_margin_right, $var_margin_bottom, $var_margin_left)
+  }
+  @else if 
+  $var_margin_top != $var_margin_bottom and $var_margin_right != $var_margin_left or 
+  $var_margin_top > 0 and $var_margin_right > 0 and $var_margin_bottom > 0 and $var_margin_left > 0 {
+    margin: all-margin($var_margin_top, $var_margin_right, $var_margin_bottom, $var_margin_left)
+  }
+  @else if
+  ($var_margin_top != 0 and $var_margin_bottom != 0 and $var_margin_right != 0 and $var_margin_left != 0) and
+  ($var_margin_top == $var_margin_bottom and $var_margin_top == $var_margin_right and $var_margin_top == $var_margin_left) {
+    margin: all-margin($var_margin_top, $var_margin_right, $var_margin_bottom, $var_margin_left);
+  }
+}
+@mixin horizontal-vertical-margin ($var_margin_top, $var_margin_right, $var_margin_bottom, $var_margin_left) {
+  @if 
+  ($var_margin_top == $var_margin_bottom and $var_margin_top != 0 and $var_margin_bottom != 0) and 
+  ($var_margin_right == $var_margin_left and $var_margin_right != 0 and $var_margin_left != 0) {
+    margin: horizontal-vertical-margin($var_margin_top, $var_margin_right, $var_margin_bottom, $var_margin_left)
+  }
+  @else if
+  ($var_margin_top == $var_margin_bottom and $var_margin_top = 0 and $var_margin_bottom = 0) and
+  ($var_margin_right == $var_margin_left and $var_margin_right != 0 and $var_margin_left != 0) {
+    margin: horizontal-vertical-margin($var_margin_top, $var_margin_right, $var_margin_bottom, $var_margin_left)
+  }
+  @else if
+  ($var_margin_top == $var_margin_bottom and $var_margin_top != 0 and $var_margin_bottom != 0) and
+  ($var_margin_right == $var_margin_left and $var_margin_right = 0 and $var_margin_left = 0) {
+    margin: horizontal-vertical-margin($var_margin_top, $var_margin_right, $var_margin_bottom, $var_margin_left)
+  }
+}
+@mixin box-shadow ($var_h-offset, $var_v-offset, $var_blur, $var_color) {
+  box-shadow: box-shadow($var_h-offset, $var_v-offset, $var_blur, $var_color);
+}
+@mixin all-border ($var_border_top_width, $var_border_right_width, $var_border_bottom_width, $var_border_left_width) {
+  @if 
+  $var_border_top_width !=0 and ($var_border_bottom_width == 0 and $var_border_right_width == 0 and $var_border_left_width == 0) {
+    border#{-top}-width: all-border($var_border_top_width, $var_border_right_width, $var_border_bottom_width, $var_border_left_width);
+    border#{-top}-style: solid;
+    border#{-top}-color: #000000;
+  }
+  @else if
+  $var_border_right_width !=0 and ($var_border_bottom_width == 0 and $var_border_top_width == 0 and $var_border_left_width == 0) {
+    border#{-right}-width: all-border($var_border_top_width, $var_border_right_width, $var_border_bottom_width, $var_border_left_width);
+    border#{-right}-style: solid;
+    border#{-right}-color: #000000;
+  }
+  @else if
+  $var_border_bottom_width !=0 and ($var_border_right_width == 0 and $var_border_top_width == 0 and $var_border_left_width == 0) {
+    border#{-bottom}-width: all-border($var_border_top_width, $var_border_right_width, $var_border_bottom_width, $var_border_left_width);
+    border#{-bottom}-style: solid;
+    border#{-bottom}-color: #000000;
+  }
+  @else if
+  $var_border_left_width !=0 and ($var_border_right_width == 0 and $var_border_top_width == 0 and $var_border_bottom_width == 0) {
+    border#{-left}-width: all-border($var_border_top_width, $var_border_right_width, $var_border_bottom_width, $var_border_left_width);
+    border#{-left}-style: solid;
+    border#{-left}-color: #000000;
+  }
+  @else if
+  ($var_border_top_width == $var_border_bottom_width and $var_border_top_width != 0 and $var_border_bottom_width != 0) and
+  ($var_border_right_width == $var_border_left_width and $var_border_right_width == 0 and $var_border_left_width == 0) {
+    border-width: all-border($var_border_top_width, $var_border_right_width, $var_border_bottom_width, $var_border_left_width);
+    border-style: solid;
+    border-color: #000000;
+  }
+  @else if
+  ($var_border_top_width == $var_border_bottom_width and $var_border_top_width == 0 and $var_border_bottom_width == 0) and
+  ($var_border_right_width == $var_border_left_width and $var_border_right_width != 0 and $var_border_left_width != 0) {
+    border-width: all-border($var_border_top_width, $var_border_right_width, $var_border_bottom_width, $var_border_left_width);
+    border-style: solid;
+    border-color: #000000;
+  }
+  @else if
+  $var_border_top_width == 0 and $var_border_bottom_width == 0 and $var_border_right_width == 0 and $var_border_left_width == 0 {
+    border-width: all-border($var_border_top_width, $var_border_right_width, $var_border_bottom_width, $var_border_left_width);
+  }
+  @else if
+  ($var_border_top_width != 0 and $var_border_bottom_width != 0 and $var_border_right_width != 0 and $var_border_left_width != 0) and
+  ($var_border_top_width == $var_border_bottom_width and $var_border_top_width == $var_border_right_width and $var_border_top_width == $var_border_left_width) {
+    border-width: all-border($var_border_top_width, $var_border_right_width, $var_border_bottom_width, $var_border_left_width);
+    border-style: solid;
+    border-color: #000000;
+  }
+}
+@mixin border-radius ($var_border_top_left_radius, $var_border_top_right_radius, $var_border_bottom_right_radius, $var_border_bottom_left_radius) {
+  @if 
+  ($var_border_top_left_radius != 0 and $var_border_bottom_right_radius != 0 and $var_border_top_right_radius != 0 and $var_border_bottom_left_radius != 0) and
+  ($var_border_top_left_radius == $var_border_bottom_right_radius and $var_border_top_left_radius == $var_border_top_right_radius and $var_border_top_left_radius == $var_border_bottom_left_radius) {
+    border-radius: border-radius($var_border_top_left_radius, $var_border_top_right_radius, $var_border_bottom_right_radius, $var_border_bottom_left_radius);
+  }
+  @else if
+  $var_border_top_left_radius == 0 and $var_border_top_right_radius == 0 and $var_border_bottom_right_radius == 0 and $var_border_bottom_left_radius == 0 {
+    border-radius: border-radius($var_border_top_left_radius, $var_border_top_right_radius, $var_border_bottom_right_radius, $var_border_bottom_left_radius);
+  }
+}
+@mixin left-border-radius ($var_border_top_left_radius, $var_border_bottom_left_radius) {
+  border#{-top-left}-radius: left-border-radius($var_border_top_left_radius, $var_border_bottom_left_radius);
+  border#{-bottom-left}-radius: left-border-radius($var_border_top_left_radius, $var_border_bottom_left_radius);
+}
+@mixin right-border-radius ($var_border_top_right_radius, $var_border_bottom_right_radius) {
+  border#{-top-right}-radius: right-border-radius($var_border_top_right_radius, $var_border_bottom_right_radius);
+  border#{-bottom-right}-radius: right-border-radius($var_border_top_right_radius, $var_border_bottom_right_radius);
+}
+@mixin all-padding ($var_padding_top, $var_padding_right, $var_padding_bottom, $var_padding_left) {
+  @if 
+  $var_padding_top != 0 and ($var_padding_right == 0 and $var_padding_bottom == 0 and $var_padding_left == 0) {
+    padding#{-top}: all-padding($var_padding_top, $var_padding_right, $var_padding_bottom, $var_padding_left);
+    padding#{-bottom}: ($padding_bottom/$var_base_font_size) * 1rem;
+  }
+  @else if 
+  $var_padding_right != 0 and ($var_padding_top == 0 and $var_padding_bottom == 0 and $var_padding_left == 0) {
+    padding#{-right}: all-padding($var_padding_top, $var_padding_right, $var_padding_bottom, $var_padding_left);
+    padding#{-top}: ($padding_top/$var_base_font_size) * 1rem;
+    padding#{-bottom}: ($padding_bottom/$var_base_font_size) * 1rem;
+  }
+  @else if 
+  $var_padding_bottom != 0 and ($var_padding_right == 0 and $var_padding_top == 0 and $var_padding_left == 0) {
+    padding#{-bottom}: all-padding($var_padding_top, $var_padding_right, $var_padding_bottom, $var_padding_left);
+    padding#{-top}: ($padding_top/$var_base_font_size) * 1rem;
+  }
+  @else if 
+  $var_padding_left != 0 and ($var_padding_right == 0 and $var_padding_bottom == 0 and $var_padding_top == 0) {
+    padding#{-left}: all-padding($var_padding_top, $var_padding_right, $var_padding_bottom, $var_padding_left);
+    padding#{-top}: ($padding_top/$var_base_font_size) * 1rem;
+    padding#{-bottom}: ($padding_bottom/$var_base_font_size) * 1rem;
+  }
+  @else if 
+  $var_padding_top == 0 and $var_padding_right == 0 and $var_padding_bottom == 0 and $var_padding_left == 0 {
+    padding: all-padding($var_padding_top, $var_padding_right, $var_padding_bottom, $var_padding_left)
+  }
+  @else if 
+  $var_padding_top != $var_padding_bottom and $var_padding_right != $var_padding_left {
+    padding: all-padding($var_padding_top, $var_padding_right, $var_padding_bottom, $var_padding_left)
+  }
+  @else if
+  ($var_padding_top != 0 and $var_padding_bottom != 0 and $var_padding_right != 0 and $var_padding_left != 0) and
+  ($var_padding_top == $var_padding_bottom and $var_padding_top == $var_padding_right and $var_padding_top == $var_padding_left)  {
+    padding: all-padding($var_padding_top, $var_padding_right, $var_padding_bottom, $var_padding_left);
+  }
+}
+@mixin horizontal-vertical-padding ($var_padding_top, $var_padding_right, $var_padding_bottom, $var_padding_left) {
+  @if 
+  ($var_padding_top == $var_padding_bottom and $var_padding_top != 0 and $var_padding_bottom != 0) and 
+  ($var_padding_right == $var_padding_left and $var_padding_right != 0 and $var_padding_left != 0) {
+    padding: horizontal-vertical-padding($var_padding_top, $var_padding_right, $var_padding_bottom, $var_padding_left)
+  }
+  @else if
+  ($var_padding_top == $var_padding_bottom and $var_padding_top = 0 and $var_padding_bottom = 0) and
+  ($var_padding_right == $var_padding_left and $var_padding_right != 0 and $var_padding_left != 0) {
+    padding: horizontal-vertical-padding($var_padding_top, $var_padding_right, $var_padding_bottom, $var_padding_left)
+  }
+  @else if
+  ($var_padding_top == $var_padding_bottom and $var_padding_top != 0 and $var_padding_bottom != 0) and
+  ($var_padding_right == $var_padding_left and $var_padding_right = 0 and $var_padding_left = 0) {
+    padding: horizontal-vertical-padding($var_padding_top, $var_padding_right, $var_padding_bottom, $var_padding_left)
+  }
+}
+@mixin width ($var_width) {
+  @if $var_width == 0#{"px"} {
+    width: width($var_width);
+  }
+  @else if $var_width != 0#{"px"} {
+    width: width($var_width);
+  }
+}
+@mixin height ($var_height) {
+  @if $var_height == 0#{"px"} {
+    height: height($var_height);
+  }
+  @else if $var_width != 0#{"px"} {
+    height: height($var_height);
+  }
+}

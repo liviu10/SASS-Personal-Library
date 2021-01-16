@@ -1,0 +1,126 @@
+@import "../global_functions/_global_functions";
+@import "../global_variables/_global_variables";
+@import "../box_model/_box_model";
+
+@mixin standard_typography {
+  font-family: "Times New Roman", Times, serif;
+  font-style: normal;
+  font-variant: normal;
+  font-weight: normal;
+  text-align: left;
+  text-decoration: none;
+  text-overflow: hidden;
+  text-transform: normal;
+  white-space: normal;
+  word-break: normal;
+  word-spacing: normal;
+}
+@mixin font-size ($var_font_size) {
+  font-size: font-size($var_font-size);
+}
+@mixin letter-spacing ($var_letter_spacing) {
+  letter-spacing: letter-spacing($var_letter_spacing);
+}
+@mixin line-height ($var_line_height) {
+  line-height: line-height($var_line_height);
+}
+@mixin text-indent ($var_text-indent) {
+  text-indent: text-indent($var_text-indent);
+}
+@mixin h1-typography {
+  @include horizontal-vertical-margin(11px, 0px, 11px, 0px);
+  @include all-padding(0px, 0px, 0px, 0px);
+  width: 100%;
+  @include height(40px);
+  @include font-size(35px);
+  @include text-indent(0px);
+  @include standard_typography;
+  text-align: center;
+}
+@mixin h2-typography {
+  @include horizontal-vertical-margin(10px, 0px, 10px, 0px);
+  @include all-padding(0px, 0px, 0px, 0px);
+  width: 100%;
+  @include height(30px);
+  @include font-size(25px);
+  @include text-indent(0px);
+  @include standard_typography;
+  text-align: center;
+}
+@mixin h3-typography {
+  @include horizontal-vertical-margin(9px, 0px, 9px, 0px);
+  @include all-padding(0px, 0px, 0px, 0px);
+  width: 100%;
+  @include height(20px);
+  @include font-size(18px);
+  @include text-indent(0px);
+  @include standard_typography;
+  text-align: center;
+}
+@mixin h4-typography {
+  @include horizontal-vertical-margin(11px, 0px, 11px, 0px);
+  @include all-padding(0px, 0px, 0px, 0px);
+  width: 100%;
+  @include height(18px);
+  @include font-size(16px);
+  @include text-indent(0px);
+  @include standard_typography;
+  text-align: center;
+}
+@mixin h5-typography {
+  @include horizontal-vertical-margin(12px, 0px, 12px, 0px);
+  @include all-padding(0px, 0px, 0px, 0px);
+  width: 100%;
+  @include height(16px);
+  @include font-size(14px);
+  @include text-indent(0px);
+  @include standard_typography;
+  text-align: center;
+}
+@mixin h6-typography {
+  @include horizontal-vertical-margin(13px, 0px, 13px, 0px);
+  @include all-padding(0px, 0px, 0px, 0px);
+  width: 100%;
+  @include height(14px);
+  @include font-size(12px);
+  @include text-indent(0px);
+  @include standard_typography;
+  text-align: center;
+}
+@mixin p-typography {
+  @include horizontal-vertical-margin(8px, 0px, 8px, 0px);
+  @include all-padding(0px, 0px, 0px, 0px);
+  width: 100%;
+  @include height (18px);
+  @include font-size (16px);
+  @include text-indent(0px);
+  @include standard_typography;
+}
+@mixin a-typography {
+  @include horizontal-vertical-margin(8px, 0px, 8px, 0px);
+  @include all-padding(0px, 0px, 0px, 0px);
+  width: 100%;
+  @include height (18px);
+  @include font-size (16px);
+  @include text-indent(0px);
+  @include standard_typography;
+  color: #007BFF;
+  text-decoration: underline;
+  &:visited {
+    color: #007BFF;
+  }
+  &:hover {
+    color: #007BFF;
+    cursor: pointer;
+  }
+  &:active {
+    color: #007BFF;
+  }
+}
+@mixin btn-typography {
+  @include font-size (16px);
+  @include letter-spacing (2px);
+  @include text-indent(0px);
+  @include standard_typography;
+  user-select: none;
+}

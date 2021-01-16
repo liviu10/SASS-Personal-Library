@@ -1,0 +1,1126 @@
+@import "../box_model/_box_model";
+@import "../flexbox/_flexbox";
+@import "../global_functions/_global_functions";
+@import "../global_variables/_global_variables";
+@import "../typography/_typography";
+
+@mixin accordion-btn {
+  @include all-margin(0px, 0px, 0px, 0px);
+  @include horizontal-vertical-padding(0px, 16px, 0px, 16px);
+  @include width(1000px);
+  @include height(50px);
+  cursor: pointer;
+  &--btn {
+    background-color: #EEEEEE;
+    @include all-border(0px, 0px, 0px, 0px);
+    color: #444444;
+  }
+  &__text {
+    @include btn-typography;
+    width: 98%;
+    @include font-size(18px);
+    display: inline-block;
+    @each $breakpoint in $component_breakpoints {
+      @media only screen and (max-width: $breakpoint) {
+        @include width($breakpoint - 50px);
+      }
+    }
+  }
+  &::after {
+    content: '\002B';
+    color: #777777;
+    font-weight: bold;
+    float: right;
+    @include all-margin(0px, 0px, 0px, 5px);
+  }
+  &--active::after {
+    content: "\2212";
+  }
+  @each $breakpoint in $component_breakpoints {
+    @media only screen and (max-width: $breakpoint) {
+      @include width($breakpoint);
+    }
+  }
+}
+@mixin accordion-panel {
+  width: auto;
+  background-color: #EEEEEE;
+  height: auto;
+  max-height: 0px;
+  overflow: hidden;
+  transition: max-height 0.2s ease-out;
+  & .p-typography {
+    @include p-typography;
+    @include horizontal-vertical-padding(10px, 16px, 10px, 16px);
+    @include width(968px);
+    @include font-size(18px);
+    height: auto;
+    @each $breakpoint in $component_breakpoints {
+      @if $breakpoint <= 1024px {
+        @media only screen and (max-width: $breakpoint) {
+          @include width($breakpoint - 32px);
+          text-align: justify;
+        }
+      } @else {
+        @media only screen and (max-width: $breakpoint) {
+          @include width($breakpoint - 32px);
+        }
+      }
+    }
+  }
+  @each $breakpoint in $component_breakpoints {
+    @media only screen and (max-width: $breakpoint) {
+      @include width($breakpoint);
+    }
+  }
+}
+@mixin alert {
+  @include width(1000px);
+  @include height(50px);
+  @include flex-center-left-center();
+  &__text {
+    @include p-typography;
+    @include all-padding(0px, 0px, 0px, 10px);
+    @include height(30px);
+    @include font-size(20px);
+    user-select: none;
+    @include flex-center-left-center();
+  }
+  @each $class, $properties in $alert_classes {
+    &--#{$class} {
+      color: map-get($map: $properties, $key: color);
+      background-color: map-get($map: $properties, $key: background-color);
+      @include all-border(1px, 1px, 1px, 1px);
+      border-color: map-get($map: $properties, $key: border-color);
+    }
+  }
+  &:hover {
+    opacity: 0.85;
+    cursor: pointer;
+  }
+  @each $breakpoint in $component_breakpoints {
+    @if $breakpoint <= 412px {
+      @media only screen and (max-width: $breakpoint) and (orientation: portrait) {
+        @include width($breakpoint - 2px);
+        @include height(125px);
+      }
+    } @else if $breakpoint > 412px {
+      @media only screen and (max-width: $breakpoint) and (orientation: portrait) {
+        @include width($breakpoint - 2px);
+      } 
+    }
+  }
+  // @each $breakpoint in $component_breakpoints-landscape {
+  //   @media only screen and (max-width: $breakpoint) and (orientation: landscape) {
+  //     @include width($breakpoint - 2px);
+  //   }
+  // }
+}
+@mixin button-group {
+  @include flex-center-left-center();
+  & .btn {
+    @include all-margin(0px, 0px, 0px, 0px);
+    @include all-padding(0px, 0px, 0px, 0px);
+    @include width(150px);
+    @include height(30px);
+    &__text {
+      @include btn-typography;
+    }
+    @each $class, $properties in $button_classes {
+      &--#{$class} {
+        @include all-border(1px, 1px, 1px, 1px);
+        background-color: map-get($map: $properties, $key: background-color);
+        border-color: map-get($map: $properties, $key: border-color);
+      }
+      &--#{$class}:first-of-type {
+        @include left-border-radius(5px, 5px);
+      }
+      &--#{$class}:last-of-type {
+        @include right-border-radius(5px, 5px);
+      }
+    }
+    &:hover {
+      cursor: pointer;
+      opacity: 0.85;
+    }
+    &:focus {
+      outline: none;
+    }
+  }
+  @each $breakpoint in $component_breakpoints {
+    @if $breakpoint <= 768px and $breakpoint >= 600px {
+      & .btn:nth-child(n+3):nth-child(-n+3) {
+        @media only screen and (max-width: $breakpoint) and (orientation: portrait) {
+          display: none;
+        }
+      }
+      & .btn {
+        @media only screen and (max-width: $breakpoint) and (orientation: portrait) {
+          @include width(118px);
+        }
+      }
+    } @else if $breakpoint <= 412px {
+      & .btn:nth-child(n+2):nth-child(-n+2) {
+        @media only screen and (max-width: $breakpoint) and (orientation: portrait) {
+          display: none;
+        }
+      }
+      & .btn {
+        @media only screen and (max-width: $breakpoint) and (orientation: portrait) {
+          @include width(98px);
+        }
+      }
+    }
+  }
+  // @each $breakpoint in $component_breakpoints_landscape {
+  //   @if $breakpoint <= 768px and $breakpoint >= 600px {
+  //     & .btn:nth-child(n+3):nth-child(-n+3) {
+  //       @media only screen and (max-width: $breakpoint) and (orientation: landscape) {
+  //         display: none;
+  //       }
+  //     }
+  //     & .btn {
+  //       @media only screen and (max-width: $breakpoint) and (orientation: landscape) {
+  //         @include width(118px);
+  //       }
+  //     }
+  //   } @else if $breakpoint <= 568px {
+  //     & .btn:nth-child(n+2):nth-child(-n+2) {
+  //       @media only screen and (max-width: $breakpoint) and (orientation: landscape) {
+  //         display: none;
+  //       }
+  //     }
+  //     & .btn {
+  //       @media only screen and (max-width: $breakpoint) and (orientation: landscape) {
+  //         @include width(98px);
+  //       }
+  //     }
+  //   }
+  // }
+}
+@mixin btn {
+  @include all-margin(0px, 0px, 0px, 0px);
+  @include all-padding(0px, 0px, 0px, 0px);
+  @include width(150px);
+  @include height(50px);
+  &__text {
+    @include btn-typography;
+  }
+  &__no-spacing {
+    @include letter-spacing(1px);
+  }
+  &__badge {
+    @include p-typography;
+    @include horizontal-vertical-padding(0px, 5px, 0px, 5px);
+    @include all-border(1px, 1px, 1px, 1px);
+    @include border-radius(5px, 5px, 5px, 5px);
+    border-color: #FFFFFF;
+    background-color: #FFFFFF;
+    color: #000000;
+    font-weight: bold;
+  }
+  @each $class, $properties in $button_classes {
+    &--#{$class} {
+      color: map-get($map: $properties, $key: color);
+      @include all-border(1px, 1px, 1px, 1px);
+      background-color: map-get($map: $properties, $key: background-color);
+      border-color: map-get($map: $properties, $key: border-color);
+    }
+  }
+  @each $outline-class, $properties in $button_classes-outline {
+    &--#{$outline-class} {
+      color: map-get($map: $properties, $key: color);
+      @include all-border(1px, 1px, 1px, 1px);
+      border-color: map-get($map: $properties, $key: border-color);
+      background-color: #FFFFFF;
+      @if $outline-class == "outline-standard" or $outline-class == "outline-warning" or $outline-class == "outline-light" {
+        &:hover {
+          color: map-get($map: $properties, $key: hover-color);
+          background-color: map-get($map: $properties, $key: hover-background-color);
+        }
+      } @else {
+        &:hover {
+          color: #FFFFFF;
+          background-color: map-get($map: $properties, $key: hover-background-color);
+        }
+      }
+    }
+  }
+  &--scroll-top {
+    bottom: 20px;
+    right: 30px;
+    border: none;
+    @include border-radius(4px, 4px, 4px, 4px);
+    @include horizontal-vertical-padding(10px, 15px, 10px, 15px);
+    width: auto;
+    height: auto;
+    @include font-size(20px);
+    display: none;
+    position: fixed;
+    z-index: 99;
+    outline: none;
+    background-color: #FF0000;
+    color: white;
+    cursor: pointer;
+    &:hover {
+      background-color: #E60000;
+    }
+  }
+  &--read-more {
+    @include width(120px);
+    @include height(30px);
+    color: #FFFFFF;
+    background-color: #007BFF;
+    @include all-border(1px, 1px, 1px, 1px);
+    @include border-radius(5px, 5px, 5px, 5px);
+    border-color: #007BFF;
+    &:hover {
+      background-color: #006FE6;
+    }
+  }
+  &:hover {
+    cursor: pointer;
+    opacity: 0.85;
+  }
+  &:focus {
+    outline: none;
+  }
+}
+@mixin card {
+  @include width(300px);
+  @include height(450px);
+  @include flex-center();
+  flex-direction: column;
+  &__img {
+    @include left-border-radius(5px, 0px);
+    @include right-border-radius(5px, 0px);
+    @include width(300px);
+    @include height(250px);
+    user-select: none;
+  }
+  &__body {
+    @include width(300px);
+    @include height(200px);
+    user-select: none;
+    @include flex-center();
+    flex-direction: column;
+  }
+  &__title {
+    @include h2-typography;
+    @include all-margin(0px, 0px, 0px, 0px);
+    @include width(300px);
+    @include height(30px);
+    @include flex-center();
+  }
+  &__text {
+    @include p-typography;
+    @include all-margin(0px, 0px, 0px, 0px);
+    @include width(300px);
+    @include height(100px);
+    @include flex-center();
+    text-align: center !important;
+  }
+  &--standard {
+    @include all-border(1px, 1px, 1px, 1px);
+    @include border-radius(5px, 5px, 5px, 5px);
+    border-color: #999999;
+  }
+  & .btn {
+    @include all-margin(10px, 0px, 0px, 0px);
+    @include all-padding(0px, 0px, 0px, 0px);
+    @include width(150px);
+    @include height(30px);
+    &__text {
+      @include btn-typography;
+    }
+    @each $class, $properties in $button_classes {
+      &--#{$class} {
+        @include all-border(1px, 1px, 1px, 1px);
+        @include border-radius(5px, 5px, 5px, 5px);
+        background-color: map-get($map: $properties, $key: background-color);
+        border-color: map-get($map: $properties, $key: border-color);
+      }
+    }
+    &:hover {
+      cursor: pointer;
+      opacity: 0.85;
+    }
+    &:focus {
+      outline: none;
+    }
+  }
+}
+@mixin dropdown-button {
+  position: relative;
+  display: inline-block;
+  & .btn {
+    @include all-margin(0px, 0px, 0px, 0px);
+    @include all-padding(0px, 0px, 0px, 0px);
+    @include width(150px);
+    @include height(50px);
+    &__text {
+      @include btn-typography;
+    }
+    &--standard {
+      @include all-border(1px, 1px, 1px, 1px);
+      background-color: #E6E6E6;
+      border-color: #CCCCCC;
+    }
+    &:hover {
+      cursor: pointer;
+      opacity: 0.85;
+    }
+    &:focus {
+      outline: none;
+    }
+  }
+  @each $class, $properties in $button_classes {
+    & .dropdown-content--#{$class} {
+      @include all-border(1px, 1px, 1px, 1px);
+      @include width(148px);
+      height: auto;
+      background-color: map-get($map: $properties, $key: background-color);
+      border-color: map-get($map: $properties, $key: border-color);
+      box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+      display: none;
+      position: absolute;
+      z-index: 1;
+      & .a-typography {
+        @include a-typography;
+        @include all-margin(0px, 0px, 0px, 0px);
+        @include horizontal-vertical-padding(0px, 5px, 0px, 5px);
+        @include width(138px);
+        @include height(50px);
+        text-decoration: none;
+        @include flex-center-top();
+        flex-direction: column;
+        &:visited {
+          color: #000000;
+        }
+        &:hover {
+          background-color: map-get($map: $properties, $key: background-color-hover);
+          color: map-get($map: $properties, $key: color);
+          opacity: 0.85;
+        }
+        &:active {
+          color: #000000;
+        }
+      }
+      @if $class == "standard" or $class == "warning" or $class == "light" {
+        & .a-typography {
+          color: #000000 !important;
+        } 
+      } @else {
+        & .a-typography {
+          color: #FFFFFF !important;
+        }
+      }
+    }
+    &:hover .dropdown-content--#{$class} {
+      display: block;
+    }
+  }
+}
+@mixin fa {
+  @include width(50px);
+  @include height(50px);
+  font-size: 1.25rem !important;
+  text-decoration: none;
+  text-align: center;
+  cursor: pointer;
+  user-select: none;
+  @include flex-center();
+  display: flex !important;
+  flex-wrap: wrap !important;
+  @each $class, $properties in $fa-classes {
+    &-#{$class} {
+      background-color: map-get($map: $properties, $key: background-color);
+      color: map-get($map: $properties, $key: color);
+      background-color: map-get($map: $properties, $key: background-color);
+      @include flex-center();
+      &:hover {
+        color: map-get($map: $properties, $key: hover-color);
+        background-color: map-get($map: $properties, $key: hover-background-color);
+        opacity: 0.7;
+      }
+    }
+    @if $class == "snapchat-ghost" {
+      text-shadow: -1px 0 #000000, 0 1px #000000, 1px 0 #000000, 0 -1px #000000;
+    }
+    &-icon {
+      font-size: 1.25rem !important;
+    }
+    &-round-border {
+      @include border-radius(50px, 50px, 50px, 50px);
+      @include horizontal-vertical-margin(0px, 5px, 0px, 5px);
+    }
+  }
+}
+@mixin hero-image {
+  @include width(1920px);
+  @include height(600px);
+  background-image: url('http://localhost/PROJECTS/Portfolio-Projects/SASS-Personal-Library/utilities/media%20library/hero-image.jpg');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  @include flex-center();
+  & .hero-text {
+    @include width(600px);
+    height: auto;
+    @include flex-center();
+    flex-direction: column;
+    & .h1-typography {
+      @include h1-typography;
+      @include all-margin(0px, 0px, 0px, 0px);
+      @include height(100px);
+      @include font-size(80px);
+      user-select: none;
+      background-color: #FFFFFF;
+      opacity: 0.75;
+      @include flex-center();
+      @each $breakpoint in $component_breakpoints {
+        @media only screen and (max-width: $breakpoint) {
+          @include width(600px);
+        }
+        @if $breakpoint <= 962px {
+          @media only screen and (max-width: $breakpoint) {
+            @include width($breakpoint);
+            height: auto;
+          }
+        }
+      }
+    }
+    & .p-typography {
+      @include p-typography;
+      @include all-margin(0px, 0px, 0px, 0px);
+      @include height(50px);
+      @include font-size(30px);
+      text-align: center;
+      user-select: none;
+      background-color: #FFFFFF;
+      opacity: 0.75;
+      @include flex-center();
+      @each $breakpoint in $component_breakpoints {
+        @media only screen and (max-width: $breakpoint) {
+          @include width(600px);
+        }
+        @if $breakpoint <= 962px {
+          @media only screen and (max-width: $breakpoint) {
+            @include width($breakpoint);
+            height: auto;
+          }
+        }
+      }
+    }
+    & .btn {
+      @include btn;
+      @include horizontal-vertical-margin(20px, 0px, 20px, 0px);
+    }
+    @each $breakpoint in $component_breakpoints {
+      @media only screen and (max-width: $breakpoint) and (orientation: portrait) {
+        @include width(600px);
+      }
+      @if $breakpoint <= 962px {
+        @media only screen and (max-width: $breakpoint) and (orientation: portrait) {
+          @include width($breakpoint);
+        }
+      }
+    }
+  }
+  @each $breakpoint in $component_breakpoints {
+    @media only screen and (max-width: $breakpoint) {
+      @include width($breakpoint);
+    }
+    @if $breakpoint == 320px {
+      @media only screen and (max-width: $breakpoint) {
+        @include height(568px);
+      }
+    }
+  }
+}
+@mixin img-logo {
+  width: auto;
+  height: auto;
+  @each $img-class, $properties in $img-logo {
+    &--#{$img-class} {
+      @include width(map-get($map: $properties, $key: logo-width));
+      @include height(map-get($map: $properties, $key: logo-height));
+      @include flex-center();
+      @each $breakpoint in $component_breakpoints {
+        @if $breakpoint <= 412px {
+          @media only screen and (max-width: $breakpoint) {
+            width: auto;
+          }
+        }
+      }
+      & img {
+        @include width(map-get($map: $properties, $key: img-width));
+        @include height(map-get($map: $properties, $key: img-height));
+      }
+      @if $img-class == "logo-100px" {
+        @each $breakpoint in $component_breakpoints {
+          @if $breakpoint <= 375px {
+            @media only screen and (max-width: $breakpoint) {
+              @include width($breakpoint - 20px);
+              & img {
+                @include width($breakpoint - 20px);
+              }
+            }
+          }
+        }
+      } @else if $img-class == "logo-75px" {
+        @each $breakpoint in $component_breakpoints {
+          @if $breakpoint <= 360px {
+            @media only screen and (max-width: $breakpoint) {
+              @include width($breakpoint - 20px);
+              & img {
+                @include width($breakpoint - 20px);
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+@mixin input {
+  @include all-margin(0px, 0px, 0px, 0px);
+  @include horizontal-vertical-padding(5px, 0px, 5px, 0px);
+  width: auto;
+  height: auto;
+  @include flex-center;
+  &--cbx-radio {
+    @each $breakpoint in $component_breakpoints {
+      @if $breakpoint <= 412px {
+        @media only screen and (max-width: $breakpoint) and (orientation: portrait) {
+          width: auto;
+          @include flex-center();
+          flex-direction: row !important;
+        }
+      }
+    }
+  }
+  @each $class in $input-classes {
+    @if $class == "check" {
+      &__#{$class} {
+        @include all-margin(0px, 10px, 0px, 0px);
+        @include width(20px);
+        @include height(20px);
+      }
+    } @else if $class == "control" {
+      &__#{$class} {
+        @include all-border(1px, 1px, 1px, 1px);
+        @include all-padding(0px, 0px, 0px, 5px);
+        @include width(300px);
+        @include height(30px);
+      }
+    } @else if $class == "text" {
+      &__#{$class} {
+        @include p-typography;
+        @include height(20px);
+        user-select: none;
+        &:hover {
+          cursor: pointer;
+        }
+      }
+    } @else if $class == "label" {
+      &__#{$class} {
+        @include p-typography;
+        @include width(120px);
+        @include height(30px);
+        user-select: none;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+    } @else if $class == "textarea" {
+      &__#{$class} {
+        @include all-border(1px, 1px, 1px, 1px);
+        @include all-padding(0px, 0px, 0px, 5px);
+        @include width(300px);
+        @include height(200px);
+        resize: none;
+      }
+    } @else {
+      &__#{$class} {
+        @include all-margin(0px, 0px, 0px, 0px);
+        @include all-border(1px, 1px, 1px, 1px);
+        @include all-padding(0px, 0px, 0px, 0px);
+      }
+    }
+  }
+  &__dropdown {
+    @include all-border(1px, 1px, 1px, 1px);
+    @include all-padding(0px, 0px, 0px, 5px);
+    @include width(309px);
+    @include height(32px);
+  }
+  @each $breakpoint in $component_breakpoints {
+    @if $breakpoint <= 412px {
+      @media only screen and (max-width: $breakpoint) and (orientation: portrait) {
+        @include width($breakpoint);
+        flex-direction: column;
+      }
+    }
+  }
+}
+@mixin input-group {
+  @include flex-center();
+  flex-direction: column;
+}
+@mixin list {
+  @include all-margin(10px, 0px, 0px, 0px);
+  width: auto;
+  height: auto;
+  &__unordered, &__ordered {
+    @include all-padding(0px, 0px, 0px, 25px);
+    @include width(275px);
+  }
+  &__element {
+    width: auto;
+    height: auto;
+  }
+  &__text {
+    @include p-typography;
+    @include height(20px);
+    @include font-size(18px);
+  }
+  &__type1, &__type2 {
+    @include all-margin(0px, 0px, 0px, 0px);
+    @include width(300px);
+  }
+  &__element-type1 {
+    @include all-margin(0px, 0px, 0px, 0px);
+    width: auto;
+    @include height(50px);
+    color: #000000;
+    background-color: #E6E6E6;
+    border-color: #CCCCCC;
+    list-style-type: none;
+    &:hover {
+      background-color: #D9D9D9;
+      cursor: pointer;
+    }
+  }
+  &__text-type1 {
+    @include p-typography;
+    @include all-margin(0px, 0px, 0px, 0px);
+    @include horizontal-vertical-padding(0px, 10px, 0px, 10px);
+    @include width(280px);
+    @include height(50px);
+    @include font-size(18px);
+    @include flex-center-left-center();
+  }
+  &__type2 {
+    counter-reset: list-counter;
+  }
+  &__element-type2 {
+    @include all-margin(0px, 0px, 0px, 0px);
+    width: auto;
+    @include height(50px);
+    color: #000000;
+    background-color: #E6E6E6;
+    border-color: #CCCCCC;
+    @include flex-center-left-center();
+    &:hover {
+      background-color: #D9D9D9;
+      cursor: pointer;
+    }
+    &::before {
+      content: counter(list-counter);
+      counter-increment: list-counter;
+      @include horizontal-vertical-padding(0px, 6px, 0px, 6px);
+      @include width(35px);
+      @include height(50px);
+      color: #000000;
+      font-weight: bold;
+      text-align: center;
+      @include flex-center();
+    }
+  }
+  &__text-type2 {
+    @include p-typography;
+    @include all-margin(0px, 0px, 0px, 0px);
+    @include width(280px);
+    @include height(50px);
+    @include font-size(18px);
+    @include flex-center-left-center();
+  }
+}
+@mixin list-search {
+  width: auto;
+  height: auto;
+  & .list {
+    @include list;
+    @include all-margin(0px, 0px, 0px, 0px);
+    &__type1 {
+      @include width(498px);
+      @include all-border(1px, 1px, 1px, 1px);
+      border-top-width: 0px;
+      @each $breakpoint in $component_breakpoints {
+        @if $breakpoint < 600px {
+          @media only screen and (max-width: $breakpoint) {
+            @include width($breakpoint - 2px);
+          }
+        }
+      }
+    }
+    &__text-type1 {
+      @include width(480px);
+      @each $breakpoint in $component_breakpoints {
+        @if $breakpoint < 600px {
+          @media only screen and (max-width: $breakpoint) {
+            @include width($breakpoint - 20px);
+          }
+        }
+      }
+    }
+  }
+  & .input {
+    @include input;
+    &__control {
+      @include horizontal-vertical-padding(0px, 10px, 0px, 10px);
+      @include width(478px);
+      @include height(50px);
+      &:focus {
+        outline: none;
+      }
+      @each $breakpoint in $component_breakpoints {
+        @if $breakpoint < 600px {
+          @media only screen and (max-width: $breakpoint) {
+            @include horizontal-vertical-padding(0px, 10px, 0px, 10px);
+            @include width($breakpoint - 22px);
+          }
+        }
+      }
+    }
+  }
+  @each $breakpoint in $component_breakpoints {
+    @if $breakpoint < 600px {
+      @media only screen and (max-width: $breakpoint) {
+        @include width($breakpoint);
+      }
+    }
+  }
+}
+@mixin navigation-bar {
+  @include width(1366px);
+  @include height(50px);
+  @include flex-center();
+  background-color: #4D4D4D;
+  position: relative;
+  & .navbar-header {
+    @include width(1366px);
+    & .navbar-title {
+      @include width(366px);
+      @include height(50px);
+      @include flex-center();
+      & .p-typography {
+        @include p-typography;
+        @include height(34px);
+        @include font-size(22px);
+        @include flex-center-left-center();
+        @each $breakpoint in $component_breakpoints {
+          @media only screen and (max-width: $breakpoint) {
+            width: auto;
+          }
+          @if $breakpoint <= 768px {
+            @media only screen and (max-width: $breakpoint) {
+              @include flex-center();
+            }
+          }
+        }
+      }
+      @each $breakpoint in $component_breakpoints {
+        @media only screen and (max-width: $breakpoint) {
+          width: auto;
+        }
+        @if $breakpoint <= 768px {
+          @media only screen and (max-width: $breakpoint) {
+            @include width($breakpoint - 50px);
+          }
+        }
+      }
+    }
+  }
+  & .navbar-btn {
+    @include height(50px);
+    display: none;
+    @media only screen and (max-width: 768px) {
+      display: inline-block;
+      position: absolute;
+      right: 0px;
+      top: 0px;
+    }
+    & label {
+      @include horizontal-vertical-padding(5px, 0px, 5px, 0px);
+      height: auto;
+      &:hover {
+        @media only screen and (max-width: 768px) {
+          background-color: rgba(0, 0, 0, 0.3);
+        }
+      }
+      & span {
+        @media only screen and (max-width: 768px) {
+          @include horizontal-vertical-margin(7px, 10.5px, 7px, 10.5px);
+          @include all-border(2px, 2px, 2px, 2px);
+          border-color: #EEEEEE;
+          @include width(25px);
+          display: block;
+        }
+      }
+      @media only screen and (max-width: 768px) {
+        display: inline-block;
+        @include width(50px);
+      }
+    }
+  }
+  & .navbar-links {
+    @include width(1000px);
+    @include height(50px);
+    @include flex-center();
+    & .a-typography {
+      &:hover {
+        background-color: rgba(0, 0, 0, 0.3);
+      }
+      @media only screen and (max-width: 768px) {
+        display: block;
+        width: 100%;
+      }
+      & .btn {
+        @each $breakpoint in $component_breakpoints {
+          @if $breakpoint <= 768px {
+            @media only screen and (max-width: $breakpoint) {
+              @include width($breakpoint);
+            }
+          } @else if $breakpoint <= 1024px and $breakpoint > 768px {
+            @media only screen and (max-width: $breakpoint) {
+              @include width(122px - 2px);
+            }
+          }
+        }
+      }
+    }
+    @media only screen and (max-width: 768px) {
+      position: absolute;
+      display: block;
+      width: 100%;
+      background-color: #333;
+      height: 0px;
+      transition: all 0.3s ease-in;
+      overflow-y: hidden;
+      top: 50px;
+      left: 0px;
+    }
+  }
+  & #navbar_check {
+    display: none;
+    &:checked ~ .navbar-btn & label {
+      @media only screen and (max-width: 768px) {
+        background-color: rgba(0, 0, 0, 0.3);
+      }
+    }
+    &:not(:checked) ~ .navbar-links {
+      @media only screen and (max-width: 768px) {
+        height: 0px;
+      }
+    }
+    &:checked ~ .navbar-links {
+      @media only screen and (max-width: 768px) {
+        height: calc(100vh - 50px);
+        overflow-y: auto;
+      }
+    }
+  }
+  @each $breakpoint in $component_breakpoints {
+    @media only screen and (max-width: $breakpoint) {
+      @include width($breakpoint);
+    }
+    @if $breakpoint <= 768px {
+      @media only screen and (max-width: $breakpoint) {
+        @include width($breakpoint);
+      }
+    }
+  }
+}
+@mixin pagination-group {
+  @include flex-center-left-center();
+  & .btn {
+    @include all-margin(0px, 0px, 0px, 0px);
+    @include all-padding(0px, 0px, 0px, 0px);
+    @include width(100px);
+    @include height(30px);
+    &__text {
+      @include btn-typography;
+    }
+    @each $class, $properties in $button_classes {
+      &--#{$class} {
+        @include all-border(1px, 1px, 1px, 1px);
+        @include width(50px);
+        background-color: map-get($map: $properties, $key: background-color);
+        border-color: map-get($map: $properties, $key: border-color);
+      }
+      &--#{$class}:first-of-type {
+        @include left-border-radius(5px, 5px);
+        @include width(100px);
+      }
+      &--#{$class}:last-of-type {
+        @include right-border-radius(5px, 5px);
+        @include width(100px);
+      }
+    }
+    &:hover {
+      cursor: pointer;
+      opacity: 0.85;
+    }
+    &:focus {
+      outline: none;
+    }
+  }
+  @each $breakpoint in $component_breakpoints {
+    @if $breakpoint < 600px and $breakpoint >= 375px {
+      @media only screen and (max-width: $breakpoint) and (orientation: portrait) {
+        & .btn:not(:first-of-type), & .btn:not(:last-of-type) {
+          @include width(38px);
+        }
+        & .btn:first-of-type, & .btn:last-of-type {
+          @include width(88px);
+        }
+      }
+    } @else if $breakpoint < 375px {
+      @media only screen and (max-width: $breakpoint) and (orientation: portrait) {
+        & .btn:first-of-type, & .btn:last-of-type {
+          @include horizontal-vertical-padding(0px, 3px, 0px, 3px);
+          width: auto;
+        }
+      }
+    }
+  }
+}
+@mixin table {
+  border-spacing: 0px;
+  @include width(600px);
+  height: auto;
+  &__row {
+    @include width(600px);
+    @include height(40px);
+    @include flex-center-left-center();
+  }
+  &__header, &__cell {
+    @include p-typography;
+    @include horizontal-vertical-margin(0px, 0px, 0px, 0px);
+    @include all-border(1px, 1px, 1px, 1px);
+    @include horizontal-vertical-padding(0px, 5px, 0px, 5px);
+    @include height(40px);
+    @include flex-center-left-center();
+  }
+  &__header {
+    font-weight: bold;
+    @include flex-center();
+  }
+}
+@mixin text-group {
+  @include horizontal-vertical-margin(10px, 0px, 10px, 0px);
+  @include horizontal-vertical-padding(0px, 10px, 0px, 10px);
+  width: 100%;
+  height: auto;
+  @include flex-center-left-top();
+  flex-direction: column;
+  & .text-header {
+    @include all-margin(0px, 0px, 0px, 0px);
+    @include all-padding(0px, 0px, 0px, 0px);
+    width: 100%;
+    height: auto;
+    @include flex-center-left-center();
+    & .h3-typography {
+      @include h3-typography;
+      @include height(30px);
+      @include font-size (30px);
+      font-weight: bold !important;
+      text-align: left;
+      @each $breakpoint in $component_breakpoints {
+        @if $breakpoint <= 768px {
+          @media only screen and (max-width: $breakpoint) and (orientation: portrait) {
+            text-align: center;
+          }
+        }
+      }
+    }
+  }
+  & .text-content {
+    @include all-margin(0px, 0px, 0px, 0px);
+    @include all-padding(0px, 0px, 0px, 0px);
+    width: 100%;
+    height: auto;
+    & .p-typography {
+      @include p-typography;
+      @include font-size (20px);
+      height: auto;
+      @each $breakpoint in $component_breakpoints {
+        @if $breakpoint <= 768px {
+          @media only screen and (max-width: $breakpoint) and (orientation: portrait) {
+            text-align: justify;
+          }
+        }
+      }
+    }
+  }
+  @each $breakpoint in $component_breakpoints {
+    @media only screen and (max-width: $breakpoint) and (orientation: portrait) {
+      @include width($breakpoint - 20px);
+    }
+  }
+  // @each $breakpoint in $component_breakpoints-landscape {
+  //   @media only screen and (max-width: $breakpoint) and (orientation: landscape) {
+  //     @include width($breakpoint - 20px);
+  //   }
+  // }
+}
+@mixin tooltip-button {
+  position: relative;
+  display: inline-block;
+  & .btn {
+    @include all-margin(0px, 0px, 0px, 0px);
+    @include all-padding(0px, 0px, 0px, 0px);
+    @include width(150px);
+    @include height(50px);
+    &__text {
+      @include btn-typography;
+    }
+    &--standard {
+      @include all-border(1px, 1px, 1px, 1px);
+      background-color: #E6E6E6;
+      border-color: #CCCCCC;
+    }
+    &:hover {
+      cursor: pointer;
+      opacity: 0.85;
+    }
+    &:focus {
+      outline: none;
+    }
+  }
+  .tooltip-content {
+    @include width(148px);
+    height: auto;
+    background-color: #E6E6E6;
+    @include all-border(1px, 1px, 1px, 1px);
+    border-color: #CCCCCC;
+    @include border-radius(5px, 5px, 5px, 5px);
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    display: none;
+    position: absolute;
+    top: 55px;
+    z-index: 1;
+    // clip-path: polygon(50% 0%, 60% 20%, 100% 20%, 100% 100%, 0 100%, 0 20%, 40% 20%);
+    & .p-typography {
+      @include p-typography;
+      @include horizontal-vertical-margin(8px, 0px, 5px, 0px);
+      text-align: center;
+      user-select: none;
+    }
+  }
+  &:hover .tooltip-content {
+    display: block;
+  }
+}

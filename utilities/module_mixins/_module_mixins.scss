@@ -1,0 +1,132 @@
+@import "../box_model/_box_model";
+@import "../flexbox/_flexbox";
+@import "../global_functions/_global_functions.scss";
+@import "../global_variables/_global_variables";
+@import "../typography/_typography";
+
+@mixin display-components {
+  width: 100%;
+  height: auto;
+  @include flex-center;
+  flex-direction: column;
+}
+@mixin section-display {
+  @include horizontal-vertical-margin(10px, 0px, 10px, 0px);
+  @include width(1440px);
+  height: auto;
+  @include flex-center;
+  flex-direction: column;
+  & .alert {
+    @each $class, $properties in $alert-classes {
+      @if $class == "standard" {
+        &--#{$class} {
+          @include all-margin(0px, 0px, 5px, 0px);
+        }
+      } @else if $class == "dark" {
+        &--#{$class} {
+          @include all-margin(5px, 0px, 0px, 0px);
+        }
+      } @else {
+        &--#{$class} {
+          @include horizontal-vertical-margin(5px, 0px, 5px, 0px);
+        }
+      }
+    }
+  }
+  & .button-group {
+    @for $i from 1 to 9 {
+      &:first-of-type {
+        @include all-margin(0px, 0px, 5px, 0px);
+      }
+      &:last-of-type {
+        @include all-margin(0px, 0px, 5px, 0px);
+      }
+      @include horizontal-vertical-margin(5px, 0px, 5px, 0px);
+    }
+  }
+  & .pagination-group {
+    @for $i from 1 to 9 {
+      &:first-of-type {
+        @include all-margin(0px, 0px, 5px, 0px);
+      }
+      &:last-of-type {
+        @include all-margin(0px, 0px, 5px, 0px);
+      }
+      @include horizontal-vertical-margin(5px, 0px, 5px, 0px);
+    }
+  }
+  & .card {
+    &:nth-child(2) {
+      @include horizontal-vertical-margin(0px, 5px, 0px, 5px);
+    }
+  }
+  & .display-buttons, & .display-cards, & .display-icons {
+    @include flex-center;
+    flex-wrap: wrap;
+  }
+  @each $breakpoint in $component_breakpoints {
+    @media only screen and (max-width: $breakpoint) {
+      @include width($breakpoint);
+    }
+  }
+  // @each $breakpoint in $component_breakpoints-landscape {
+  //   @media only screen and (max-width: $breakpoint) and (orientation: landscape) {
+  //     @include width($breakpoint);
+  //   }
+  // }
+}
+/* BOOTSTRAP MODULES */
+@mixin navbar {
+  @include all-padding(0px, 0px, 0px, 0px);
+  @include height(50px);
+  & .navbar-brand {
+    @include all-margin(0px, 0px, 0px, 0px);
+    @include all-padding(0px, 0px, 0px, 0px);
+    @include height(50px);
+    & .img {
+      &--logo-50px {
+        @include height(50px);
+        @media only screen and (max-width: 1920px) {
+          width: auto;
+        }
+      }
+    }
+  }
+  & .navbar-nav {
+    @media only screen and (max-width: 992px) {
+      @include all-padding(0px, 0px, 0px, 30px);
+    }
+    @media only screen and (max-width: 375px) {
+      @include all-padding(0px, 0px, 0px, 0px);
+      text-align: center;
+    }
+  }
+  & .dropdown-menu {
+    @media only screen and (max-width: 992px) {
+      @include all-margin(0px, 30px, 0px, 0px);
+    }
+    @media only screen and (max-width: 375px) {
+      @include horizontal-vertical-margin(0px, 10px, 0px, 10px);
+    }
+  }
+  @media only screen and (min-width: 993px) {
+    @include horizontal-vertical-margin(0px, 20px, 0px, 20px);
+  }
+  @media only screen and (max-width: 992px) {
+    height: auto;
+  }
+}
+@mixin carousel {
+  & .carousel-inner {
+    & .carousel-item {
+      & img {
+        @media only screen and (max-width: 1200px) {
+          @include height(300px);
+        }
+        @media only screen and (min-width: 768px) {
+          @include height(350px);
+        }
+      }
+    }
+  }
+}
