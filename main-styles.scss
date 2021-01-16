@@ -1,15 +1,15 @@
 /* INCLUDING ALL THE BOX MODEL MIXINS */
-    @import '_all-border';
-    @import '_all-margin';
-    @import '_all-padding';
-    @import '_border-radius';
-    @import '_box-shadow';
-    @import '_height';
-    @import '_horizontal-vertical-margin';
-    @import '_horizontal-vertical-padding';
-    @import '_left-border-radius';
-    @import '_right-border-radius';
-    @import '_width';
+    @import 'utilities/box_model/_all-border';
+    @import 'utilities/box_model/_all-margin';
+    @import 'utilities/box_model/_all-padding';
+    @import 'utilities/box_model/_border-radius';
+    @import 'utilities/box_model/_box-shadow';
+    @import 'utilities/box_model/_height';
+    @import 'utilities/box_model/_horizontal-vertical-margin';
+    @import 'utilities/box_model/_horizontal-vertical-padding';
+    @import 'utilities/box_model/_left-border-radius';
+    @import 'utilities/box_model/_right-border-radius';
+    @import 'utilities/box_model/_width';
 
 
 @import "utilities/component_mixins/_component_mixins";
