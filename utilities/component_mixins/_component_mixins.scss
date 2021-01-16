@@ -73,28 +73,7 @@
   }
 }
 
-@mixin table {
-  border-spacing: 0px;
-  @include width(600px);
-  height: auto;
-  &__row {
-    @include width(600px);
-    @include height(40px);
-    @include flex-center-left-center();
-  }
-  &__header, &__cell {
-    @include p-typography;
-    @include horizontal-vertical-margin(0px, 0px, 0px, 0px);
-    @include all-border(1px, 1px, 1px, 1px);
-    @include horizontal-vertical-padding(0px, 5px, 0px, 5px);
-    @include height(40px);
-    @include flex-center-left-center();
-  }
-  &__header {
-    font-weight: bold;
-    @include flex-center();
-  }
-}
+
 @mixin text-group {
   @include horizontal-vertical-margin(10px, 0px, 10px, 0px);
   @include horizontal-vertical-padding(0px, 10px, 0px, 10px);

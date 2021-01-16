@@ -1,2 +1,33 @@
 @import '../global_functions/_global_functions';
 @import '../global_variables/_global_variables';
+@import '../box_model/_width';
+@import '../box_model/_height';
+@import '../box_model/_horizontal-vertical-margin';
+@import '../box_model/_all-border';
+@import '../box_model/_horizontal-vertical-padding';
+@import '../flexbox/_flex-center-left';
+@import '../flexbox/_flex-center';
+@import '../typography/_p-typography';
+
+@mixin table {
+    border-spacing: 0px;
+    @include width(600px);
+    height: auto;
+    &__row {
+        @include width(600px);
+        @include height(40px);
+        @include flex-center-left-center();
+    }
+    &__header, &__cell {
+        @include p-typography;
+        @include horizontal-vertical-margin(0px, 0px, 0px, 0px);
+        @include all-border(1px, 1px, 1px, 1px);
+        @include horizontal-vertical-padding(0px, 5px, 0px, 5px);
+        @include height(40px);
+        @include flex-center-left-center();
+    }
+    &__header {
+        font-weight: bold;
+        @include flex-center();
+    }
+}
