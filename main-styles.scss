@@ -16,6 +16,23 @@
     @import 'utilities/flexbox/flex-center';
     @import 'utilities/flexbox/flex-center-right';
 
+/* INCLUDING ALL THE TYPOGRAPHY MIXINS */
+    @import 'utilities/typography/_a-typography';
+    @import 'utilities/typography/_btn-typography';
+    @import 'utilities/typography/_font-size';
+    @import 'utilities/typography/_h1-typography';
+    @import 'utilities/typography/_h2-typography';
+    @import 'utilities/typography/_h3-typography';
+    @import 'utilities/typography/_h4-typography';
+    @import 'utilities/typography/_h5-typography';
+    @import 'utilities/typography/_h6-typography';
+    @import 'utilities/typography/_letter-spacing';
+    @import 'utilities/typography/_line-height';
+    @import 'utilities/typography/_p-typography';
+    @import 'utilities/typography/_standard-typography';
+    @import 'utilities/typography/_text-indent';
+    
+
 @import "utilities/component_mixins/_component_mixins";
 @import "utilities/module_mixins/_module_mixins";
 @import "utilities/resets/_resets";
