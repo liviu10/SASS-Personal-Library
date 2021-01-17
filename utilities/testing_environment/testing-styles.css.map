@@ -1,8 +1,21 @@
 {
     "version": 3,
-    "mappings": "",
+    "mappings": "AAAA,qCAAqC",
     "sources": [
-        "testing-styles.scss"
+        "testing-styles.scss",
+        "../module_mixins/_module_mixins.scss",
+        "../global_functions/_global_functions.scss",
+        "../global_variables/_global_variables.scss",
+        "../global_variables/_global_variables.scss",
+        "../box_model/_width-height.scss",
+        "../global_functions/_global_functions.scss",
+        "../global_variables/_global_variables.scss",
+        "../global_variables/_global_variables.scss",
+        "../box_model/_all-margin.scss",
+        "../global_functions/_global_functions.scss",
+        "../global_variables/_global_variables.scss",
+        "../global_variables/_global_variables.scss",
+        "../flexbox/_flex-center.scss"
     ],
     "names": [],
     "file": "testing-styles.css"
