@@ -6,7 +6,7 @@
 @import '../box_model/_all-border';
 @import '../typography/_btn-typography';
 
-@mixin btn {
+@mixin btn-filled {
     @include all-margin(0px, 0px, 0px, 0px);
     @include all-padding(0px, 0px, 0px, 0px);
     @include width(150px);
