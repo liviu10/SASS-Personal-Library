@@ -2,12 +2,9 @@
 @import '../global_variables/_global_variables';
 @import '../box_model/_all-margin';
 @import '../box_model/_all-padding';
-@import '../box_model/_width';
-@import '../box_model/_height';
+@import '../box_model/_width-height';
 @import '../box_model/_all-border';
-@import '../box_model/_left-border-radius';
-@import '../box_model/_right-border-radius';
-@import '../box_model/_horizontal-vertical-padding';
+@import '../box_model/_border-radius';
 @import '../flexbox/_flex-center-left';
 @import '../typography/_btn-typography';
 
