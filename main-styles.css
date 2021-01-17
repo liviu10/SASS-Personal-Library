@@ -6703,9 +6703,6 @@ table {
 }
 
 .testing-class {
-  border-width: 1.25rem;
-  border-style: solid;
-  border-color: #000000;
-  border-radius: 1.25rem;
+  margin: 1.25rem 0rem;
 }
 /*# sourceMappingURL=main-styles.css.map */
