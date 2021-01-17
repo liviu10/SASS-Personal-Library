@@ -69,14 +69,10 @@
   .card {@include card;}
   .dropdown-button {@include dropdown-button;}
   .fa {@include fa;}
-
-  // .hero-image {@include hero-image;}
-
-  .img {@include img-logo;}
+    .img {@include img-logo;}
   .input {@include input;}
   .list {@include list;}
   .list-search {@include list-search;}
-  // .navigation-bar {@include navigation-bar;}
   #more {display: none;}
   .pagination-group {@include pagination-group;}
   .panel {@include accordion-panel;}
