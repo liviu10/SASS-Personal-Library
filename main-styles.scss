@@ -89,5 +89,5 @@
 
 
 .testing-class {
-    @include all-padding(20px, 20px, 20px, 20px);
+    @include all-border(20px, 20px, 20px, 20px);
 }
