@@ -89,5 +89,5 @@
 
 
 .testing-class {
-    @include height(600px);
+    @include all-margin(20px, 20px, 20px, 20px);
 }
