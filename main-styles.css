@@ -6706,7 +6706,7 @@ table {
   border-width: 0.625rem;
   border-style: solid;
   border-color: #000000;
-  border-top-left-radius: 1.875rem;
-  border-bottom-left-radius: 1.875rem;
+  border-top-right-radius: 1.875rem;
+  border-bottom-right-radius: 1.875rem;
 }
 /*# sourceMappingURL=main-styles.css.map */
