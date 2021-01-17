@@ -83,9 +83,3 @@
 /* INCLUDE HTML MODULES */
   .display-components {@include display-components;}
   .section-display {@include section-display;}
-
-
-.testing-class {
-    @include all-border(10px, 10px, 10px, 10px);
-    @include box-shadow(20px, 20px, 10px, yellow);
-}
