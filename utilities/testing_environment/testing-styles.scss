@@ -4,3 +4,24 @@
 /* INCLUDE HTML MODULES */
     .display-components {@include display-components;}
     .section-display {@include section-display;}
+
+/* INCLUDE HTML MIXIN COMPONENTS */
+    .accordion {@include accordion-btn;}
+    .alert {@include alert;}
+    .button-group {@include button-group;}
+    .btn {@include btn-filled;}
+    .btn {@include btn-outlined;}
+    .btn {@include btn-badge;}
+    .card {@include card;}
+    .dropdown-button {@include dropdown-button;}
+    .fa {@include fa;}
+    .img {@include img-logo;}
+    .input {@include input;}
+    .list {@include list;}
+    .list-search {@include list-search;}
+    #more {display: none;}
+    .pagination-group {@include pagination-group;}
+    .panel {@include accordion-panel;}
+    .table {@include table;}
+    .text-group {@include text-group;}
+    .tooltip-button {@include tooltip-button;}
