@@ -1,2 +1,6 @@
 /* INCLUDING ALL THE MODULE MIXINS */
     @import '../module_mixins/_module_mixins';
+
+/* INCLUDE HTML MODULES */
+    .display-components {@include display-components;}
+    .section-display {@include section-display;}
