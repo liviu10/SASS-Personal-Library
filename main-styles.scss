@@ -90,4 +90,5 @@
 
 .testing-class {
     @include all-border(20px, 20px, 20px, 20px);
+    @include border-radius(20px, 20px);
 }
