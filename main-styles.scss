@@ -75,7 +75,7 @@
   .input {@include input;}
   .list {@include list;}
   .list-search {@include list-search;}
-  .navigation-bar {@include navigation-bar;}
+  // .navigation-bar {@include navigation-bar;}
   #more {display: none;}
   .pagination-group {@include pagination-group;}
   .panel {@include accordion-panel;}
@@ -88,3 +88,6 @@
   .section-display {@include section-display;}
 
 
+.testing-class {
+    @include width(600px);
+}
