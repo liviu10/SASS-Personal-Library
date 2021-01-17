@@ -68,13 +68,16 @@
   .button-group {@include button-group;}
 
   // .btn {@include btn;}
+  .btn {@include btn-filled;}
+  .btn {@include btn-outlined;}
+  .btn {@include btn-badge;}
 
   .card {@include card;}
   .dropdown-button {@include dropdown-button;}
   .fa {@include fa;}
 
   // .hero-image {@include hero-image;}
-  
+
   .img {@include img-logo;}
   .input {@include input;}
   .list {@include list;}
