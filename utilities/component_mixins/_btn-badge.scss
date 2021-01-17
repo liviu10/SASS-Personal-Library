@@ -9,7 +9,7 @@
 @import '../typography/_letter-spacing';
 @import '../typography/_p-typography';
 
-@mixin btn {
+@mixin btn-badge {
     @include all-margin(0px, 0px, 0px, 0px);
     @include all-padding(0px, 0px, 0px, 0px);
     @include width(150px);
