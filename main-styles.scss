@@ -52,34 +52,31 @@
     @import 'utilities/typography/_standard-typography';
     @import 'utilities/typography/_text-indent';
 
-
-
-
-
-@import "utilities/module_mixins/_module_mixins";
+/* INCLUDING ALL THE MODULE MIXINS */
+    @import "utilities/module_mixins/_module_mixins";
 
 
 /* INCLUDE HTML MIXIN COMPONENTS */
-  .accordion {@include accordion-btn;}
-  .alert {@include alert;}
-  .button-group {@include button-group;}
-  .btn {@include btn-filled;}
-  .btn {@include btn-outlined;}
-  .btn {@include btn-badge;}
-  .card {@include card;}
-  .dropdown-button {@include dropdown-button;}
-  .fa {@include fa;}
+    .accordion {@include accordion-btn;}
+    .alert {@include alert;}
+    .button-group {@include button-group;}
+    .btn {@include btn-filled;}
+    .btn {@include btn-outlined;}
+    .btn {@include btn-badge;}
+    .card {@include card;}
+    .dropdown-button {@include dropdown-button;}
+    .fa {@include fa;}
     .img {@include img-logo;}
-  .input {@include input;}
-  .list {@include list;}
-  .list-search {@include list-search;}
-  #more {display: none;}
-  .pagination-group {@include pagination-group;}
-  .panel {@include accordion-panel;}
-  .table {@include table;}
-  .text-group {@include text-group;}
-  .tooltip-button {@include tooltip-button;}
+    .input {@include input;}
+    .list {@include list;}
+    .list-search {@include list-search;}
+    #more {display: none;}
+    .pagination-group {@include pagination-group;}
+    .panel {@include accordion-panel;}
+    .table {@include table;}
+    .text-group {@include text-group;}
+    .tooltip-button {@include tooltip-button;}
 
 /* INCLUDE HTML MODULES */
-  .display-components {@include display-components;}
-  .section-display {@include section-display;}
+    .display-components {@include display-components;}
+    .section-display {@include section-display;}
