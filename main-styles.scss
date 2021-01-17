@@ -90,5 +90,5 @@
 
 .testing-class {
     @include all-border(10px, 10px, 10px, 10px);
-    @include right-border-radius(30px, 30px);
+    @include box-shadow(20px, 20px, 10px, yellow);
 }
