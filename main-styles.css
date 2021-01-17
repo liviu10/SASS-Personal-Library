@@ -6703,6 +6703,10 @@ table {
 }
 
 .testing-class {
-  padding: 1.25rem 0rem;
+  border-width: 0.625rem;
+  border-style: solid;
+  border-color: #000000;
+  border-top-left-radius: 1.875rem;
+  border-bottom-left-radius: 1.875rem;
 }
 /*# sourceMappingURL=main-styles.css.map */
