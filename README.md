@@ -57,11 +57,11 @@ This section consists in different components that can be used in future project
 
 This section consists in different CSS Styles that are use to design the HTML Components. The styles are constructed following [D.R.Y. Principles](https://en.wikipedia.org/wiki/Don%27t_repeat_yourself "Don't Repeat Yourself Principles"). For each utility mixin you will see detailed information regarding the way SASS logic is constructed so that the CSS Styles are applied to each component variation accordingly.
 
-- [Box Model](https://liviu-voica.ro/assets/html/box-model.html "Box Model Utilities") consist of a set of functions and mixins like: *margin*, *padding*, *width*, *height* etc. that can be used in future projects;
+- <b><u>Box Model</u></b> consist of a set of functions and mixins like: *margin*, *padding*, *width*, *height* etc. that can be used in future projects;
 
-- [Flex Box](https://liviu-voica.ro/assets/html/flexbox.html "Flex Box Utilities") consist of a set of mixins to center elements to the left, center or right side of the screen by using the following properties: *display*, *justify-content* and *align-items*;
+- <b><u>Flex Box</u></b> consist of a set of mixins to center elements to the left, center or right side of the screen by using the following properties: *display*, *justify-content* and *align-items*;
 
-- [Typography](https://liviu-voica.ro/assets/html/typography.html "Typography Utilities") consist of a set of mixins that are useful when the user wants to format a paragraph or a link. Font size function and mixin will convert the *pixels* unit of measurement to *rem*;
+- <b><u>Typography</u></b> consist of a set of mixins that are useful when the user wants to format a paragraph or a link. Font size function and mixin will convert the *pixels* unit of measurement to *rem*;
 
 ## IMPROVEMENTS <a name="improvements"></a>:
 
