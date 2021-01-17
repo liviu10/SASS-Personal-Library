@@ -12,9 +12,6 @@
 /* INCLUDING ALL THE HTML COMPONENTS */
     @import 'utilities/component_mixins/_accordion';
     @import 'utilities/component_mixins/_alert';
-
-    // @import 'utilities/component_mixins/_btn';
-
     @import 'utilities/component_mixins/_btn-filled';
     @import 'utilities/component_mixins/_btn-outlined';
     @import 'utilities/component_mixins/_btn-badge';
@@ -66,12 +63,9 @@
   .accordion {@include accordion-btn;}
   .alert {@include alert;}
   .button-group {@include button-group;}
-
-  // .btn {@include btn;}
   .btn {@include btn-filled;}
   .btn {@include btn-outlined;}
   .btn {@include btn-badge;}
-
   .card {@include card;}
   .dropdown-button {@include dropdown-button;}
   .fa {@include fa;}
