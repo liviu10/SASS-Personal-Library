@@ -1506,6 +1506,65 @@ table {
   outline: none;
 }
 
+.btn {
+  margin: 0rem;
+  padding: 0rem;
+  width: 9.375rem;
+  height: 3.125rem;
+}
+
+.btn__text {
+  font-size: 1rem;
+  letter-spacing: 0.125rem;
+  text-indent: 0rem;
+  font-family: "Times New Roman", Times, serif;
+  font-style: normal;
+  font-variant: normal;
+  font-weight: normal;
+  text-align: left;
+  text-decoration: none;
+  text-overflow: hidden;
+  text-transform: normal;
+  white-space: normal;
+  word-break: normal;
+  word-spacing: normal;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+}
+
+.btn--scroll-top {
+  bottom: 20px;
+  right: 30px;
+  border: none;
+  border-radius: 0.25rem;
+  padding: 0.625rem 0.9375rem;
+  width: auto;
+  height: auto;
+  font-size: 1.25rem;
+  display: none;
+  position: fixed;
+  z-index: 99;
+  outline: none;
+  background-color: #FF0000;
+  color: white;
+  cursor: pointer;
+}
+
+.btn--scroll-top:hover {
+  background-color: #E60000;
+}
+
+.btn:hover {
+  cursor: pointer;
+  opacity: 0.85;
+}
+
+.btn:focus {
+  outline: none;
+}
+
 .card {
   width: 18.75rem;
   height: 28.125rem;
