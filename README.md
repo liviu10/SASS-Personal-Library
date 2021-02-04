@@ -48,7 +48,7 @@ TABLE OF CONTENTS:
       </span>
 ## Box Model: all-margin() <a name="all_margin"></a>
 
-   The <span style="font-style:italic; font-weight:bold;">all-margin</span> and <span style="font-style:italic; font-weight:bold;">horizontal-vertical-margin</span> mixin accepts 4 arguments: <span style="font-style:italic; font-weight:bold;">\$var_margin_top</span>, <span style="font-style:italic; font-weight:bold;">\$var_margin_right</span>, <span style="font-style:italic; font-weight:bold;">\$var_margin_bottom</span> and <span style="font-style:italic; font-weight:bold;">\$var_margin_left</span>. These mixins will set up the following CSS properties: margin top, right, bottom or left and will convert the number of pixels to rem unit of measure. Examples of usage:
+   The <span style="color:red; font-style:italic; font-weight:bold;">all-margin</span> and <span style="color:red; font-style:italic; font-weight:bold;">horizontal-vertical-margin</span> mixin accepts 4 arguments: <span style="font-style:italic; font-weight:bold;">\$var_margin_top</span>, <span style="font-style:italic; font-weight:bold;">\$var_margin_right</span>, <span style="font-style:italic; font-weight:bold;">\$var_margin_bottom</span> and <span style="font-style:italic; font-weight:bold;">\$var_margin_left</span>. These mixins will set up the following CSS properties: margin top, right, bottom or left and will convert the number of pixels to rem unit of measure. Examples of usage:
 
    * Setting up the top margin:
       <span style="color:red; font-weight:bold;">
@@ -92,7 +92,7 @@ TABLE OF CONTENTS:
       </span>
 ## Box Model: all-padding() <a name="all_padding"></a>
 
-   The <span style="font-style:italic; font-weight:bold;">all-padding</span> and <span style="font-style:italic; font-weight:bold;">horizontal-vertical-padding</span> mixin accepts 4 arguments: <span style="font-style:italic; font-weight:bold;">\$var_padding_top</span>, <span style="font-style:italic; font-weight:bold;">\$var_padding_right</span>, <span style="font-style:italic; font-weight:bold;">\$var_padding_bottom</span> and <span style="font-style:italic; font-weight:bold;">\$var_padding_left</span>. These mixins will set up the following CSS properties: padding top, right, bottom or left and will convert the number of pixels to rem unit of measure. Examples of usage:
+   The <span style="color:red; font-style:italic; font-weight:bold;">all-padding</span> and <span style="color:red; font-style:italic; font-weight:bold;">horizontal-vertical-padding</span> mixin accepts 4 arguments: <span style="font-style:italic; font-weight:bold;">\$var_padding_top</span>, <span style="font-style:italic; font-weight:bold;">\$var_padding_right</span>, <span style="font-style:italic; font-weight:bold;">\$var_padding_bottom</span> and <span style="font-style:italic; font-weight:bold;">\$var_padding_left</span>. These mixins will set up the following CSS properties: padding top, right, bottom or left and will convert the number of pixels to rem unit of measure. Examples of usage:
 
    * Setting up the top padding:
       <span style="color:red; font-weight:bold;">
@@ -136,7 +136,7 @@ TABLE OF CONTENTS:
       </span>
 ## Box Model: border-radius() <a name="border_radius"></a>
 
-   The <span style="font-style:italic; font-weight:bold;">border-radius</span>, <span style="font-style:italic; font-weight:bold;">left-border-radius</span> and <span style="font-style:italic; font-weight:bold;">right-border-radius</span> mixin accepts 2 to 4 arguments: <span style="font-style:italic; font-weight:bold;">\$var_border_top_left_radius</span>, <span style="font-style:italic; font-weight:bold;">\$var_border_top_right_radius</span>, <span style="font-style:italic; font-weight:bold;">\$var_border_bottom_right_radius</span> and <span style="font-style:italic; font-weight:bold;">\$var_border_bottom_left_radius</span>. These mixins will set up the following CSS properties: padding top, right, bottom or left and will convert the number of pixels to rem unit of measure. Examples of usage:
+   The <span style="color:red; font-style:italic; font-weight:bold;">border-radius</span>, <span style="color:red; font-style:italic; font-weight:bold;">left-border-radius</span> and <span style="color:red; font-style:italic; font-weight:bold;">right-border-radius</span> mixin accepts 2 to 4 arguments: <span style="font-style:italic; font-weight:bold;">\$var_border_top_left_radius</span>, <span style="font-style:italic; font-weight:bold;">\$var_border_top_right_radius</span>, <span style="font-style:italic; font-weight:bold;">\$var_border_bottom_right_radius</span> and <span style="font-style:italic; font-weight:bold;">\$var_border_bottom_left_radius</span>. These mixins will set up the following CSS properties: padding top, right, bottom or left and will convert the number of pixels to rem unit of measure. Examples of usage:
 
    * Setting up all the corners to be rounded:
       <span style="color:red; font-weight:bold;">
@@ -156,7 +156,7 @@ TABLE OF CONTENTS:
       </span>
 ## Box Model: box-shadow() <a name="box_shadow"></a>
 
-   The <span style="font-style:italic; font-weight:bold;">box-shadow</span> mixin accepts 4 arguments: <span style="font-style:italic; font-weight:bold;">\$var_h-offset</span>, <span style="font-style:italic; font-weight:bold;">\$var_v-offset</span>, <span style="font-style:italic; font-weight:bold;">\$var_blur</span> and <span style="font-style:italic; font-weight:bold;">\$var_color</span>. These mixins will set up the following CSS properties: padding top, right, bottom or left and will convert the number of pixels to rem unit of measure. Examples of usage:
+   The <span style="color:red; font-style:italic; font-weight:bold;">box-shadow</span> mixin accepts 4 arguments: <span style="font-style:italic; font-weight:bold;">\$var_h-offset</span>, <span style="font-style:italic; font-weight:bold;">\$var_v-offset</span>, <span style="font-style:italic; font-weight:bold;">\$var_blur</span> and <span style="font-style:italic; font-weight:bold;">\$var_color</span>. These mixins will set up the following CSS properties: padding top, right, bottom or left and will convert the number of pixels to rem unit of measure. Examples of usage:
 
    * Setting up all the corners to be rounded:
       <span style="color:red; font-weight:bold;">
@@ -164,7 +164,7 @@ TABLE OF CONTENTS:
       </span>
 ## Box Model: width() and height() <a name="width_height"></a>
 
-   The <span style="font-style:italic; font-weight:bold;">width</span> and <span style="font-style:italic; font-weight:bold;">height</span> mixin accepts 1 argument: <span style="font-style:italic; font-weight:bold;">\$var_width</span> and <span style="font-style:italic; font-weight:bold;">\$var_height</span>. These mixins will set up the following CSS properties: width or height and will convert the number of pixels to rem unit of measurement. Examples of usage:
+   The <span style="color:red; font-style:italic; font-weight:bold;">width</span> and <span style="color:red; font-style:italic; font-weight:bold;">height</span> mixin accepts 1 argument: <span style="font-style:italic; font-weight:bold;">\$var_width</span> and <span style="font-style:italic; font-weight:bold;">\$var_height</span>. These mixins will set up the following CSS properties: width or height and will convert the number of pixels to rem unit of measurement. Examples of usage:
 
    * Setting up width to 100px:
       <span style="color:red; font-weight:bold;">
@@ -184,7 +184,7 @@ TABLE OF CONTENTS:
       </span>
 ## Flexbox: flex-center-left() <a name="flex_center_left"></a>
 
-   The <span style="font-style:italic; font-weight:bold;">flex-center-left</span> file consist of 3 mixins: <span style="font-style:italic; font-weight:bold;">\$flex-center-left-top</span>, <span style="font-style:italic; font-weight:bold;">\$flex-center-left-center</span> and <span style="font-style:italic; font-weight:bold;">\$flex-center-left-bottom</span>. These mixins will set up the following CSS properties: display, justify-content and align-items. Examples of usage:
+   The <span style="color:red; font-style:italic; font-weight:bold;">flex-center-left</span> file consist of 3 mixins: <span style="font-style:italic; font-weight:bold;">\$flex-center-left-top</span>, <span style="font-style:italic; font-weight:bold;">\$flex-center-left-center</span> and <span style="font-style:italic; font-weight:bold;">\$flex-center-left-bottom</span>. These mixins will set up the following CSS properties: display, justify-content and align-items. Examples of usage:
 
    * Setting up width to 100px:
       <span style="color:red; font-weight:bold;">
@@ -200,7 +200,7 @@ TABLE OF CONTENTS:
       </span>
 ## Flexbox: flex-center() <a name="flex_center"></a>
 
-   The <span style="font-style:italic; font-weight:bold;">flex-center</span> file consist of 3 mixins: <span style="font-style:italic; font-weight:bold;">\$flex-center-top</span>, <span style="font-style:italic; font-weight:bold;">\$flex-center-center</span> and <span style="font-style:italic; font-weight:bold;">\$flex-center-bottom</span>. These mixins will set up the following CSS properties: display, justify-content and align-items. Examples of usage:
+   The <span style="color:red; font-style:italic; font-weight:bold;">flex-center</span> file consist of 3 mixins: <span style="font-style:italic; font-weight:bold;">\$flex-center-top</span>, <span style="font-style:italic; font-weight:bold;">\$flex-center-center</span> and <span style="font-style:italic; font-weight:bold;">\$flex-center-bottom</span>. These mixins will set up the following CSS properties: display, justify-content and align-items. Examples of usage:
 
    * Setting up width to 100px:
       <span style="color:red; font-weight:bold;">
@@ -216,7 +216,7 @@ TABLE OF CONTENTS:
       </span>
 ## Flexbox: flex-center-right() <a name="flex_center_right"></a>
 
-   The <span style="font-style:italic; font-weight:bold;">flex-center-right</span> file consist of 3 mixins: <span style="font-style:italic; font-weight:bold;">\$flex-center-right-top</span>, <span style="font-style:italic; font-weight:bold;">\$flex-center-right-center</span> and <span style="font-style:italic; font-weight:bold;">\$flex-center-right-bottom</span>. These mixins will set up the following CSS properties: display, justify-content and align-items. Examples of usage:
+   The <span style="color:red; font-style:italic; font-weight:bold;">flex-center-right</span> file consist of 3 mixins: <span style="font-style:italic; font-weight:bold;">\$flex-center-right-top</span>, <span style="font-style:italic; font-weight:bold;">\$flex-center-right-center</span> and <span style="font-style:italic; font-weight:bold;">\$flex-center-right-bottom</span>. These mixins will set up the following CSS properties: display, justify-content and align-items. Examples of usage:
 
    * Setting up width to 100px:
       <span style="color:red; font-weight:bold;">
