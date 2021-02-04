@@ -241,7 +241,6 @@
     ($var_height / $var_base_font_size) * 1rem;
   }
 }
-
 @function font-size($var_font-size) {
   @return ($var_font-size / $var_base_font_size) * 1rem;
 }
