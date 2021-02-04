@@ -1,69 +1,181 @@
-# SASS-Personal-Library
+TABLE OF CONTENTS:
 
-"SASS Personal Library" started initially as a way for me to learn the basics of CSS and pre-processor - SASS. As the time passed by, I realized that it's better to have custom made HTML and CSS Components; so that I can reuse them in different projects.
+- [All Border Mixin <a name="all_border"></a>](#all-border-mixin-)
+- [All Margin Mixin <a name="all_margin"></a>](#all-margin-mixin-)
+- [All Padding Mixin <a name="all_padding"></a>](#all-padding-mixin-)
+- [Border Radius Mixin <a name="border_radius"></a>](#border-radius-mixin-)
+- [Box Shadow Mixin <a name="box_shadow"></a>](#box-shadow-mixin-)
+- [Width and Height Mixin <a name="width_height"></a>](#width-and-height-mixin-)
 
-## TABLE OF CONTENTS:
+## All Border Mixin <a name="all_border"></a>
 
-1. [HTML SNIPPETS](#html_snippets)
+   The <span style="color:red; font-style:italic; font-weight:bold;">all-border</span> mixin is accepting 4 arguments: <span style="font-style:italic; font-weight:bold;">\$var_border_top_width</span>, <span style="font-style:italic; font-weight:bold;">\$var_border_right_width</span>, <span style="font-style:italic; font-weight:bold;">\$var_border_bottom_width</span> and <span style="font-style:italic; font-weight:bold;">\$var_border_left_width</span>. This mixin will set up the following CSS properties: border-width, border-style: solid and border-color: #000000. Examples of usage:
+   
+   * Setting up the top border:
+      <span style="color:red; font-weight:bold;">
+         <pre>all-border(1px, 0px, 0px, 0px);</pre>
+      </span>
+   * Setting up the right border:
+      <span style="color:red; font-weight:bold;">
+         <pre>all-border(0px, 1px, 0px, 0px);</pre>
+      </span>
+   * Setting up the bottom border:
+      <span style="color:red; font-weight:bold;">
+         <pre>all-border(0px, 0px, 1px, 0px);</pre>
+      </span>
+   * Setting up the left border:
+      <span style="color:red; font-weight:bold;">
+         <pre>all-border(0px, 0px, 0px, 1px);</pre>
+      </span>
+   * Setting up all the borders to the same value:
+      <span style="color:red; font-weight:bold;">
+         <pre>all-border(1px, 1px, 1px, 1px);</pre>
+      </span>
+   * Setting up the top and bottom borders:
+      <span style="color:red; font-weight:bold;">
+         <pre>all-border(1px, 0px, 1px, 0px);</pre>
+      </span>
+   * Setting up the left and right borders:
+      <span style="color:red; font-weight:bold;">
+         <pre>all-border(0px, 1px, 0px, 1px);</pre>
+      </span>
+   * Setting up all the borders to 0:
+      <span style="color:red; font-weight:bold;">
+         <pre>all-border(0px, 0px, 0px, 0px);</pre>
+      </span>
+## All Margin Mixin <a name="all_margin"></a>
 
-   1. [Accordion](#accordion)
-   2. [Alerts](#alert)
-   3. [Buttons](#button)
-   4. [Cards](#card)
-   5. [Font Awesome Icons](#social_icons)
-   6. [Image Logo](#image_logo)
-   7. [User Inputs](#user_input)
-   8. [Lists](#list)
-   9. [Read More Button](#read_more)
-   10. [Scroll Top Button](#scroll_top)
-   11. [Search Menu](#search_menu)
-   12. [Tables](#table)
-   13. [Text Group with Header](#text_group)
+   The <span style="font-style:italic; font-weight:bold;">all-margin</span> and <span style="font-style:italic; font-weight:bold;">horizontal-vertical-margin</span> mixin accepts 4 arguments: <span style="font-style:italic; font-weight:bold;">\$var_margin_top</span>, <span style="font-style:italic; font-weight:bold;">\$var_margin_right</span>, <span style="font-style:italic; font-weight:bold;">\$var_margin_bottom</span> and <span style="font-style:italic; font-weight:bold;">\$var_margin_left</span>. These mixins will set up the following CSS properties: margin top, right, bottom or left and will convert the number of pixels to rem unit of measure. Examples of usage:
 
-2. [UTILITIES](#utilities)
-3. [IMPROVEMENTS](#improvements)
+   * Setting up the top margin:
+      <span style="color:red; font-weight:bold;">
+         <pre>all-margin(10px, 0px, 0px, 0px);</pre>
+      </span>
+   * Setting up the right margin:
+      <span style="color:red; font-weight:bold;">
+         <pre>all-margin(0px, 10px, 0px, 0px);</pre>
+      </span>
+   * Setting up the bottom margin:
+      <span style="color:red; font-weight:bold;">
+         <pre>all-margin(0px, 0px, 10px, 0px);</pre>
+      </span>
+   * Setting up the left margin:
+      <span style="color:red; font-weight:bold;">
+         <pre>all-margin(0px, 0px, 0px, 10px);</pre>
+      </span>
+   * Setting up all the margins to 0:
+      <span style="color:red; font-weight:bold;">
+         <pre>all-margin(0px, 0px, 0px, 0px);</pre>
+      </span>
+   * Setting up all the margins to the different values but not equal to 0:
+      <span style="color:red; font-weight:bold;">
+         <pre>all-margin(10px, 20px, 30px, 40px);</pre>
+      </span>
+   * Setting up all the margins to the same value:
+      <span style="color:red; font-weight:bold;">
+         <pre>all-margin(10px, 10px, 10px, 10px);</pre>
+      </span>
+   * Setting up the horizontal and vertical margins to different values but not equal to 0:
+      <span style="color:red; font-weight:bold;">
+         <pre>horizontal-vertical-margin(10px, 20px, 10px, 20px);</pre>
+      </span>
+   * Setting up the left and right margins:
+      <span style="color:red; font-weight:bold;">
+         <pre>horizontal-vertical-margin(0px, 20px, 0px, 20px);</pre>
+      </span>
+   * Setting up the top and bottom margins:
+      <span style="color:red; font-weight:bold;">
+         <pre>horizontal-vertical-margin(10px, 0px, 10px, 0px);</pre>
+      </span>
+## All Padding Mixin <a name="all_padding"></a>
 
-## HTML SNIPPETS <a name="html_snippets"></a>:
+   The <span style="font-style:italic; font-weight:bold;">all-padding</span> and <span style="font-style:italic; font-weight:bold;">horizontal-vertical-padding</span> mixin accepts 4 arguments: <span style="font-style:italic; font-weight:bold;">\$var_padding_top</span>, <span style="font-style:italic; font-weight:bold;">\$var_padding_right</span>, <span style="font-style:italic; font-weight:bold;">\$var_padding_bottom</span> and <span style="font-style:italic; font-weight:bold;">\$var_padding_left</span>. These mixins will set up the following CSS properties: padding top, right, bottom or left and will convert the number of pixels to rem unit of measure. Examples of usage:
 
-This section consists in different components that can be used in future projects. The classes are constructed following [BEM Methodology](http://getbem.com/naming/ "BEM Methodology") and [D.R.Y. Principles](https://en.wikipedia.org/wiki/Don%27t_repeat_yourself "Don't Repeat Yourself Principles"). For each HTML Component you will see detailed information regarding the way HTML tags are build. Besides this aspect, you will see how the SASS logic is constructed so that the CSS Styles are applied to each component variation accordingly. These components are responsive only in portrait mode.
+   * Setting up the top padding:
+      <span style="color:red; font-weight:bold;">
+         <pre>all-padding(10px, 0px, 0px, 0px);</pre>
+      </span>
+   * Setting up the right padding:
+      <span style="color:red; font-weight:bold;">
+         <pre>all-padding(0px, 10px, 0px, 0px);</pre>
+      </span>
+   * Setting up the bottom padding:
+      <span style="color:red; font-weight:bold;">
+         <pre>all-padding(0px, 0px, 10px, 0px);</pre>
+      </span>
+   * Setting up the left padding:
+      <span style="color:red; font-weight:bold;">
+         <pre>all-padding(0px, 0px, 0px, 10px);</pre>
+      </span>
+   * Setting up all the paddings to 0:
+      <span style="color:red; font-weight:bold;">
+         <pre>all-padding(0px, 0px, 0px, 0px);</pre>
+      </span>
+   * Setting up all the paddings to the different values but not equal to 0:
+      <span style="color:red; font-weight:bold;">
+         <pre>all-padding(10px, 20px, 30px, 40px);</pre>
+      </span>
+   * Setting up all the paddings to the same value:
+      <span style="color:red; font-weight:bold;">
+         <pre>all-padding(10px, 10px, 10px, 10px);</pre>
+      </span>
+   * Setting up the horizontal and vertical paddings to different values but not equal to 0:
+      <span style="color:red; font-weight:bold;">
+         <pre>horizontal-vertical-padding(10px, 20px, 10px, 20px);</pre>
+      </span>
+   * Setting up the left and right paddings:
+      <span style="color:red; font-weight:bold;">
+         <pre>horizontal-vertical-padding(0px, 20px, 0px, 20px);</pre>
+      </span>
+   * Setting up the top and bottom paddings:
+      <span style="color:red; font-weight:bold;">
+         <pre>horizontal-vertical-padding(10px, 0px, 10px, 0px);</pre>
+      </span>
+## Border Radius Mixin <a name="border_radius"></a>
 
-- <b><u>Accordion</u></b><a name="accordion"></a> is a custom made component that is constructed using the block classes - *accordion* and a *panel*. The javascript file is changing the behavior of this accordion. This component is responsive only in portrait mode. You can view a live example [here](https://liviu-voica.ro/My%20Portfolio/SASS-Personal-Library/html_components/accordion.html);
+   The <span style="font-style:italic; font-weight:bold;">border-radius</span>, <span style="font-style:italic; font-weight:bold;">left-border-radius</span> and <span style="font-style:italic; font-weight:bold;">right-border-radius</span> mixin accepts 2 to 4 arguments: <span style="font-style:italic; font-weight:bold;">\$var_border_top_left_radius</span>, <span style="font-style:italic; font-weight:bold;">\$var_border_top_right_radius</span>, <span style="font-style:italic; font-weight:bold;">\$var_border_bottom_right_radius</span> and <span style="font-style:italic; font-weight:bold;">\$var_border_bottom_left_radius</span>. These mixins will set up the following CSS properties: padding top, right, bottom or left and will convert the number of pixels to rem unit of measure. Examples of usage:
 
-- <b><u>Alerts</u></b><a name="alert"></a> are a set of components with different color variations that are constructed using the block class - *alert*. Modifier classes like: *--standard*, *--primary*, *--secondary* etc. will change the color schema of a certain alert. This component is responsive only in portrait mode. You can view a live example [here](https://liviu-voica.ro/My%20Portfolio/SASS-Personal-Library/html_components/alerts.html);
+   * Setting up all the corners to be rounded:
+      <span style="color:red; font-weight:bold;">
+         <pre>border-radius(10px, 10px, 10px, 10px);</pre>
+      </span>
+   * Setting up all the corners to be square:
+      <span style="color:red; font-weight:bold;">
+         <pre>border-radius(0px, 0px, 0px, 0px);</pre>
+      </span>
+   * Setting up the left side to have rounded corners:
+      <span style="color:red; font-weight:bold;">
+         <pre>left-border-radius(10px, 10px);</pre>
+      </span>
+   * Setting up the right side to have rounded corners:
+      <span style="color:red; font-weight:bold;">
+         <pre>right-border-radius(10px, 10px);</pre>
+      </span>
+## Box Shadow Mixin <a name="box_shadow"></a>
 
-- <b><u>Buttons</u></b><a name="button"></a> are a set of components with different color variations and layouts that are constructed using the block class - *button-group*, *btn* and *pagination-group*. Modifier classes like: *--standard*, *--primary*, *--secondary*, *--outline-standard*, *--outline-primary*, *--outline-secondary* etc. will change the color schema and layout of a certain button. This component is responsive only in portrait mode. You can view a live example [here](https://liviu-voica.ro/My%20Portfolio/SASS-Personal-Library/html_components/buttons.html);
+   The <span style="font-style:italic; font-weight:bold;">box-shadow</span> mixin accepts 4 arguments: <span style="font-style:italic; font-weight:bold;">\$var_h-offset</span>, <span style="font-style:italic; font-weight:bold;">\$var_v-offset</span>, <span style="font-style:italic; font-weight:bold;">\$var_blur</span> and <span style="font-style:italic; font-weight:bold;">\$var_color</span>. These mixins will set up the following CSS properties: padding top, right, bottom or left and will convert the number of pixels to rem unit of measure. Examples of usage:
 
-- <b><u>Cards</u></b><a name="card"></a> are custom made component that are constructed using the block classes - *card* and *btn*. Modifier classes like: *--standard*, *--primary*, *--secondary* etc. will change the color schema of a certain button. This component is responsive only in portrait mode. You can se a live example [here](https://liviu-voica.ro/My%20Portfolio/SASS-Personal-Library/html_components/cards.html);
+   * Setting up all the corners to be rounded:
+      <span style="color:red; font-weight:bold;">
+         <pre>box-shadow(20px, 20px, 50px, #000000);</pre>
+      </span>
+## Width and Height Mixin <a name="width_height"></a>
 
-- <b><u>Font Awesome Icons</u></b><a name="social_icons"></a> are custom made component that are constructed using the class structure from [Font Awesome v4.7](https://fontawesome.com/v4.7.0/ "Font Awesome v4.7"). These components are responsive only in portrait mode. You can view a live example [here](https://liviu-voica.ro/My%20Portfolio/SASS-Personal-Library/html_components/icons.html);
+   The <span style="font-style:italic; font-weight:bold;">width</span> and <span style="font-style:italic; font-weight:bold;">height</span> mixin accepts 1 argument: <span style="font-style:italic; font-weight:bold;">\$var_width</span> and <span style="font-style:italic; font-weight:bold;">\$var_height</span>. These mixins will set up the following CSS properties: width or height and will convert the number of pixels to rem unit of measurement. Examples of usage:
 
-- <b><u>Image Logo</u></b><a name="image_logo"></a> is set of components with different dimensions that is constructed using the block class *img*. The modifier classes like: *--logo-50px*, *--logo-75px* etc. will change the width and height of a certain logo. These components are responsive only in portrait mode. You can view a live example [here](https://liviu-voica.ro/My%20Portfolio/SASS-Personal-Library/html_components/image-logo.html);
-
-- <b><u>User Inputs</u></b><a name="user_input"></a> are set of components that are constructed using the block class *input*. The element classes like: *__check*, *__text*, *__label* etc. will change the way these inputs are displayed. These components are responsive only in portrait mode. You can view a live example [here](https://liviu-voica.ro/My%20Portfolio/SASS-Personal-Library/html_components/inputs.html);
-
-- <b><u>Lists</u></b><a name="list"></a> are set of components that are constructed using the block class *lists*. The element classes like: *__element*, *__element-type1*, *__text* etc. will change the way these lists are displayed. These components are responsive only in portrait mode. You can view a live example [here](https://liviu-voica.ro/My%20Portfolio/SASS-Personal-Library/html_components/lists.html);
-
-- <b><u>Read More Button</u></b><a name="read_more"></a> is a custom made component that is constructed using the block class - *btn*. The javascript file is changing the behavior of this read more / read less button. This component is responsive only in portrait mode. You can view a live example [here](https://liviu-voica.ro/My%20Portfolio/SASS-Personal-Library/html_components/read-more.html);
-
-- <b><u>Scroll Top Button</u></b><a name="scroll_top"></a> is a custom made component that is constructed using the block class - *btn*. The javascript file is changing the behavior of this scroll top button. This component is responsive only in portrait mode. You can view a live example [here](https://liviu-voica.ro/My%20Portfolio/SASS-Personal-Library/html_components/scroll-top-btn.html);
-
-- <b><u>Search Menu</u></b><a name="search_menu"></a> is a custom made component that is constructed using the block classes - *list-search* and *list*. The javascript file will be triggered every time the user will enter data in the search field. In this search menu, the user can enter whatever he/she likes. This component is responsive only in portrait mode. You can view a live example [here](https://liviu-voica.ro/My%20Portfolio/SASS-Personal-Library/html_components/scroll-top-btn.html);
-
-- <b><u>Table</u></b><a name="table"></a> is a component that is constructed using the block class - *table*. The element classes like: *__header*, *__row* and *__cell* will change the layout of the component to a more easy-to-read table. This component is not responsive. You can view a live example [here](https://liviu-voica.ro/My%20Portfolio/SASS-Personal-Library/html_components/tables.html);
-
-- <b><u>Text Group with Header</u></b><a name="text_group"></a> is a component with a header and a paragraph that is constructed using the block classes - *text-group*, *text-header* and *text-content*. This component is responsive only in portrait mode. You can view a live example [here](https://liviu-voica.ro/My%20Portfolio/SASS-Personal-Library/html_components/text-group.html).
-
-## UTILITIES <a name="utilities"></a>:
-
-This section consists in different CSS Styles that are use to design the HTML Components. The styles are constructed following [D.R.Y. Principles](https://en.wikipedia.org/wiki/Don%27t_repeat_yourself "Don't Repeat Yourself Principles"). For each utility mixin you will see detailed information regarding the way SASS logic is constructed so that the CSS Styles are applied to each component variation accordingly.
-
-- <b><u>Box Model</u></b> consist of a set of functions and mixins like: *margin*, *padding*, *width*, *height* etc. that can be used in future projects;
-
-- <b><u>Flex Box</u></b> consist of a set of mixins to center elements to the left, center or right side of the screen by using the following properties: *display*, *justify-content* and *align-items*;
-
-- <b><u>Typography</u></b> consist of a set of mixins that are useful when the user wants to format a paragraph or a link. Font size function and mixin will convert the *pixels* unit of measurement to *rem*;
-
-## IMPROVEMENTS <a name="improvements"></a>:
-
-- Responsive Navigation Bar with Hamburger Menu;
-- Responsive Hero Image with Button;
+   * Setting up width to 100px:
+      <span style="color:red; font-weight:bold;">
+         <pre>width(100px);</pre>
+      </span>
+   * Setting up width to 0px:
+      <span style="color:red; font-weight:bold;">
+         <pre>width(0px);</pre>
+      </span>
+   * Setting up height to 100px:
+      <span style="color:red; font-weight:bold;">
+         <pre>height(100px);</pre>
+      </span>
+   * Setting up height to 0px:
+      <span style="color:red; font-weight:bold;">
+         <pre>height(0px);</pre>
+      </span>
