@@ -37,4 +37,217 @@ table {
 /* INCLUDING ALL THE HTML COMPONENTS */
 /* INCLUDING ALL THE FLEXBOX MIXINS */
 /* INCLUDING ALL THE TYPOGRAPHY MIXINS */
+.alert {
+  width: 62.5rem;
+  height: 3.125rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.alert__text {
+  margin: 0.5rem 0rem;
+  padding: 0rem;
+  width: 100%;
+  height: 1.125rem;
+  font-size: 1rem;
+  text-indent: 0rem;
+  font-family: "Times New Roman", Times, serif;
+  font-style: normal;
+  font-variant: normal;
+  font-weight: normal;
+  text-align: left;
+  text-decoration: none;
+  text-overflow: hidden;
+  text-transform: normal;
+  white-space: normal;
+  word-break: normal;
+  word-spacing: normal;
+  padding-left: 0.625rem;
+  padding-top: 0rem;
+  padding-bottom: 0rem;
+  height: 1.875rem;
+  font-size: 1.25rem;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.alert--standard {
+  color: #000000;
+  background-color: #E6E6E6;
+  border-width: 0.0625rem;
+  border-style: solid;
+  border-color: #000000;
+  border-color: #CCCCCC;
+}
+
+.alert--primary {
+  color: #000000;
+  background-color: #007BFF;
+  border-width: 0.0625rem;
+  border-style: solid;
+  border-color: #000000;
+  border-color: #007BFF;
+}
+
+.alert--secondary {
+  color: #FFFFFF;
+  background-color: #6C757D;
+  border-width: 0.0625rem;
+  border-style: solid;
+  border-color: #000000;
+  border-color: #6C757D;
+}
+
+.alert--success {
+  color: #000000;
+  background-color: #28A745;
+  border-width: 0.0625rem;
+  border-style: solid;
+  border-color: #000000;
+  border-color: #28A745;
+}
+
+.alert--danger {
+  color: #000000;
+  background-color: #DC3545;
+  border-width: 0.0625rem;
+  border-style: solid;
+  border-color: #000000;
+  border-color: #DC3545;
+}
+
+.alert--warning {
+  color: #000000;
+  background-color: #FFC107;
+  border-width: 0.0625rem;
+  border-style: solid;
+  border-color: #000000;
+  border-color: #FFC107;
+}
+
+.alert--info {
+  color: #000000;
+  background-color: #17A2B8;
+  border-width: 0.0625rem;
+  border-style: solid;
+  border-color: #000000;
+  border-color: #17A2B8;
+}
+
+.alert--light {
+  color: #000000;
+  background-color: #F8F9FA;
+  border-width: 0.0625rem;
+  border-style: solid;
+  border-color: #000000;
+  border-color: #F8F9FA;
+}
+
+.alert--dark {
+  color: #FFFFFF;
+  background-color: #343A40;
+  border-width: 0.0625rem;
+  border-style: solid;
+  border-color: #000000;
+  border-color: #343A40;
+}
+
+.alert:hover {
+  opacity: 0.85;
+  cursor: pointer;
+}
+
+@media only screen and (max-width: 1366px) and (orientation: portrait) {
+  .alert {
+    width: 85.25rem;
+  }
+}
+
+@media only screen and (max-width: 1280px) and (orientation: portrait) {
+  .alert {
+    width: 79.875rem;
+  }
+}
+
+@media only screen and (max-width: 1024px) and (orientation: portrait) {
+  .alert {
+    width: 63.875rem;
+  }
+}
+
+@media only screen and (max-width: 962px) and (orientation: portrait) {
+  .alert {
+    width: 60rem;
+  }
+}
+
+@media only screen and (max-width: 834px) and (orientation: portrait) {
+  .alert {
+    width: 52rem;
+  }
+}
+
+@media only screen and (max-width: 800px) and (orientation: portrait) {
+  .alert {
+    width: 49.875rem;
+  }
+}
+
+@media only screen and (max-width: 768px) and (orientation: portrait) {
+  .alert {
+    width: 47.875rem;
+  }
+}
+
+@media only screen and (max-width: 600px) and (orientation: portrait) {
+  .alert {
+    width: 37.375rem;
+  }
+}
+
+@media only screen and (max-width: 412px) and (orientation: portrait) {
+  .alert {
+    width: 25.625rem;
+    height: 7.8125rem;
+  }
+}
+
+@media only screen and (max-width: 375px) and (orientation: portrait) {
+  .alert {
+    width: 23.3125rem;
+    height: 7.8125rem;
+  }
+}
+
+@media only screen and (max-width: 360px) and (orientation: portrait) {
+  .alert {
+    width: 22.375rem;
+    height: 7.8125rem;
+  }
+}
+
+@media only screen and (max-width: 320px) and (orientation: portrait) {
+  .alert {
+    width: 19.875rem;
+    height: 7.8125rem;
+  }
+}
 /*# sourceMappingURL=testing-styles.css.map */
