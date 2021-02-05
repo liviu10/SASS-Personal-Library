@@ -28,9 +28,9 @@
     @import 'utilities/component_mixins/_user-input';
 
 /* INCLUDING ALL THE FLEXBOX MIXINS */
-    @import 'utilities/flexbox/flex-center-left';
-    @import 'utilities/flexbox/flex-center';
-    @import 'utilities/flexbox/flex-center-right';
+    @import 'utilities/flexbox/_flex-center-left';
+    @import 'utilities/flexbox/_flex-center';
+    @import 'utilities/flexbox/_flex-center-right';
 
 /* INCLUDING ALL THE TYPOGRAPHY MIXINS */
     @import 'utilities/typography/_a-typography';
