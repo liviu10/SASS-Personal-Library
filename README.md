@@ -4,10 +4,9 @@
 
 # Project's wikipedia table of contents:
 
-1. [Utilities: Box Model](https://github.com/liviu10/SASS-Personal-Library/wiki/Utilities:-Box-Model "Utilities: Box Model")
-2. [Utilities: Component Mixin](https://github.com/liviu10/SASS-Personal-Library/wiki/Utilities:-Component-Mixin "Utilities: Component Mixin")
-3. [Utilities: Flexbox](https://github.com/liviu10/SASS-Personal-Library/wiki/Utilities:-Flexbox "Utilities: Flexbox")
-4. [Utilities: Global Functions](https://github.com/liviu10/SASS-Personal-Library/wiki/Utilities:-Global-Functions "Utilities: Global Functions")
-5. [Utilities: Global Variables](https://github.com/liviu10/SASS-Personal-Library/wiki/Utilities:-Global-Variables "Utilities: Global Variables")
-6. [Utilities: Resets](https://github.com/liviu10/SASS-Personal-Library/wiki/Utilities:-Resets "Utilities: Resets")
-7. [Utilities: Typography](https://github.com/liviu10/SASS-Personal-Library/wiki/Utilities:-Flexbox "Utilities: Typography")
+1. [HTML Snippets](https://github.com/liviu10/SASS-Personal-Library/wiki/HTML-Snippetsl "HTML Snippets")
+2. [Utilities: Box Model](https://github.com/liviu10/SASS-Personal-Library/wiki/Utilities:-Box-Model "Utilities: Box Model")
+3. [Utilities: Component Mixin](https://github.com/liviu10/SASS-Personal-Library/wiki/Utilities:-Component-Mixin "Utilities: Component Mixin")
+4. [Utilities: Flexbox](https://github.com/liviu10/SASS-Personal-Library/wiki/Utilities:-Flexbox "Utilities: Flexbox")
+5. [Utilities: Resets](https://github.com/liviu10/SASS-Personal-Library/wiki/Utilities:-Resets "Utilities: Resets")
+6. [Utilities: Typography](https://github.com/liviu10/SASS-Personal-Library/wiki/Utilities:-Flexbox "Utilities: Typography")
