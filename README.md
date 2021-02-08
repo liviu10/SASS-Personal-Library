@@ -4,7 +4,7 @@
 
 # PROJECT'S WIKI TABLE OF CONTENTS
 
-1. [HTML Snippets](https://github.com/liviu10/SASS-Personal-Library/wiki/HTML-Snippetsl "HTML Snippets")
+1. [HTML Snippets](https://github.com/liviu10/SASS-Personal-Library/wiki/HTML-Snippets "HTML Snippets")
 2. [Utilities: Box Model](https://github.com/liviu10/SASS-Personal-Library/wiki/Utilities:-Box-Model "Utilities: Box Model")
 3. [Utilities: Component Mixin](https://github.com/liviu10/SASS-Personal-Library/wiki/Utilities:-Component-Mixin "Utilities: Component Mixin")
 4. [Utilities: Flexbox](https://github.com/liviu10/SASS-Personal-Library/wiki/Utilities:-Flexbox "Utilities: Flexbox")
