@@ -8,6 +8,4 @@ function include(file) {
     document.getElementsByTagName('head').item(0).appendChild(script); 
 }
 
-include("../utilities/javascript/accordion.js");
-include("../utilities/javascript/read-more.js");
-include("../utilities/javascript/scroll-top.js");
+include("../main-scripts.js");

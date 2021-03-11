@@ -1,0 +1,67 @@
+@import '../global_functions/_global_functions';
+@import '../global_variables/_global_variables';
+@import '../box_model/_all-margin';
+@import '../box_model/_width-height';
+@import '../box_model/_all-border';
+@import '../box_model/_all-padding';
+
+
+@import '../component_mixins/_list';
+@import '../component_mixins/_user-input';
+
+@mixin list-search {
+    width: auto;
+    height: auto;
+    & .list {
+        @include list;
+        @include all-margin(0px, 0px, 0px, 0px);
+        &__type1 {
+            @include width(498px);
+            @include all-border(1px, 1px, 1px, 1px);
+            border-top-width: 0px;
+            @each $breakpoint in $component_breakpoints {
+            @if $breakpoint < 600px {
+                @media only screen and (max-width: $breakpoint) {
+                @include width($breakpoint - 2px);
+                }
+            }
+            }
+        }
+        &__text-type1 {
+            @include width(480px);
+            @each $breakpoint in $component_breakpoints {
+            @if $breakpoint < 600px {
+                @media only screen and (max-width: $breakpoint) {
+                @include width($breakpoint - 20px);
+                }
+            }
+            }
+        }
+    }
+    & .input {
+        @include input;
+        &__control {
+            @include horizontal-vertical-padding(0px, 10px, 0px, 10px);
+            @include width(478px);
+            @include height(50px);
+            &:focus {
+                outline: none;
+            }
+            @each $breakpoint in $component_breakpoints {
+                @if $breakpoint < 600px {
+                    @media only screen and (max-width: $breakpoint) {
+                        @include horizontal-vertical-padding(0px, 10px, 0px, 10px);
+                        @include width($breakpoint - 22px);
+                    }
+                }
+            }
+        }
+    }
+    @each $breakpoint in $component_breakpoints {
+        @if $breakpoint < 600px {
+            @media only screen and (max-width: $breakpoint) {
+                @include width($breakpoint);
+            }
+        }
+    }
+}
