@@ -1,3 +1,11 @@
+@import '../global_functions/_global_functions';
+@import '../global_variables/_global_variables';
+@import '../box_model/_width-height';
+@import '../box_model/border-radius';
+@import '../typography/_font-size';
+@import '../typography/_standard-typography';
+
+
 @mixin btn-switch {
     position: relative;
     display: inline-block;
@@ -7,7 +15,7 @@
         display: none;
     }
     & input:checked + .slider {
-        background-color: #2ab934;
+        background-color: #2AB934;
     }
     & input:focus + .slider {
         box-shadow: 0 0 1px #2196F3;
@@ -24,19 +32,19 @@
         left: 0;
         right: 0;
         bottom: 0;
-        background-color: #ca2222;
-        -webkit-transition: .4s;
-        transition: .4s;
+        background-color: #CA2222;
+        -webkit-transition: 0.4s;
+        transition: 0.4s;
         &:before {
             position: absolute;
             content: "";
-            height: 26px;
-            width: 26px;
+            @include height(26px);
+            @include width(26px);
             left: 4px;
             bottom: 4px;
-            background-color: white;
-            -webkit-transition: .4s;
-            transition: .4s;
+            background-color: #FFFFFF;
+            -webkit-transition: 0.4s;
+            transition: 0.4s;
         }
         & .on {
             display: none;
@@ -47,11 +55,12 @@
             transform: translate(-50%,-50%);
             top: 50%;
             left: 50%;
-            font-size: 10px;
-            font-family: Verdana, sans-serif;
+            @include font-size(12px);
+            @include standard-typography();
+            user-select: none;
         }
         &.round {
-            border-radius: 34px;
+            @include border-radius(34px, 34px, 34px, 34px);
             &:before {
                 border-radius: 50%;
             }
