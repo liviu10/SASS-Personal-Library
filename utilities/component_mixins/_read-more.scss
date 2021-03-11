@@ -1,0 +1,49 @@
+@import '../global_functions/_global_functions';
+@import '../global_variables/_global_variables';
+@import '../box_model/_all-margin';
+@import '../box_model/_all-padding';
+@import '../box_model/_width-height';
+@import '../box_model/_all-border';
+@import '../box_model/_border-radius';
+@import '../typography/_btn-typography';
+@import '../typography/_h2-typography';
+@import '../typography/_p-typography';
+
+
+@mixin btn-read-more {
+    & .h2-typography {
+        @include h2-typography();
+    }
+    & .p-typography {
+        @include p-typography();
+        height: auto;
+    }
+    & #dots, & #more {
+        display: none;
+    }
+    & .btn {
+        @include all-margin(0px, 0px, 0px, 0px);
+        @include all-padding(0px, 0px, 0px, 0px);
+        @include width(150px);
+        @include height(50px);
+        &--read-more {
+            @include width(120px);
+            @include height(30px);
+            color: #FFFFFF;
+            background-color: #007BFF;
+            @include all-border(1px, 1px, 1px, 1px);
+            @include border-radius(5px, 5px, 5px, 5px);
+            border-color: #007BFF;
+            &:hover {
+                background-color: #006FE6;
+            }
+        }
+        &__text {
+            @include btn-typography;
+        }
+    }
+}
+
+.btn-read-more {
+    @include btn-read-more();
+}
