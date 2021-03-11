@@ -1,0 +1,49 @@
+@import '../utilities/global_functions/_global_functions';
+@import '../utilities/global_variables/_global_variables';
+@import '../utilities/box_model/_all-margin';
+@import '../utilities/box_model/_all-padding';
+@import '../utilities/box_model/_width-height';
+@import '../utilities/box_model/_all-border';
+@import '../utilities/typography/_btn-typography';
+
+@mixin btn-scroll-top {
+    & .p-typography {
+        @include p-typography();
+    }
+    & .btn {
+        @include all-margin(0px, 0px, 0px, 0px);
+        @include all-padding(0px, 0px, 0px, 0px);
+        @include width(150px);
+        @include height(50px);
+        &__text {
+            @include btn-typography;
+        }
+        &--scroll-top {
+            bottom: 20px;
+            right: 30px;
+            border: none;
+            @include border-radius(4px, 4px, 4px, 4px);
+            @include horizontal-vertical-padding(10px, 15px, 10px, 15px);
+            width: auto;
+            height: auto;
+            @include font-size(20px);
+            display: none;
+            position: fixed;
+            z-index: 99;
+            outline: none;
+            background-color: #FF0000;
+            color: white;
+            cursor: pointer;
+            &:hover {
+                background-color: #E60000;
+            }
+        }
+        &:hover {
+            cursor: pointer;
+            opacity: 0.85;
+        }
+        &:focus {
+            outline: none;
+        }
+    }
+}
