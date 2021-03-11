@@ -10,6 +10,7 @@
     @import 'utilities/box_model/_width-height';
 
 /* INCLUDING ALL THE HTML COMPONENTS */
+    @import 'utilities/component_mixins/_accordion';
     @import 'utilities/component_mixins/_alert';
     @import 'utilities/component_mixins/_btn-filled';
     @import 'utilities/component_mixins/_btn-outlined';
@@ -22,6 +23,8 @@
     @import 'utilities/component_mixins/_input-group';
     @import 'utilities/component_mixins/_list';
     @import 'utilities/component_mixins/_pagination-group';
+    @import 'utilities/component_mixins/_read-more';
+    @import 'utilities/component_mixins/_scroll-top';
     @import 'utilities/component_mixins/_text-group';
     @import 'utilities/component_mixins/_tooltip-button';
     @import 'utilities/component_mixins/_user-input';
