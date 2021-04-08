@@ -1,0 +1,158 @@
+@import '../global_functions/_global_functions';
+@import '../global_variables/_global_variables';
+@import '../box_model/_width-height';
+@import '../box_model/_all-margin';
+@import '../box_model/_all-padding';
+@import '../box_model/_all-border';
+@import '../flexbox/_flex-center.scss';
+@import '../typography/_p-typography';
+@import '../typography/_font-size';
+@import '_btn-filled.scss';
+
+@mixin responsive-table {
+    @media only screen and (max-width: 768px) {
+        @include flex-center();
+    }
+    .table {
+        @include width(600px);
+        @media only screen and (max-width: 768px) {
+            @include width(556px);
+        }
+        @media only screen and (max-width: 576px) {
+            @include width(405px);
+        }
+        @media only screen and (max-width: 425px) {
+            @include width(355px);
+        }
+        @media only screen and (max-width: 375px) and (max-width: 320px) {
+            @include width(310px);
+        }
+        &--standard {
+            border-collapse: collapse;
+            table-layout: fixed;
+        }
+        & .table-head, & .table-body {
+            @include all-padding(6px, 6px, 6px, 6px);
+            @include all-border (1px, 1px, 1px, 1px);
+            border-color: #CCCCCC;
+            &__cell {
+                @include horizontal-vertical-padding(2px, 4px, 2px, 4px);
+                @include height(50px);
+            }
+            &__typography {
+                @include flex-center();
+                @include height(46px);
+                @include p-typography();
+            }
+        }
+        & .table-head {
+            @media only screen and (max-width: 768px) {
+                display: none;
+            }
+            &__cell {
+                @include all-border(1px, 1px, 1px, 1px);
+                border-color: #808080;
+                background-color: #333333;
+                color: #FFFFFF;
+                font-weight: bold;
+            }
+            &__typography {
+                @include font-size(22px);
+                font-weight: bold;
+            }
+        }
+        & .table-body {
+            @media only screen and (max-width: 768px) {
+                @include flex-center();
+                display: block !important;
+                @include all-border(0px, 0px, 0px, 0px);
+                @include all-padding(0px, 0px, 0px, 0px);
+            }
+            &__cell {
+                @include all-border(1px, 1px, 1px, 1px);
+                border-color: #808080;
+                background-color: #FFFFFF;
+                color: #000000;
+                &:before {
+                    @media only screen and (max-width: 768px) {
+                        @include flex-center();
+                        @include all-margin(0px, 0px, 0px, 0px);
+                        @include all-border(0px, 1px, 0px, 0px);
+                        @include horizontal-vertical-padding(2px, 0px, 2px, 0px);
+                        @include height(50px);
+                        width: 30%;
+                    }
+                    @media only screen and (max-width: 576px) {
+                        @include flex-center();
+                        @include horizontal-vertical-margin(8px, 0px, 8px, 0px);
+                        width: 50%;
+                    }
+                }
+            }
+            &__typography {
+                @include font-size(18px);
+                font-weight: normal;
+                @media only screen and (max-width: 768px) {
+                    @include flex-center();
+                    @include all-margin(0px, 0px, 0px, 0px);
+                    @include horizontal-vertical-padding(2px, 0px, 2px, 0px);
+                    @include height(50px);
+                    width: 70%;
+                }
+                @media only screen and (max-width: 576px) {
+                    @include flex-center();
+                    width: 50%;
+                }
+            }
+            & .table-body-form {
+                height: auto;
+                @media only screen and (max-width: 768px) {
+                    @include flex-center();
+                    @include horizontal-vertical-margin(8px, 0px, 8px, 0px);
+                    width: 70%;
+                }
+                @media only screen and (max-width: 576px) {
+                    @include flex-center();
+                    @include horizontal-vertical-margin(8px, 0px, 8px, 0px);
+                    width: 50%;
+                }
+                &__actions {
+                    @include flex-center();
+                    @include height(50px);
+                    &__btn {
+                        @include btn-filled();
+                        @include flex-center();
+                        @include width(30px);
+                        @include height(30px);
+                        &--success, &--warning, &--danger {
+                            @include all-border(0px, 0px, 0px, 0px);
+                            text-decoration: none;
+                        }
+                    }
+                }
+            }
+            & tr {
+                & td {
+                    @media only screen and (max-width: 768px) {
+                        @include flex-center();
+                        &:nth-of-type(1):before {
+                            content: "VALUE";
+                        }
+                        &:nth-of-type(2):before { 
+                            content: "DATE READ"; 
+                        }
+                        &:nth-of-type(3):before { 
+                            content: "ACTIONS"; 
+                        }
+                    }
+                }
+            }
+        }
+        table, thead, tbody, th, td, tr {
+            @media only screen and (max-width: 768px) {
+                @include flex-center();
+                display: block;
+            }
+        }
+    }
+}
