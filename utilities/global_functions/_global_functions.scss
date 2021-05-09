@@ -2,31 +2,31 @@
 
 @function all-margin($var_margin_top, $var_margin_right, $var_margin_bottom, $var_margin_left) {
   @if 
-  $var_margin_top != 0 and ($var_margin_right == 0 and $var_margin_bottom == 0 and $var_margin_left == 0) {
+  $var_margin_top != 0 and ($var_margin_right == 0px and $var_margin_bottom == 0px and $var_margin_left == 0px) {
     @return
     ($var_margin_top / $var_base_font_size) * 1rem + ($var_margin_right / $var_base_font_size) * 1rem + 
     ($var_margin_bottom / $var_base_font_size) * 1rem + ($var_margin_left / $var_base_font_size) * 1rem;
   }
   @else if
-  $var_margin_right != 0 and ($var_margin_top == 0 and $var_margin_bottom == 0 and $var_margin_left == 0) {
+  $var_margin_right != 0 and ($var_margin_top == 0px and $var_margin_bottom == 0px and $var_margin_left == 0px) {
     @return
     ($var_margin_top / $var_base_font_size) * 1rem + ($var_margin_right / $var_base_font_size) * 1rem + 
     ($var_margin_bottom / $var_base_font_size) * 1rem + ($var_margin_left / $var_base_font_size) * 1rem;
   }
   @else if
-  $var_margin_bottom != 0 and ($var_margin_right == 0 and $var_margin_top == 0 and $var_margin_left == 0) {
+  $var_margin_bottom != 0 and ($var_margin_right == 0px and $var_margin_top == 0px and $var_margin_left == 0px) {
     @return
     ($var_margin_top / $var_base_font_size) * 1rem + ($var_margin_right / $var_base_font_size) * 1rem + 
     ($var_margin_bottom / $var_base_font_size) * 1rem + ($var_margin_left / $var_base_font_size) * 1rem;
   }
   @else if
-  $var_margin_left != 0 and ($var_margin_right == 0 and $var_margin_bottom == 0 and $var_margin_top == 0) {
+  $var_margin_left != 0 and ($var_margin_right == 0px and $var_margin_bottom == 0px and $var_margin_top == 0px) {
     @return
     ($var_margin_top / $var_base_font_size) * 1rem + ($var_margin_right / $var_base_font_size) * 1rem + 
     ($var_margin_bottom / $var_base_font_size) * 1rem + ($var_margin_left / $var_base_font_size) * 1rem;
   }
   @else if 
-  $var_margin_top == 0 and $var_margin_right == 0 and $var_margin_bottom == 0 and $var_margin_left == 0 {
+  $var_margin_top == 0px and $var_margin_right == 0px and $var_margin_bottom == 0px and $var_margin_left == 0px {
     @return
     ($var_margin_top / $var_base_font_size) * 1rem + ($var_margin_right / $var_base_font_size) * 1rem + 
     ($var_margin_bottom / $var_base_font_size) * 1rem + ($var_margin_left / $var_base_font_size) * 1rem;
@@ -56,7 +56,7 @@
     ((($var_margin_right + $var_margin_left) / 2) / $var_base_font_size) * 1rem;
   }
   @else if
-  ($var_margin_top == $var_margin_bottom and $var_margin_top = 0 and $var_margin_bottom = 0) and
+  ($var_margin_top == $var_margin_bottom and $var_margin_top == 0px and $var_margin_bottom == 0px) and
   ($var_margin_right == $var_margin_left and $var_margin_right != 0 and $var_margin_left != 0) {
     @return
     ((($var_margin_top + $var_margin_bottom) / 2 ) / $var_base_font_size) * 1rem
@@ -64,7 +64,7 @@
   }
   @else if
   ($var_margin_top == $var_margin_bottom and $var_margin_top != 0 and $var_margin_bottom != 0) and
-  ($var_margin_right == $var_margin_left and $var_margin_right = 0 and $var_margin_left = 0) {
+  ($var_margin_right == $var_margin_left and $var_margin_right == 0px and $var_margin_left == 0px) {
     @return
     ((($var_margin_top + $var_margin_bottom) / 2 ) / $var_base_font_size) * 1rem
     ((($var_margin_right + $var_margin_left) / 2) / $var_base_font_size) * 1rem;
@@ -79,45 +79,45 @@
 }
 @function all-border($var_border_top_width, $var_border_right_width, $var_border_bottom_width, $var_border_left_width) {
   @if 
-  $var_border_top_width !=0 and ($var_border_bottom_width == 0 and $var_border_right_width == 0 and $var_border_left_width == 0) {
+  $var_border_top_width !=0 and ($var_border_bottom_width == 0px and $var_border_right_width == 0px and $var_border_left_width == 0px) {
     @return
       ($var_border_top_width / $var_base_font_size) * 1rem + ($var_border_right_width / $var_base_font_size) * 1rem + 
       ($var_border_bottom_width / $var_base_font_size) * 1rem + ($var_border_left_width / $var_base_font_size) * 1rem;
   }
   @else if
-  $var_border_right_width !=0 and ($var_border_bottom_width == 0 and $var_border_top_width == 0 and $var_border_left_width == 0) {
+  $var_border_right_width !=0 and ($var_border_bottom_width == 0px and $var_border_top_width == 0px and $var_border_left_width == 0px) {
     @return
     ($var_border_top_width / $var_base_font_size) * 1rem + ($var_border_right_width / $var_base_font_size) * 1rem + 
     ($var_border_bottom_width / $var_base_font_size) * 1rem + ($var_border_left_width / $var_base_font_size) * 1rem;
   }
   @else if
-  $var_border_bottom_width !=0 and ($var_border_right_width == 0 and $var_border_top_width == 0 and $var_border_left_width == 0) {
+  $var_border_bottom_width !=0 and ($var_border_right_width == 0px and $var_border_top_width == 0px and $var_border_left_width == 0px) {
     @return
     ($var_border_top_width / $var_base_font_size) * 1rem + ($var_border_right_width / $var_base_font_size) * 1rem + 
     ($var_border_bottom_width / $var_base_font_size) * 1rem + ($var_border_left_width / $var_base_font_size) * 1rem;
   }
   @else if
-  $var_border_left_width !=0 and ($var_border_right_width == 0 and $var_border_top_width == 0 and $var_border_bottom_width == 0) {
+  $var_border_left_width !=0 and ($var_border_right_width == 0px and $var_border_top_width == 0px and $var_border_bottom_width == 0px) {
     @return
     ($var_border_top_width / $var_base_font_size) * 1rem + ($var_border_right_width / $var_base_font_size) * 1rem + 
     ($var_border_bottom_width / $var_base_font_size) * 1rem + ($var_border_left_width / $var_base_font_size) * 1rem;
   }
   @else if
   ($var_border_top_width == $var_border_bottom_width and $var_border_top_width != 0 and $var_border_bottom_width != 0) and
-  ($var_border_right_width == $var_border_left_width and $var_border_right_width == 0 and $var_border_left_width == 0) {
+  ($var_border_right_width == $var_border_left_width and $var_border_right_width == 0px and $var_border_left_width == 0px) {
     @return
     ((($var_border_top_width + $var_border_bottom_width) / 2) / $var_base_font_size) * 1rem
     ($var_border_right_width / $var_base_font_size) * 1rem + ($var_border_left_width / $var_base_font_size) * 1rem;
   }
   @else if
-  ($var_border_top_width == $var_border_bottom_width and $var_border_top_width == 0 and $var_border_bottom_width == 0) and
+  ($var_border_top_width == $var_border_bottom_width and $var_border_top_width == 0px and $var_border_bottom_width == 0px) and
   ($var_border_right_width == $var_border_left_width and $var_border_right_width != 0 and $var_border_left_width != 0) {
     @return
     ($var_border_top_width / $var_base_font_size) * 1rem + ($var_border_bottom_width / $var_base_font_size) * 1rem
     ((($var_border_right_width + $var_border_left_width) / 2) / $var_base_font_size) * 1rem;
   }
   @else if
-  $var_border_top_width == 0 and $var_border_bottom_width == 0 and $var_border_right_width == 0 and $var_border_left_width == 0 {
+  $var_border_top_width == 0px and $var_border_bottom_width == 0px and $var_border_right_width == 0px and $var_border_left_width == 0px {
     @return
     ($var_border_top_width / $var_base_font_size) * 1rem + 
     ($var_border_right_width / $var_base_font_size) * 1rem + 
@@ -139,7 +139,7 @@
     ((($var_border_top_left_radius + $var_border_top_right_radius + $var_border_bottom_right_radius + $var_border_bottom_left_radius) / 4) / $var_base_font_size) * 1rem;
   }
   @else if
-  $var_border_top_left_radius == 0 and $var_border_top_right_radius == 0 and $var_border_bottom_right_radius == 0 and $var_border_bottom_left_radius == 0 {
+  $var_border_top_left_radius == 0px and $var_border_top_right_radius == 0px and $var_border_bottom_right_radius == 0px and $var_border_bottom_left_radius == 0px {
     @return
     (($var_border_top_left_radius + $var_border_top_right_radius + $var_border_bottom_right_radius + $var_border_bottom_left_radius) / $var_base_font_size) * 1rem;
   }
@@ -154,31 +154,31 @@
 }
 @function all-padding($var_padding_top, $var_padding_right, $var_padding_bottom, $var_padding_left) {
   @if 
-  $var_padding_top != 0 and ($var_padding_right == 0 and $var_padding_bottom == 0 and $var_padding_left == 0) {
+  $var_padding_top != 0 and ($var_padding_right == 0px and $var_padding_bottom == 0px and $var_padding_left == 0px) {
     @return
     ($var_padding_top / $var_base_font_size) * 1rem + ($var_padding_right / $var_base_font_size) * 1rem + 
     ($var_padding_bottom / $var_base_font_size) * 1rem + ($var_padding_left / $var_base_font_size) * 1rem;
   }
   @else if
-  $var_padding_right != 0 and ($var_padding_top == 0 and $var_padding_bottom == 0 and $var_padding_left == 0) {
+  $var_padding_right != 0 and ($var_padding_top == 0px and $var_padding_bottom == 0px and $var_padding_left == 0px) {
     @return
     ($var_padding_top / $var_base_font_size) * 1rem + ($var_padding_right / $var_base_font_size) * 1rem + 
     ($var_padding_bottom / $var_base_font_size) * 1rem + ($var_padding_left / $var_base_font_size) * 1rem;
   }
   @else if
-  $var_padding_bottom != 0 and ($var_padding_right == 0 and $var_padding_top == 0 and $var_padding_left == 0) {
+  $var_padding_bottom != 0 and ($var_padding_right == 0px and $var_padding_top == 0px and $var_padding_left == 0px) {
     @return
     ($var_padding_top / $var_base_font_size) * 1rem + ($var_padding_right / $var_base_font_size) * 1rem + 
     ($var_padding_bottom / $var_base_font_size) * 1rem + ($var_padding_left / $var_base_font_size) * 1rem;
   }
   @else if
-  $var_padding_left != 0 and ($var_padding_right == 0 and $var_padding_bottom == 0 and $var_padding_top == 0) {
+  $var_padding_left != 0 and ($var_padding_right == 0px and $var_padding_bottom == 0px and $var_padding_top == 0px) {
     @return
     ($var_padding_top / $var_base_font_size) * 1rem + ($var_padding_right / $var_base_font_size) * 1rem + 
     ($var_padding_bottom / $var_base_font_size) * 1rem + ($var_padding_left / $var_base_font_size) * 1rem;
   }
   @else if 
-  $var_padding_top == 0 and $var_padding_right == 0 and $var_padding_bottom == 0 and $var_padding_left == 0 {
+  $var_padding_top == 0px and $var_padding_right == 0px and $var_padding_bottom == 0px and $var_padding_left == 0px {
     @return
     ($var_padding_top / $var_base_font_size) * 1rem + ($var_padding_right / $var_base_font_size) * 1rem + 
     ($var_padding_bottom / $var_base_font_size) * 1rem + ($var_padding_left / $var_base_font_size) * 1rem;
@@ -207,7 +207,7 @@
     ((($var_padding_right + $var_padding_left) / 2) / $var_base_font_size) * 1rem;
   }
   @else if
-  ($var_padding_top == $var_padding_bottom and $var_padding_top = 0 and $var_padding_bottom = 0) and
+  ($var_padding_top == $var_padding_bottom and $var_padding_top == 0px and $var_padding_bottom == 0px) and
   ($var_padding_right == $var_padding_left and $var_padding_right != 0 and $var_padding_left != 0) {
     @return
     ((($var_padding_top + $var_padding_bottom) / 2 ) / $var_base_font_size) * 1rem
@@ -215,14 +215,14 @@
   }
   @else if
   ($var_padding_top == $var_padding_bottom and $var_padding_top != 0 and $var_padding_bottom != 0) and
-  ($var_padding_right == $var_padding_left and $var_padding_right = 0 and $var_padding_left = 0) {
+  ($var_padding_right == $var_padding_left and $var_padding_right == 0px and $var_padding_left == 0px) {
     @return
     ((($var_padding_top + $var_padding_bottom) / 2 ) / $var_base_font_size) * 1rem
     ((($var_padding_right + $var_padding_left) / 2) / $var_base_font_size) * 1rem;
   }
 }
 @function width($var_width) {
-  @if $var_width == 0#{"px"} {
+  @if $var_width == 0px#{"px"} {
     @return 
     ($var_width / $var_base_font_size) * 1rem;
   }
@@ -232,7 +232,7 @@
   }
 }
 @function height($var_height) {
-  @if $var_height == 0#{"px"} {
+  @if $var_height == 0px#{"px"} {
     @return 
     ($var_height / $var_base_font_size) * 1rem;
   }

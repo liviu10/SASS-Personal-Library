@@ -3,29 +3,29 @@
 
 @mixin all-margin ($var_margin_top, $var_margin_right, $var_margin_bottom, $var_margin_left) {
     @if 
-    $var_margin_top != 0 and ($var_margin_right == 0 and $var_margin_bottom == 0 and $var_margin_left == 0) {
+    $var_margin_top != 0 and ($var_margin_right == 0px and $var_margin_bottom == 0px and $var_margin_left == 0px) {
         margin#{-top}: all-margin($var_margin_top, $var_margin_right, $var_margin_bottom, $var_margin_left);
         margin#{-bottom}: ($margin_bottom/$var_base_font_size) * 1rem;
     }
     @else if 
-    $var_margin_right != 0 and ($var_margin_top == 0 and $var_margin_bottom == 0 and $var_margin_left == 0) {
+    $var_margin_right != 0 and ($var_margin_top == 0px and $var_margin_bottom == 0px and $var_margin_left == 0px) {
         margin#{-right}: all-margin($var_margin_top, $var_margin_right, $var_margin_bottom, $var_margin_left);
         margin#{-top}: ($margin_top/$var_base_font_size) * 1rem;
         margin#{-bottom}: ($margin_bottom/$var_base_font_size) * 1rem;
     }
     @else if 
-    $var_margin_bottom != 0 and ($var_margin_right == 0 and $var_margin_top == 0 and $var_margin_left == 0) {
+    $var_margin_bottom != 0 and ($var_margin_right == 0px and $var_margin_top == 0px and $var_margin_left == 0px) {
         margin#{-bottom}: all-margin($var_margin_top, $var_margin_right, $var_margin_bottom, $var_margin_left);
         margin#{-top}: ($margin_top/$var_base_font_size) * 1rem;
     }
     @else if 
-    $var_margin_left != 0 and ($var_margin_right == 0 and $var_margin_bottom == 0 and $var_margin_top == 0) {
+    $var_margin_left != 0 and ($var_margin_right == 0px and $var_margin_bottom == 0px and $var_margin_top == 0px) {
         margin#{-left}: all-margin($var_margin_top, $var_margin_right, $var_margin_bottom, $var_margin_left);
         margin#{-top}: ($margin_top/$var_base_font_size) * 1rem;
         margin#{-bottom}: ($margin_bottom/$var_base_font_size) * 1rem;
     }
     @else if 
-    $var_margin_top == 0 and $var_margin_right == 0 and $var_margin_bottom == 0 and $var_margin_left == 0 {
+    $var_margin_top == 0px and $var_margin_right == 0px and $var_margin_bottom == 0px and $var_margin_left == 0px {
         margin: all-margin($var_margin_top, $var_margin_right, $var_margin_bottom, $var_margin_left)
     }
     @else if 
@@ -47,13 +47,13 @@
         margin: horizontal-vertical-margin($var_margin_top, $var_margin_right, $var_margin_bottom, $var_margin_left)
     }
     @else if
-    ($var_margin_top == $var_margin_bottom and $var_margin_top = 0 and $var_margin_bottom = 0) and
+    ($var_margin_top == $var_margin_bottom and $var_margin_top == 0px and $var_margin_bottom == 0px) and
     ($var_margin_right == $var_margin_left and $var_margin_right != 0 and $var_margin_left != 0) {
         margin: horizontal-vertical-margin($var_margin_top, $var_margin_right, $var_margin_bottom, $var_margin_left)
     }
     @else if
     ($var_margin_top == $var_margin_bottom and $var_margin_top != 0 and $var_margin_bottom != 0) and
-    ($var_margin_right == $var_margin_left and $var_margin_right = 0 and $var_margin_left = 0) {
+    ($var_margin_right == $var_margin_left and $var_margin_right == 0px and $var_margin_left == 0px) {
         margin: horizontal-vertical-margin($var_margin_top, $var_margin_right, $var_margin_bottom, $var_margin_left)
     }
 }
