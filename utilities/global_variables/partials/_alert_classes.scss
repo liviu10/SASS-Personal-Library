@@ -1,0 +1,49 @@
+@import '_base_colors';
+
+$alert_classes: (
+    standard: (
+        color: $font_color_black,
+        background-color: $standard,
+        border-color: $standard,
+    ),
+    primary: (
+        color: $font_color_black,
+        background-color: $primary,
+        border-color: $primary,
+    ),
+    secondary: (
+        color: $font_color_white,
+        background-color: $secondary,
+        border-color: $secondary,
+    ),
+    success: (
+        color: $font_color_black,
+        background-color: $success,
+        border-color: $success,
+    ),
+    danger: (
+        color: $font_color_black,
+        background-color: $danger,
+        border-color: $danger,
+    ),
+    warning: (
+        color: $font_color_black,
+        background-color: $warning,
+        border-color: $warning,
+    ),
+    info: (
+        color: $font_color_black,
+        background-color: $info,
+        border-color: $info,
+    ),
+    light: (
+        color: $font_color_black,
+        background-color: $light,
+        border-color: $light,
+    ),
+    dark: (
+        color: $font_color_white,
+        background-color: $dark,
+        border-color: $dark,
+    ),
+);

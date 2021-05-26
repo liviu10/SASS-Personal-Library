@@ -1,6 +1,0 @@
-@import '../global_functions/_global_functions';
-@import '../global_variables/_global_variables';
-
-@mixin font-size ($var_font_size) {
-    font-size: font-size($var_font-size);
-}

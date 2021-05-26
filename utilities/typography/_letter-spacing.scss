@@ -1,6 +1,0 @@
-@import '../global_functions/_global_functions';
-@import '../global_variables/_global_variables';
-
-@mixin letter-spacing ($var_letter_spacing) {
-    letter-spacing: letter-spacing($var_letter_spacing);
-}

@@ -1,0 +1,56 @@
+@import '_base_colors';
+
+$button_classes: (
+    standard: (
+        color: $font_color_black,
+        background-color: $standard,
+        border-color: #CCCCCC,
+        background-color-hover: #D9D9D9,
+    ),
+    primary: (
+        color: $font_color_white,
+        background-color: $primary,
+        border-color: $primary,
+        background-color-hover: #006FE6,
+    ),
+    secondary: (
+        color: $font_color_white,
+        background-color: $secondary,
+        border-color: $secondary,
+        background-color-hover: #848D94,
+    ),
+    success: (
+        color: $font_color_white,
+        background-color: $success,
+        border-color: $success,
+        background-color-hover: #2DB94D,
+    ),
+    danger: (
+        color: $font_color_white,
+        background-color: $danger,
+        border-color: $danger,
+        background-color-hover: #D92638,
+    ),
+    warning: (
+        background-color: $warning,
+        border-color: $warning,
+        background-color-hover: #E6AC00,
+    ),
+    info: (
+        color: $font_color_white,
+        background-color: $info,
+        border-color: $info,
+        background-color-hover: #19B4CC,
+    ),
+    light: (
+        background-color: $light,
+        border-color: $light,
+        background-color-hover: #E1E6EA,
+    ),
+    dark: (
+        color: $font_color_white,
+        background-color: $dark,
+        border-color: $dark,
+        background-color-hover: #2E3338,
+    ),
+);

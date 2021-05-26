@@ -2,52 +2,32 @@
     @import 'utilities/resets/_resets';
 
 /* INCLUDING ALL THE BOX MODEL MIXINS */
-    @import 'utilities/box_model/_all-border';
-    @import 'utilities/box_model/_all-margin';
-    @import 'utilities/box_model/_all-padding';
-    @import 'utilities/box_model/_border-radius';
-    @import 'utilities/box_model/_box-shadow';
-    @import 'utilities/box_model/_width-height';
+    @import 'utilities/box_model/_global_box_model';
 
 /* INCLUDING ALL THE HTML COMPONENTS */
-    @import 'utilities/component_mixins/_accordion';
-    @import 'utilities/component_mixins/_alert';
-    @import 'utilities/component_mixins/_btn-filled';
-    @import 'utilities/component_mixins/_btn-outlined';
-    @import 'utilities/component_mixins/_btn-switch';
-    @import 'utilities/component_mixins/_btn-badge';
-    @import 'utilities/component_mixins/_button-group';
-    @import 'utilities/component_mixins/_card';
-    @import 'utilities/component_mixins/_dropdown-button';
-    @import 'utilities/component_mixins/_fa-icons';
-    @import 'utilities/component_mixins/_input-group';
-    @import 'utilities/component_mixins/_list';
-    @import 'utilities/component_mixins/_search-menu';
-    @import 'utilities/component_mixins/_pagination-group';
-    @import 'utilities/component_mixins/_read-more';
-    @import 'utilities/component_mixins/_responsive-table';
-    @import 'utilities/component_mixins/_scroll-top';
-    @import 'utilities/component_mixins/_text-group';
-    @import 'utilities/component_mixins/_tooltip-button';
-    @import 'utilities/component_mixins/_user-input';
+    // @import 'utilities/component_mixins/_accordion';
+    // @import 'utilities/component_mixins/_alert';
+    // @import 'utilities/component_mixins/_btn-filled';
+    // @import 'utilities/component_mixins/_btn-outlined';
+    // @import 'utilities/component_mixins/_btn-switch';
+    // @import 'utilities/component_mixins/_btn-badge';
+    // @import 'utilities/component_mixins/_button-group';
+    // @import 'utilities/component_mixins/_card';
+    // @import 'utilities/component_mixins/_dropdown-button';
+    // @import 'utilities/component_mixins/_fa-icons';
+    // @import 'utilities/component_mixins/_input-group';
+    // @import 'utilities/component_mixins/_list';
+    // @import 'utilities/component_mixins/_search-menu';
+    // @import 'utilities/component_mixins/_pagination-group';
+    // @import 'utilities/component_mixins/_read-more';
+    // @import 'utilities/component_mixins/_responsive-table';
+    // @import 'utilities/component_mixins/_scroll-top';
+    // @import 'utilities/component_mixins/_text-group';
+    // @import 'utilities/component_mixins/_tooltip-button';
+    // @import 'utilities/component_mixins/_user-input';
 
 /* INCLUDING ALL THE FLEXBOX MIXINS */
-    @import 'utilities/flexbox/_flex-center-left';
-    @import 'utilities/flexbox/_flex-center';
-    @import 'utilities/flexbox/_flex-center-right';
+    @import 'utilities/flexbox/_global_flex_box';
 
 /* INCLUDING ALL THE TYPOGRAPHY MIXINS */
-    @import 'utilities/typography/_a-typography';
-    @import 'utilities/typography/_btn-typography';
-    @import 'utilities/typography/_font-size';
-    @import 'utilities/typography/_h1-typography';
-    @import 'utilities/typography/_h2-typography';
-    @import 'utilities/typography/_h3-typography';
-    @import 'utilities/typography/_h4-typography';
-    @import 'utilities/typography/_h5-typography';
-    @import 'utilities/typography/_h6-typography';
-    @import 'utilities/typography/_letter-spacing';
-    @import 'utilities/typography/_line-height';
-    @import 'utilities/typography/_p-typography';
-    @import 'utilities/typography/_standard-typography';
-    @import 'utilities/typography/_text-indent';
+    @import 'utilities/typography/_global_typography';

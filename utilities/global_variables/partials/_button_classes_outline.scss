@@ -1,0 +1,51 @@
+@import '_base_colors';
+
+$button_classes_outline: (
+    outline-standard: ( 
+        color: $font_color_black,
+        border-color: #CCCCCC,
+        hover-background-color: $standard,
+    ),
+    outline-primary: ( 
+        color: $primary, 
+        border-color: $primary,
+        hover-background-color: $primary,
+    ),
+    outline-secondary: ( 
+        color: $secondary, 
+        border-color: $secondary,
+        hover-background-color: $secondary,
+    ),
+    outline-success: ( 
+        color: $success, 
+        border-color: $success,
+        hover-background-color: $success,
+    ),
+    outline-danger: ( 
+        color: $danger, 
+        border-color: $danger,
+        hover-background-color: $danger,
+    ),
+    outline-warning: ( 
+        color: $font_color_black, 
+        border-color: $warning,
+        hover-background-color: $warning,
+        hover-color: $font_color_black,
+    ),
+    outline-info: ( 
+        color: $info, 
+        border-color: $info,
+        hover-background-color: $info,
+    ),
+    outline-light: ( 
+        color: $font_color_black, 
+        border-color: $light,
+        hover-background-color: $light,
+        hover-color: $font_color_black,
+    ),
+    outline-dark: ( 
+        color: $dark, 
+        border-color: $dark,
+        hover-background-color: $dark,
+    ),
+);
