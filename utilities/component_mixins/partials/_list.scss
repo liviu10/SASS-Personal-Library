@@ -1,11 +1,8 @@
-@import '../global_functions/_global_functions';
-@import '../global_variables/_global_variables';
-@import '../box_model/_all-margin';
-@import '../box_model/_all-padding';
-@import '../box_model/_width-height';
-@import '../flexbox/flex-center-left';
-@import '../typography/p-typography';
-@import '../typography/_font-size';
+@import '../../global_functions/_global_functions';
+@import '../../global_variables/_global_variables';
+@import '../../box_model/_global_box_model';
+@import '../../flexbox/_global_flex_box';
+@import '../../typography/_global_typography';
 
 @mixin list {
     @include all-margin(10px, 0px, 0px, 0px);
@@ -22,7 +19,7 @@
     &__text {
         @include p-typography;
         @include height(20px);
-        @include font-size(18px);
+        font-size: font-size(18px);
     }
     &__type1, &__type2 {
         @include all-margin(0px, 0px, 0px, 0px);
@@ -47,7 +44,7 @@
         @include horizontal-vertical-padding(0px, 10px, 0px, 10px);
         @include width(280px);
         @include height(50px);
-        @include font-size(18px);
+        font-size: font-size(18px);
         @include flex-center-left-center();
     }
     &__type2 {
@@ -82,7 +79,7 @@
         @include all-margin(0px, 0px, 0px, 0px);
         @include width(280px);
         @include height(50px);
-        @include font-size(18px);
+        font-size: font-size(18px);
         @include flex-center-left-center();
     }
 }

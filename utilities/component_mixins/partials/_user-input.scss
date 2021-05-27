@@ -1,11 +1,10 @@
-@import '../global_functions/_global_functions';
-@import '../global_variables/_global_variables';
-@import '../box_model/_all-margin';
-@import '../box_model/_width-height';
-@import '../box_model/_all-border';
-@import '../box_model/_all-padding';
-@import '../flexbox/_flex-center';
-@import '../typography/_p-typography';
+@import '../../global_functions/_global_functions';
+@import '../../global_variables/_global_variables';
+@import '../../box_model/_global_box_model';
+@import '../../flexbox/_global_flex_box';
+@import '../../typography/_global_typography';
+
+$input-classes: check, control, text, label, textarea;
 
 @mixin input {
     @include all-margin(0px, 0px, 0px, 0px);
@@ -14,15 +13,15 @@
     height: auto;
     @include flex-center;
     &--cbx-radio {
-        @each $breakpoint in $component_breakpoints {
-                @if $breakpoint <= 412px {
-                    @media only screen and (max-width: $breakpoint) and (orientation: portrait) {
-                        width: auto;
-                        @include flex-center();
-                        flex-direction: row !important;
-                }
-            }
-        }
+        // @each $breakpoint in $component_breakpoints {
+        //     @if $breakpoint <= 412px {
+        //         @media only screen and (max-width: $breakpoint) and (orientation: portrait) {
+        //             width: auto;
+        //             @include flex-center();
+        //             flex-direction: row !important;
+        //         }
+        //     }
+        // }
     }
     @each $class in $input-classes {
         @if $class == "check" {
@@ -79,12 +78,12 @@
         @include width(309px);
         @include height(32px);
     }
-    @each $breakpoint in $component_breakpoints {
-        @if $breakpoint <= 412px {
-            @media only screen and (max-width: $breakpoint) and (orientation: portrait) {
-                @include width($breakpoint);
-                flex-direction: column;
-            }
-        }
-    }
+    // @each $breakpoint in $component_breakpoints {
+    //     @if $breakpoint <= 412px {
+    //         @media only screen and (max-width: $breakpoint) and (orientation: portrait) {
+    //             @include width($breakpoint);
+    //             flex-direction: column;
+    //         }
+    //     }
+    // }
 }

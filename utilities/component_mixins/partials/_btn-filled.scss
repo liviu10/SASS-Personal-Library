@@ -1,0 +1,113 @@
+@import '../../global_functions/_global_functions';
+@import '../../global_variables/_global_variables';
+@import '../../box_model/_global_box_model';
+@import '../../typography/_global_typography';
+
+@mixin btn-filled {
+    @include all-margin(0px, 0px, 0px, 0px);
+    @include all-padding(0px, 0px, 0px, 0px);
+    @include width(150px);
+    @include height(50px);
+    &__text {
+        @include btn-typography;
+    }
+    @each $class, $properties in $button_classes {
+        &--#{$class} {
+            color: map-get($map: $properties, $key: color);
+            @include all-border(1px, 1px, 1px, 1px);
+            background-color: map-get($map: $properties, $key: background-color);
+            border-color: map-get($map: $properties, $key: border-color);
+        }
+    }
+    &:hover {
+        cursor: pointer;
+        opacity: 0.85;
+    }
+    &:focus {
+        outline: none;
+    }
+}
+@mixin btn-filled-large {
+    @include all-margin(0px, 0px, 0px, 0px);
+    @include all-padding(0px, 0px, 0px, 0px);
+    @include width(150px);
+    @include height(50px);
+    &__text {
+        @include btn-typography;
+    }
+    @each $class, $properties in $button_classes {
+        &--#{$class} {
+            color: map-get($map: $properties, $key: color);
+            @include all-border(1px, 1px, 1px, 1px);
+            background-color: map-get($map: $properties, $key: background-color);
+            border-color: map-get($map: $properties, $key: border-color);
+        }
+        &--large {
+            @include width(250px);
+            @include height(50px);
+        }
+    }
+    &:hover {
+        cursor: pointer;
+        opacity: 0.85;
+    }
+    &:focus {
+        outline: none;
+    }
+}
+@mixin btn-filled-small {
+    @include all-margin(0px, 0px, 0px, 0px);
+    @include all-padding(0px, 0px, 0px, 0px);
+    @include width(150px);
+    @include height(50px);
+    &__text {
+        @include btn-typography;
+        letter-spacing: letter-spacing(0px);
+    }
+    @each $class, $properties in $button_classes {
+        &--#{$class} {
+            color: map-get($map: $properties, $key: color);
+            @include all-border(1px, 1px, 1px, 1px);
+            background-color: map-get($map: $properties, $key: background-color);
+            border-color: map-get($map: $properties, $key: border-color);
+        }
+        &--small {
+            @include width(100px);
+            @include height(35px);
+        }
+    }
+    &:hover {
+        cursor: pointer;
+        opacity: 0.85;
+    }
+    &:focus {
+        outline: none;
+    }
+}
+@mixin btn-filled-disabled {
+    @include all-margin(0px, 0px, 0px, 0px);
+    @include all-padding(0px, 0px, 0px, 0px);
+    @include width(150px);
+    @include height(50px);
+    &__text {
+        @include btn-typography;
+    }
+    @each $class, $properties in $button_classes {
+        &--#{$class} {
+            color: map-get($map: $properties, $key: color);
+            @include all-border(1px, 1px, 1px, 1px);
+            background-color: map-get($map: $properties, $key: background-color);
+            border-color: map-get($map: $properties, $key: border-color);
+        }
+        &--disabled {
+            opacity: 0.85;
+        }
+    }
+    &:hover {
+        cursor: pointer;
+        opacity: 0.85;
+    }
+    &:focus {
+        outline: none;
+    }
+}

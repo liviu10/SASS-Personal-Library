@@ -1,9 +1,7 @@
-@import '../global_functions/_global_functions';
-@import '../global_variables/_global_variables';
-@import '../box_model/_width-height';
-@import '../box_model/_border-radius';
-@import '../box_model/_all-margin';
-@import '../flexbox/_flex-center';
+@import '../../global_functions/_global_functions';
+@import '../../global_variables/_global_variables';
+@import '../../box_model/_global_box_model';
+@import '../../flexbox/_global_flex_box';
 
 @mixin fa {
     @include width(50px);

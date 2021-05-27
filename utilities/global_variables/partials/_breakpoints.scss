@@ -1,10 +1,3 @@
 @import '../../global_functions/partials/_rem_convertor';
 
-$component_breakpoints: (
-    xs: rem-convertor(320px),
-    sm: rem-convertor(576px),
-    md: rem-convertor(768px),
-    lg: rem-convertor(992px),
-    xl: rem-convertor(1200px),
-    xxl: rem-convertor(1400px),
-);
+$component_breakpoints: 320px, 576px, 768px, 992px, 1200px, 1400px;

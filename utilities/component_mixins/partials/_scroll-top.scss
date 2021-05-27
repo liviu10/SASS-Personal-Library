@@ -1,10 +1,7 @@
-@import '../global_functions/_global_functions';
-@import '../global_variables/_global_variables';
-@import '../box_model/_all-margin';
-@import '../box_model/_all-padding';
-@import '../box_model/_width-height';
-@import '../box_model/_all-border';
-@import '../typography/_btn-typography';
+@import '../../global_functions/_global_functions';
+@import '../../global_variables/_global_variables';
+@import '../../box_model/_global_box_model';
+@import '../../typography/_global_typography';
 
 @mixin btn-scroll-top {
     & .p-typography {
@@ -26,7 +23,7 @@
             @include horizontal-vertical-padding(10px, 15px, 10px, 15px);
             width: auto;
             height: auto;
-            @include font-size(20px);
+            font-size: font-size(20px);
             display: none;
             position: fixed;
             z-index: 99;

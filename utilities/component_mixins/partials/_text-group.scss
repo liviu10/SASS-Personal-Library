@@ -1,0 +1,58 @@
+@import '../../global_functions/_global_functions';
+@import '../../global_variables/_global_variables';
+@import '../../box_model/_global_box_model';
+@import '../../flexbox/_global_flex_box';
+@import '../../typography/_global_typography';
+
+@mixin text-group {
+    @include horizontal-vertical-margin(10px, 0px, 10px, 0px);
+    @include horizontal-vertical-padding(0px, 10px, 0px, 10px);
+    width: 100%;
+    height: auto;
+    @include flex-center-left-top();
+    flex-direction: column;
+    & .text-header {
+        @include all-margin(0px, 0px, 0px, 0px);
+        @include all-padding(0px, 0px, 0px, 0px);
+        width: 100%;
+        height: auto;
+        @include flex-center-left-center();
+        & .h3-typography {
+            @include h3-typography;
+            @include height(30px);
+            font-size: font-size(30px);
+            font-weight: bold !important;
+            text-align: left;
+            // @each $breakpoint in $component_breakpoints {
+            //     @if $breakpoint <= 768px {
+            //         @media only screen and (max-width: $breakpoint) and (orientation: portrait) {
+            //             text-align: center;
+            //         }
+            //     }
+            // }
+        }
+    }
+    & .text-content {
+        @include all-margin(0px, 0px, 0px, 0px);
+        @include all-padding(0px, 0px, 0px, 0px);
+        width: 100%;
+        height: auto;
+        & .p-typography {
+            @include p-typography;
+            font-size: font-size(20px);
+            height: auto;
+            // @each $breakpoint in $component_breakpoints {
+            //     @if $breakpoint <= 768px {
+            //         @media only screen and (max-width: $breakpoint) and (orientation: portrait) {
+            //             text-align: justify;
+            //         }
+            //     }
+            // }
+        }
+    }
+    // @each $breakpoint in $component_breakpoints {
+    //     @media only screen and (max-width: $breakpoint) and (orientation: portrait) {
+    //         @include width($breakpoint - 20px);
+    //     }
+    // }
+}

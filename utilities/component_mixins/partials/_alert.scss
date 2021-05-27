@@ -1,0 +1,43 @@
+@import '../../global_functions/_global_functions';
+@import '../../global_variables/_global_variables';
+@import '../../box_model/_global_box_model';
+@import '../../flexbox/_global_flex_box';
+@import '../../typography/_global_typography';
+
+@mixin alert {
+    @include width(992px);
+    @include height(50px);
+    @include flex-center-left-center();
+    &__text {
+        @include p-typography;
+        @include all-padding(0px, 0px, 0px, 10px);
+        @include height(30px);
+        font-size: font-size(20px);
+        user-select: none;
+        @include flex-center-left-center();
+    }
+    @each $class, $properties in $alert_classes {
+        &--#{$class} {
+            color: map-get($map: $properties, $key: color);
+            background-color: map-get($map: $properties, $key: background-color);
+            @include all-border(1px, 1px, 1px, 1px);
+            border-color: map-get($map: $properties, $key: border-color);
+        }
+    }
+    &:hover {
+        opacity: 0.85;
+        cursor: pointer;
+    }
+    // @each $breakpoint in $component_breakpoints {
+    //     @if $breakpoint <= 412px {
+    //         @media only screen and (max-width: $breakpoint) and (orientation: portrait) {
+    //             @include width($breakpoint - 2px);
+    //             @include height(125px);
+    //         }
+    //     } @else if $breakpoint > 412px {
+    //         @media only screen and (max-width: $breakpoint) and (orientation: portrait) {
+    //             @include width($breakpoint - 2px);
+    //         } 
+    //     }
+    // }
+}

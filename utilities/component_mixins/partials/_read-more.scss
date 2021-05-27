@@ -1,13 +1,7 @@
-@import '../global_functions/_global_functions';
-@import '../global_variables/_global_variables';
-@import '../box_model/_all-margin';
-@import '../box_model/_all-padding';
-@import '../box_model/_width-height';
-@import '../box_model/_all-border';
-@import '../box_model/_border-radius';
-@import '../typography/_btn-typography';
-@import '../typography/_h2-typography';
-@import '../typography/_p-typography';
+@import '../../global_functions/_global_functions';
+@import '../../global_variables/_global_variables';
+@import '../../box_model/_global_box_model';
+@import '../../typography/_global_typography';
 
 
 @mixin btn-read-more {

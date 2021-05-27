@@ -1,12 +1,8 @@
-@import '../global_functions/_global_functions';
-@import '../global_variables/_global_variables';
-@import '../box_model/_width-height';
-@import '../box_model/_all-margin';
-@import '../box_model/_all-padding';
-@import '../box_model/_all-border';
-@import '../flexbox/_flex-center.scss';
-@import '../typography/_p-typography';
-@import '../typography/_font-size';
+@import '../../global_functions/_global_functions';
+@import '../../global_variables/_global_variables';
+@import '../../box_model/_global_box_model';
+@import '../../flexbox/_global_flex_box';
+@import '../../typography/_global_typography';
 @import '_btn-filled.scss';
 
 @mixin responsive-table {
@@ -57,7 +53,7 @@
                 font-weight: bold;
             }
             &__typography {
-                @include font-size(22px);
+                font-size: font-size(22px);
                 font-weight: bold;
             }
         }
@@ -90,7 +86,7 @@
                 }
             }
             &__typography {
-                @include font-size(18px);
+                font-size: font-size(18px);
                 font-weight: normal;
                 @media only screen and (max-width: 768px) {
                     @include flex-center();

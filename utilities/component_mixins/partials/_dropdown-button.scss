@@ -1,12 +1,8 @@
-@import '../global_functions/_global_functions';
-@import '../global_variables/_global_variables';
-@import '../box_model/_all-margin';
-@import '../box_model/_all-padding';
-@import '../box_model/_width-height';
-@import '../box_model/_all-border';
-@import '../flexbox/_flex-center';
-@import '../typography/_btn-typography';
-@import '../typography/_a-typography';
+@import '../../global_functions/_global_functions';
+@import '../../global_variables/_global_variables';
+@import '../../box_model/_global_box_model';
+@import '../../flexbox/_global_flex_box';
+@import '../../typography/_global_typography';
 
 @mixin dropdown-button {
     position: relative;
