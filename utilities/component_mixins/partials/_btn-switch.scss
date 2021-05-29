@@ -53,7 +53,7 @@
             transform: translate(-50%,-50%);
             top: 50%;
             left: 50%;
-            @include font-size(12px);
+            font-size: font-size(12px);
             @include standard-typography();
             user-select: none;
         }
