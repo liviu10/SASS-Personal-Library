@@ -1,4 +1,3 @@
-// @import '../../../node_modules/@fortawesome/fontawesome-free/scss/fontawesome.scss';
 @import '../../../main-styles.scss';
 
 @font-face {
@@ -35,6 +34,7 @@ body {
 }
 .container {
     @include flex-center();
+    align-items: flex-start;
     @include horizontal-vertical-padding(20px, 0px, 20px, 0px);
     width: 80vw;
     height: 100%;
@@ -44,11 +44,11 @@ body {
     @each $breakpoint in $component_breakpoints {
         @if $breakpoint <= 768px and $breakpoint >= 576px {
             @media only screen and (max-width: $breakpoint) {
-                flex-direction: column;
+                flex-direction: column-reverse;
             }
         } @else if $breakpoint <= 320px {
             @media only screen and (max-width: $breakpoint) {
-                flex-direction: column;
+                flex-direction: column-reverse;
                 width: 98vw;
             }
         }
@@ -154,7 +154,7 @@ body {
 .main-content {
     @include flex-center();
     flex-direction: column;
-    @include all-border(1px, 1px, 1px, 1px);
+    @include horizontal-vertical-margin(0px, 20px, 0px, 20px);
     width: 80%;
     height: 100%;
     @media only screen and (max-width: 1400px) and (min-width: 1200px) {
@@ -170,6 +170,93 @@ body {
         @if $breakpoint <= 768px {
             @media only screen and (max-width: $breakpoint) {
                 width: 100%;
+                @include all-margin(0px, 0px, 0px, 0px);
+            }
+        }
+    }  
+    &__article-title {
+        @include all-border(0px, 0px, 2px, 0px);
+        border-color: #999999;
+        @include all-padding(0px, 0px, 10px, 0px);
+        @include height(100px);
+        width: 100%;
+        height: 100%;
+        & .h1-typography {
+            @include h1-typography;
+            @include height(60px);
+            font-size: font-size(50px);
+            @include flex-center-left-center();
+            @include google-font();
+            font-weight: bold;
+            @media only screen and (max-width: 1023px) and (min-width: 769px) {
+                height: 100%;
+                font-size: font-size(35px);
+            }
+            @each $breakpoint in $component_breakpoints {
+                @if $breakpoint <= 768px {
+                    @media only screen and (max-width: $breakpoint) {
+                        justify-content: center;
+                        font-size: font-size(35px - 5px);
+                    }
+                }
+            }
+        }
+        & .p-typography {
+            @include p-typography;
+            @include height(30px);
+            font-size: font-size(20px);
+            @include flex-center-left-center();
+            @include google-font();
+            @media only screen and (max-width: 1023px) and (min-width: 769px) {
+                height: 100%;
+            }
+            @each $breakpoint in $component_breakpoints {
+                @if $breakpoint <= 768px {
+                    @media only screen and (max-width: $breakpoint) {
+                        justify-content: center;
+                    }
+                }
+            }
+        }
+    }
+    &__social-icons {
+        @include horizontal-vertical-margin(20px, 0px, 20px, 0px);
+        @include height(50px);
+        @include flex-center-left-center();
+        width: 100%;
+        & .fab, .fas {
+            @include fa;
+        }
+    }
+    &__article-section {
+        @include all-margin(0px, 0px, 10px, 0px);
+        &__title {
+            @include p-typography;
+            @include all-margin(0px, 0px, 0px, 0px);
+            width: auto;
+            @include height(50px);
+            font-size: font-size(30px);
+            font-weight: bold;
+            @include flex-center-left-center();
+            @include google-font();
+        }
+        & .p-typography {
+            @include p-typography;
+            @include all-margin(0px, 0px, 0px, 0px);
+            height: auto;
+            font-size: font-size(22px);
+            @include flex-center-left-center();
+            @include google-font();
+            &:nth-of-type(n-1) {
+                @include all-margin(10px, 0px, 0px, 0px);
+            }
+            
+            @each $breakpoint in $component_breakpoints {
+                @if $breakpoint <= 768px {
+                    @media only screen and (max-width: $breakpoint) {
+                        text-align: justify;
+                    }
+                }
             }
         }
     }
