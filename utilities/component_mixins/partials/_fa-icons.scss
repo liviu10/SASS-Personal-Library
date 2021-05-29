@@ -15,7 +15,7 @@
     display: flex !important;
     flex-wrap: wrap !important;
     @each $class, $properties in $fa-classes {
-        &-#{$class} {
+        &.fa-#{$class} {
             background-color: map-get($map: $properties, $key: background-color);
             color: map-get($map: $properties, $key: color);
             background-color: map-get($map: $properties, $key: background-color);
@@ -29,10 +29,10 @@
         @if $class == "snapchat-ghost" {
             text-shadow: -1px 0 #000000, 0 1px #000000, 1px 0 #000000, 0 -1px #000000;
         }
-        &-icon {
+        &.fa-icon {
             font-size: 1.25rem !important;
         }
-        &-round-border {
+        &.fa-round-border {
             @include border-radius(50px, 50px, 50px, 50px);
             @include horizontal-vertical-margin(0px, 5px, 0px, 5px);
         }
