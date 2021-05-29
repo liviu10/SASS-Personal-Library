@@ -7,6 +7,12 @@
 /* INCLUDING ALL THE HTML COMPONENTS */
     @import 'utilities/component_mixins/_global_components';
 
+/* INCLUDING ALL THE GLOBAL FUNCTIONS */
+    @import 'utilities/global_functions/_global_functions';
+
+/* INCLUDING ALL THE GLOBAL VARIABLES */
+    @import 'utilities/global_variables/_global_variables';
+
 /* INCLUDING ALL THE FLEXBOX MIXINS */
     @import 'utilities/flexbox/_global_flex_box';
 
