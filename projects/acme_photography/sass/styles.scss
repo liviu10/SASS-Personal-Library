@@ -1,0 +1,292 @@
+@import '../../../main-styles.scss';
+
+@font-face {
+    font-family: 'Lato';
+    src: url('../fonts/Lato-Light.woff2') format('woff2'),
+        url('../fonts/Lato-Light.woff') format('woff');
+    font-weight: 300;
+    font-style: normal;
+    font-display: swap;
+}
+@font-face {
+    font-family: 'Lato';
+    src: url('../fonts/Lato-Bold.woff2') format('woff2'),
+        url('../fonts/Lato-Bold.woff') format('woff');
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+}
+@font-face {
+    font-family: 'Lato';
+    src: url('../fonts/Lato-LightItalic.woff2') format('woff2'),
+        url('../fonts/Lato-LightItalic.woff') format('woff');
+    font-weight: 300;
+    font-style: italic;
+    font-display: swap;
+}
+@mixin google-font {
+    font-family: 'Lato', sans-serif !important;
+}
+
+body {
+    @include flex-center();
+    @include google-font();
+    background-color: #EEEEEE;
+}
+.container {
+    @include all-padding(0px, 0px, 0px, 0px);
+    @include width(1024px);
+    height: auto;
+    background-color: #FFFFFF;
+    opacity: 0.75;
+}
+.landing {
+    @include width(1024px);
+    @include flex-center();
+    & .text-group {
+        @include text-group();
+        @include all-margin(0px, 0px, 0px, 0px);
+        @include horizontal-vertical-padding(0px, 16px, 0px, 16px);
+        @include width(424px);
+        @include height(1080px);
+        @include flex-center();
+        flex-direction: column;
+        & .h1-typography {
+            @include h1-typography();
+            @include all-margin(0px, 0px, 0px, 0px);
+            @include height(100px);
+            @include google-font();
+            font-size: font-size(40px);
+            font-weight: bold;
+            letter-spacing: letter-spacing(2px);
+            user-select: none;
+        }
+        & .text-content {
+            & .p-typography {
+                @include p-typography();
+                @include all-margin(0px, 0px, 0px, 0px);
+                @include height(22px);
+                @include google-font();
+                font-size: font-size(20px);
+                letter-spacing: letter-spacing(2px);
+                text-align: center;
+                user-select: none;
+            }
+        }
+        & .btn {
+            @include btn-outlined();
+            @include all-margin(32px, 0px, 0px, 0px);
+            @include width(180px);
+            @include height(50px);
+            &__text {
+                @include google-font();
+                font-weight: bold;
+            }
+            &--outline-standard {
+                color: #000000;
+                @include border-radius(25px, 25px, 25px, 25px);
+                border-color: #999999;
+                letter-spacing: letter-spacing(2px);
+            }
+            &:hover {
+                background-color: #CCCCCC;
+                color: #000000;
+            }
+        }
+        // @each $breakpoint in $component_breakpoints {
+        //     @if $breakpoint <= 1024px {
+        //         @media only screen and (max-width: $breakpoint) and (orientation: portrait) {
+        //             @include horizontal-vertical-margin(40px, 0px, 40px, 0px);
+        //             @include all-padding(0px, 0px, 0px, 0px);
+        //             @include width($breakpoint);
+        //             height: auto;
+        //         }
+        //     }
+        // }
+    }
+    & .vertical-banner {
+        @include width(600px);
+        @include height(1080px);
+        @include flex-center();
+        & img {
+            @include width(600px);
+            @include height(1080px);
+            background-position: center;
+            background-size: cover;
+            background-repeat: no-repeat;
+            // @each $breakpoint in $component_breakpoints {
+            //     @if $breakpoint <= 1024px {
+            //         @media only screen and (max-width: $breakpoint) and (orientation: portrait) {
+            //             @include all-padding(0px, 0px, 0px, 0px);
+            //             @include width($breakpoint);
+            //             height: auto;
+            //         }
+            //     }
+            // }
+        }
+        // @each $breakpoint in $component_breakpoints {
+        //     @if $breakpoint <= 1024px {
+        //         @media only screen and (max-width: $breakpoint) and (orientation: portrait) {
+        //             @include all-padding(0px, 0px, 0px, 0px);
+        //             @include width($breakpoint);
+        //             height: auto;
+        //         }
+        //     }
+        // }
+    }
+    // @each $breakpoint in $component_breakpoints {
+    //     @if $breakpoint <= 1024px {
+    //         @media only screen and (max-width: $breakpoint) and (orientation: portrait) {
+    //             @include width($breakpoint);
+    //             flex-direction: column;
+    //         }
+    //     }
+    // }
+}
+.subtitle {
+    @include width(1024px);
+    @include height(70px);
+    background-color: #000000;
+    @include flex-center();
+    & .h3-typography {
+        @include h3-typography();
+        @include all-border(0px, 1px, 0px, 1px);
+        @include width(130px);
+        @include height(35px);
+        @include google-font();
+        font-size: font-size(20px);
+        letter-spacing: letter-spacing(2px);
+        color: #FFFFFF;
+        border-color: #FFFFFF;
+        @include flex-center();
+        user-select: none;
+    }
+    // @each $breakpoint in $component_breakpoints {
+    //     @if $breakpoint <= 1024px {
+    //         @media only screen and (max-width: $breakpoint) and (orientation: portrait) {
+    //             @include width($breakpoint);
+    //             flex-direction: column;
+    //         }
+    //     }
+    // }
+}
+.images {
+    @include width(1024px);
+    background-color: #FFFFFF;
+    @include flex-center-left-center();
+    flex-direction: column;
+    & .card {
+        @include card();
+        @include width(1024px);
+        @include height(800px);
+        &--standard {
+            @include all-border(0px, 0px, 0px, 0px);
+            @include border-radius(0px, 0px, 0px, 0px);
+        }
+        & .card__img {
+            @include left-border-radius(0px, 0px);
+            @include right-border-radius(0px, 0px);
+            @include width(1024px);
+            @include height(660px);
+            // @each $breakpoint in $component_breakpoints {
+            //     @media only screen and (max-width: $breakpoint) and (orientation: portrait) {
+            //         @include height(660px);
+            //     }
+            //     @if $breakpoint < 600px {
+            //         @media only screen and (max-width: $breakpoint) and (orientation: portrait) {
+            //             @include width($breakpoint);
+            //             @include height(250px);
+            //         }
+            //     } @else if $breakpoint == 600px {
+            //         @media only screen and (max-width: $breakpoint) and (orientation: portrait) {
+            //             @include width($breakpoint);
+            //             @include height(600px);
+            //         }
+            //     } @else if $breakpoint >= 768px or $breakpoint <= 962px {
+            //         @media only screen and (max-width: $breakpoint) and (orientation: portrait) {
+            //             @include width($breakpoint);
+            //             @include height(660px);
+            //         }
+            //     }
+            // }
+        }
+        & .card__body {
+            @include horizontal-vertical-padding(0px, 10px, 0px, 10px);
+            @include width(1004px);
+            @include height(140px);
+            background-color: #FFFFFF;
+            @include flex-center();
+            flex-direction: column;
+            & .card__title {
+                @include h2-typography();
+                @include height(35px);
+                @include google-font();
+                font-weight: bold;
+                font-size: font-size(22px);
+                text-align: center;
+            }
+            & .card__text {
+                @include p-typography();
+                height: auto;
+                @include google-font();
+                font-size: font-size(20px);
+                text-align: center;
+            }
+            // @each $breakpoint in $component_breakpoints {
+            //     @media only screen and (max-width: $breakpoint) and (orientation: portrait) {
+            //         @include width(1004px);
+            //     }
+            //     @if $breakpoint <= 1024px {
+            //         @media only screen and (max-width: $breakpoint) and (orientation: portrait) {
+            //             @include width($breakpoint - 20px);
+            //             height: auto;
+            //         }
+            //     }
+            // }
+        }
+        // @each $breakpoint in $component_breakpoints {
+        //     @if $breakpoint <= 1024px {
+        //         @media only screen and (max-width: $breakpoint) and (orientation: portrait) {
+        //             @include width($breakpoint);
+        //             height: auto;
+        //         }
+        //     }
+        // }
+    }
+    // @each $breakpoint in $component_breakpoints {
+    //     @media only screen and (max-width: $breakpoint) and (orientation: portrait) {
+    //         @include width(1024px);
+    //     }
+    //     @if $breakpoint <= 1024px {
+    //         @media only screen and (max-width: $breakpoint) and (orientation: portrait) {
+    //             @include width($breakpoint);
+    //         }
+    //     }
+    // }
+}
+.footer {
+    @include horizontal-vertical-padding(30px, 0px, 30px, 0px);
+    @include width(1024px);
+    @include flex-center();
+    flex-direction: column;
+    & .h3-typography {
+        @include h2-typography();
+        @include google-font();
+        font-weight: bold;
+        user-select: none;
+    }
+    & .p-typography {
+        @include p-typography();
+        @include all-margin(0px, 0px, 0px, 0px);
+        @include google-font();
+        text-align: center;
+        user-select: none;
+    }
+    // @each $breakpoint in $component_breakpoints {
+    //     @if $breakpoint <= 1024px {
+    //         @media only screen and (max-width: $breakpoint) and (orientation: portrait) {
+    //             @include width($breakpoint);
+    //         }
+    //     }
+    // }
+}
