@@ -9,7 +9,7 @@
 3. [Utilities: Component Mixin](https://github.com/liviu10/SASS-Personal-Library/wiki/Utilities:-Component-Mixin "Utilities: Component Mixin")
 4. [Utilities: Flexbox](https://github.com/liviu10/SASS-Personal-Library/wiki/Utilities:-Flexbox "Utilities: Flexbox")
 5. [Utilities: Resets](https://github.com/liviu10/SASS-Personal-Library/wiki/Utilities:-Resets "Utilities: Resets")
-6. [Utilities: Typography](https://github.com/liviu10/SASS-Personal-Library/wiki/Utilities:-Flexbox "Utilities: Typography")
+6. [Utilities: Typography](https://github.com/liviu10/SASS-Personal-Library/wiki/Utilities:-Typography "Utilities: Typography")
 
 # PROJECT INSTALLATION
 
