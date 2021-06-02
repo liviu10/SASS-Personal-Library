@@ -74,6 +74,34 @@ body {
   background-color: #FFFFFF;
   opacity: 0.75;
 }
+@media only screen and (max-width: 1200px) and (min-width: 993px) {
+  .container {
+    width: 58.875rem;
+  }
+}
+@media only screen and (max-width: 992px) and (min-width: 769px) {
+  .container {
+    width: 44.875rem;
+  }
+}
+@media only screen and (max-width: 320px) {
+  .container {
+    width: 18.75rem;
+    height: auto;
+  }
+}
+@media only screen and (max-width: 576px) {
+  .container {
+    width: 34.75rem;
+    height: auto;
+  }
+}
+@media only screen and (max-width: 768px) {
+  .container {
+    width: 46.75rem;
+    height: auto;
+  }
+}
 
 .landing {
   width: 64rem;
@@ -357,6 +385,38 @@ body {
   background-color: #CCCCCC;
   color: #000000;
 }
+@media only screen and (max-width: 992px) and (min-width: 769px) {
+  .landing .text-group {
+    margin: 2.5rem 0rem;
+    padding: 0rem;
+    width: 46.75rem;
+    height: auto;
+  }
+}
+@media only screen and (max-width: 320px) {
+  .landing .text-group {
+    margin: 2.5rem 0rem;
+    padding: 0rem;
+    width: 18.75rem;
+    height: auto;
+  }
+}
+@media only screen and (max-width: 576px) {
+  .landing .text-group {
+    margin: 2.5rem 0rem;
+    padding: 0rem;
+    width: 34.75rem;
+    height: auto;
+  }
+}
+@media only screen and (max-width: 768px) {
+  .landing .text-group {
+    margin: 2.5rem 0rem;
+    padding: 0rem;
+    width: 46.75rem;
+    height: auto;
+  }
+}
 .landing .vertical-banner {
   width: 37.5rem;
   height: 67.5rem;
@@ -370,6 +430,99 @@ body {
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
+}
+@media only screen and (max-width: 1200px) and (min-width: 993px) {
+  .landing .vertical-banner img {
+    width: 35.9375rem;
+  }
+}
+@media only screen and (max-width: 992px) and (min-width: 769px) {
+  .landing .vertical-banner img {
+    width: 44.875rem;
+    height: auto;
+  }
+}
+@media only screen and (max-width: 320px) {
+  .landing .vertical-banner img {
+    padding: 0rem;
+    width: 18.75rem;
+    height: auto;
+  }
+}
+@media only screen and (max-width: 576px) {
+  .landing .vertical-banner img {
+    padding: 0rem;
+    width: 34.75rem;
+    height: auto;
+  }
+}
+@media only screen and (max-width: 768px) {
+  .landing .vertical-banner img {
+    padding: 0rem;
+    width: 46.75rem;
+    height: auto;
+  }
+}
+@media only screen and (max-width: 1200px) and (min-width: 993px) {
+  .landing .vertical-banner {
+    width: 36.25rem;
+  }
+}
+@media only screen and (max-width: 992px) and (min-width: 769px) {
+  .landing .vertical-banner {
+    width: 44.875rem;
+    height: auto;
+  }
+}
+@media only screen and (max-width: 320px) {
+  .landing .vertical-banner {
+    padding: 0rem;
+    width: 18.75rem;
+    height: auto;
+  }
+}
+@media only screen and (max-width: 576px) {
+  .landing .vertical-banner {
+    padding: 0rem;
+    width: 34.75rem;
+    height: auto;
+  }
+}
+@media only screen and (max-width: 768px) {
+  .landing .vertical-banner {
+    padding: 0rem;
+    width: 46.75rem;
+    height: auto;
+  }
+}
+@media only screen and (max-width: 1200px) and (min-width: 993px) {
+  .landing {
+    width: 58.875rem;
+  }
+}
+@media only screen and (max-width: 992px) and (min-width: 769px) {
+  .landing {
+    width: 44.875rem;
+    flex-direction: column;
+  }
+}
+@media only screen and (max-width: 320px) {
+  .landing {
+    width: 18.75rem;
+    flex-direction: column;
+  }
+}
+@media only screen and (max-width: 576px) {
+  .landing {
+    width: 34.75rem;
+    flex-direction: column;
+  }
+}
+@media only screen and (max-width: 768px) {
+  .landing {
+    width: 46.75rem;
+    flex-direction: column;
+  }
 }
 
 .subtitle {
