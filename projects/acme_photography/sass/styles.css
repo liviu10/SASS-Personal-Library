@@ -86,19 +86,19 @@ body {
 }
 @media only screen and (max-width: 320px) {
   .container {
-    width: 18.75rem;
-    height: auto;
+    width: 90vw !important;
+    height: auto !important;
   }
 }
 @media only screen and (max-width: 576px) {
   .container {
-    width: 34.75rem;
-    height: auto;
+    width: 90vw !important;
+    height: auto !important;
   }
 }
 @media only screen and (max-width: 768px) {
   .container {
-    width: 46.75rem;
+    width: 36rem;
     height: auto;
   }
 }
@@ -207,6 +207,11 @@ body {
   font-weight: bold;
   letter-spacing: 0.125rem;
   user-select: none;
+}
+@media only screen and (max-width: 475px) and (min-width: 320px) {
+  .landing .text-group .h1-typography {
+    font-size: 1.5rem;
+  }
 }
 .landing .text-group .text-content .p-typography {
   margin: 0.5rem 0rem;
@@ -389,7 +394,7 @@ body {
   .landing .text-group {
     margin: 2.5rem 0rem;
     padding: 0rem;
-    width: 46.75rem;
+    width: 44.875rem;
     height: auto;
   }
 }
@@ -397,23 +402,23 @@ body {
   .landing .text-group {
     margin: 2.5rem 0rem;
     padding: 0rem;
-    width: 18.75rem;
-    height: auto;
+    width: 90vw !important;
+    height: auto !important;
   }
 }
 @media only screen and (max-width: 576px) {
   .landing .text-group {
     margin: 2.5rem 0rem;
     padding: 0rem;
-    width: 34.75rem;
-    height: auto;
+    width: 90vw !important;
+    height: auto !important;
   }
 }
 @media only screen and (max-width: 768px) {
   .landing .text-group {
     margin: 2.5rem 0rem;
     padding: 0rem;
-    width: 46.75rem;
+    width: 36rem;
     height: auto;
   }
 }
@@ -445,21 +450,21 @@ body {
 @media only screen and (max-width: 320px) {
   .landing .vertical-banner img {
     padding: 0rem;
-    width: 18.75rem;
-    height: auto;
+    width: 90vw !important;
+    height: auto !important;
   }
 }
 @media only screen and (max-width: 576px) {
   .landing .vertical-banner img {
     padding: 0rem;
-    width: 34.75rem;
-    height: auto;
+    width: 90vw !important;
+    height: auto !important;
   }
 }
 @media only screen and (max-width: 768px) {
   .landing .vertical-banner img {
     padding: 0rem;
-    width: 46.75rem;
+    width: 36rem;
     height: auto;
   }
 }
@@ -477,21 +482,21 @@ body {
 @media only screen and (max-width: 320px) {
   .landing .vertical-banner {
     padding: 0rem;
-    width: 18.75rem;
-    height: auto;
+    width: 90vw !important;
+    height: auto !important;
   }
 }
 @media only screen and (max-width: 576px) {
   .landing .vertical-banner {
     padding: 0rem;
-    width: 34.75rem;
-    height: auto;
+    width: 90vw !important;
+    height: auto !important;
   }
 }
 @media only screen and (max-width: 768px) {
   .landing .vertical-banner {
     padding: 0rem;
-    width: 46.75rem;
+    width: 36rem;
     height: auto;
   }
 }
@@ -508,19 +513,21 @@ body {
 }
 @media only screen and (max-width: 320px) {
   .landing {
-    width: 18.75rem;
-    flex-direction: column;
+    width: 90vw !important;
+    height: auto !important;
+    flex-direction: column !important;
   }
 }
 @media only screen and (max-width: 576px) {
   .landing {
-    width: 34.75rem;
-    flex-direction: column;
+    width: 90vw !important;
+    height: auto !important;
+    flex-direction: column !important;
   }
 }
 @media only screen and (max-width: 768px) {
   .landing {
-    width: 46.75rem;
+    width: 36rem;
     flex-direction: column;
   }
 }
@@ -564,6 +571,39 @@ body {
   justify-content: center;
   align-items: center;
   user-select: none;
+}
+@media only screen and (max-width: 475px) and (min-width: 320px) {
+  .subtitle .h3-typography {
+    font-size: 1rem;
+  }
+}
+@media only screen and (max-width: 1200px) and (min-width: 993px) {
+  .subtitle {
+    width: 58.875rem;
+  }
+}
+@media only screen and (max-width: 992px) and (min-width: 769px) {
+  .subtitle {
+    width: 44.875rem;
+  }
+}
+@media only screen and (max-width: 320px) {
+  .subtitle {
+    width: 90vw !important;
+    height: auto !important;
+  }
+}
+@media only screen and (max-width: 576px) {
+  .subtitle {
+    width: 90vw !important;
+    height: auto !important;
+  }
+}
+@media only screen and (max-width: 768px) {
+  .subtitle {
+    width: 36rem;
+    flex-direction: column;
+  }
 }
 
 .images {
@@ -770,6 +810,35 @@ body {
   width: 64rem;
   height: 41.25rem;
 }
+@media only screen and (max-width: 1200px) and (min-width: 993px) {
+  .images .card .card__img {
+    width: 58.875rem;
+  }
+}
+@media only screen and (max-width: 992px) and (min-width: 769px) {
+  .images .card .card__img {
+    width: 44.9375rem;
+    height: auto;
+  }
+}
+@media only screen and (max-width: 320px) {
+  .images .card .card__img {
+    width: 90vw !important;
+    height: auto !important;
+  }
+}
+@media only screen and (max-width: 576px) {
+  .images .card .card__img {
+    width: 90vw !important;
+    height: auto !important;
+  }
+}
+@media only screen and (max-width: 768px) {
+  .images .card .card__img {
+    width: 36rem;
+    height: auto;
+  }
+}
 .images .card .card__body {
   padding: 0rem 0.625rem;
   width: 62.75rem;
@@ -824,6 +893,96 @@ body {
   font-size: 1.25rem;
   text-align: center;
 }
+@media only screen and (max-width: 1200px) and (min-width: 993px) {
+  .images .card .card__body {
+    padding: 0rem;
+    width: 58.875rem;
+  }
+}
+@media only screen and (max-width: 992px) and (min-width: 769px) {
+  .images .card .card__body {
+    padding: 0rem;
+    width: 44.9375rem;
+    height: auto;
+  }
+}
+@media only screen and (max-width: 320px) {
+  .images .card .card__body {
+    width: 90vw !important;
+    height: auto !important;
+  }
+}
+@media only screen and (max-width: 576px) {
+  .images .card .card__body {
+    width: 90vw !important;
+    height: auto !important;
+  }
+}
+@media only screen and (max-width: 768px) {
+  .images .card .card__body {
+    padding: 0rem;
+    width: 36rem;
+    height: auto;
+  }
+}
+@media only screen and (max-width: 1200px) and (min-width: 993px) {
+  .images .card {
+    width: 58.875rem;
+  }
+}
+@media only screen and (max-width: 992px) and (min-width: 769px) {
+  .images .card {
+    width: 44.9375rem;
+    height: auto;
+  }
+}
+@media only screen and (max-width: 320px) {
+  .images .card {
+    width: 90vw !important;
+    height: auto !important;
+  }
+}
+@media only screen and (max-width: 576px) {
+  .images .card {
+    width: 90vw !important;
+    height: auto !important;
+  }
+}
+@media only screen and (max-width: 768px) {
+  .images .card {
+    width: 36rem;
+    height: auto;
+  }
+}
+@media only screen and (max-width: 1200px) and (min-width: 993px) {
+  .images {
+    width: 58.875rem;
+  }
+}
+@media only screen and (max-width: 992px) and (min-width: 769px) {
+  .images {
+    width: 44.9375rem;
+    height: auto;
+  }
+}
+@media only screen and (max-width: 320px) {
+  .images {
+    width: 90vw !important;
+    height: auto !important;
+  }
+}
+@media only screen and (max-width: 576px) {
+  .images {
+    width: 90vw !important;
+    height: auto !important;
+  }
+}
+@media only screen and (max-width: 768px) {
+  .images {
+    width: 36rem;
+    height: auto;
+  }
+}
 
 .footer {
   padding: 1.875rem 0rem;
@@ -874,6 +1033,35 @@ body {
   font-family: "Lato", sans-serif !important;
   text-align: center;
   user-select: none;
+}
+@media only screen and (max-width: 1200px) and (min-width: 993px) {
+  .footer {
+    width: 58.875rem;
+  }
+}
+@media only screen and (max-width: 992px) and (min-width: 769px) {
+  .footer {
+    width: 44.875rem;
+    height: auto;
+  }
+}
+@media only screen and (max-width: 320px) {
+  .footer {
+    width: 90vw !important;
+    height: auto !important;
+  }
+}
+@media only screen and (max-width: 576px) {
+  .footer {
+    width: 90vw !important;
+    height: auto !important;
+  }
+}
+@media only screen and (max-width: 768px) {
+  .footer {
+    width: 36rem;
+    height: auto;
+  }
 }
 
 /*# sourceMappingURL=styles.css.map */
