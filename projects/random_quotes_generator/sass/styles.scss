@@ -1,0 +1,109 @@
+@import '../../../main-styles.scss';
+
+
+body {
+    width: auto;
+    height: 100vh;
+    @include flex-center();
+    flex-direction: column;
+}
+.container {
+    @include all-padding(10px, 10px, 10px, 10px);
+    @include width(800px);
+    @include height(280px);
+    @include all-border(1px, 1px, 1px, 1px);
+    @include flex-center();
+    flex-direction: column;
+    @each $breakpoint in $component_breakpoints {
+        @if $breakpoint == 768px {
+            @media only screen and (max-width: $breakpoint) {
+                @include width($breakpoint - 192px);
+                height: auto;
+            }
+        } @else if $breakpoint <= 576px {
+            @media only screen and (max-width: $breakpoint) {
+                width: 90vw !important;
+                height: auto !important;
+            }
+        }
+    }
+}
+.button {
+    @include width(800px);
+    @include height(50px);
+    @include flex-center();
+    .btn {
+        @include btn-filled;
+        &--standard {
+            background-color: #3377ff;
+            border-color: #3377ff;
+        }
+        &__text {
+            color: #FFFFFF;
+        }
+    }
+    @each $breakpoint in $component_breakpoints {
+        @media only screen and (min-width: $breakpoint) {
+            @include horizontal-vertical-padding(10px, 0px, 10px, 0px);
+            width: 100%;
+        }
+    }
+}
+.body {
+    @include flex-center();
+    & .quote-mark {
+        @include width(50px);
+        @include height(80px);
+        @include flex-center();
+        & i {
+            font-size: font-size(30px);
+            color: #666666;
+        }
+        @each $breakpoint in $component_breakpoints {
+            @media only screen and (min-width: $breakpoint) {
+                width: 10%;
+            }
+        }
+    }
+    & .quote-body {
+        @include width(750px);
+        @include height(180px);
+        user-select: none;
+        @include flex-center-left-center();
+        & .h3-typography {
+            @include h3-typography;
+            color: #666666;
+            font-weight: bold;
+            text-align: left;
+            @each $breakpoint in $component_breakpoints {
+                @media only screen and (min-width: $breakpoint) {
+                    height: auto;
+                }
+            }
+        }
+        @each $breakpoint in $component_breakpoints {
+            @media only screen and (min-width: $breakpoint) {
+                @include horizontal-vertical-padding(0px, 10px, 0px, 10px);
+                width: 90%;
+                height: auto;
+            }
+        }
+    }
+}
+.quote-author {
+    @include width(800px);
+    @include height(50px);
+    user-select: none;
+    @include flex-center-right-top();
+    & .h5-typography {
+        @include h5-typography;
+        color: #3377ff;
+        font-weight: bold;
+        text-align: right;
+    }
+    @each $breakpoint in $component_breakpoints {
+        @media only screen and (min-width: $breakpoint) {
+            width: 100%;
+        }
+    }
+}
