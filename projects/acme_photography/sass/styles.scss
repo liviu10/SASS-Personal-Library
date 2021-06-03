@@ -46,10 +46,15 @@ body {
         @include width(768px - 50px);
     }
     @each $breakpoint in $component_breakpoints {
-        @if $breakpoint <= 768px {
+        @if $breakpoint == 768px {
             @media only screen and (max-width: $breakpoint) {
-                @include width($breakpoint - 20px);
+                @include width($breakpoint - 192px);
                 height: auto;
+            }
+        } @else if $breakpoint <= 576px {
+            @media only screen and (max-width: $breakpoint) {
+                width: 90vw !important;
+                height: auto !important;
             }
         }
     }
@@ -74,6 +79,9 @@ body {
             font-weight: bold;
             letter-spacing: letter-spacing(2px);
             user-select: none;
+            @media only screen and (max-width: 475px) and (min-width: 320px) {
+                font-size: font-size(24px);
+            }
         }
         & .text-content {
             & .p-typography {
@@ -110,16 +118,23 @@ body {
         @media only screen and (max-width: 992px) and (min-width: 769px) {
             @include horizontal-vertical-margin(40px, 0px, 40px, 0px);
             @include all-padding(0px, 0px, 0px, 0px);
-            @include width(768px - 20px);
+            @include width(768px - 50px);
             height: auto;
         }
         @each $breakpoint in $component_breakpoints {
-            @if $breakpoint <= 768px {
+            @if $breakpoint == 768px {
                 @media only screen and (max-width: $breakpoint) {
                     @include horizontal-vertical-margin(40px, 0px, 40px, 0px);
                     @include all-padding(0px, 0px, 0px, 0px);
-                    @include width($breakpoint - 20px);
+                    @include width($breakpoint - 192px);
                     height: auto;
+                }
+            } @else if $breakpoint <= 576px {
+                @media only screen and (max-width: $breakpoint) {
+                    @include horizontal-vertical-margin(40px, 0px, 40px, 0px);
+                    @include all-padding(0px, 0px, 0px, 0px);
+                    width: 90vw !important;
+                    height: auto !important;
                 }
             }
         }
@@ -142,11 +157,17 @@ body {
                 height: auto;
             }
             @each $breakpoint in $component_breakpoints {
-                @if $breakpoint <= 768px {
+                @if $breakpoint == 768px {
                     @media only screen and (max-width: $breakpoint) {
                         @include all-padding(0px, 0px, 0px, 0px);
-                        @include width($breakpoint - 20px);
+                        @include width($breakpoint - 192px);
                         height: auto;
+                    }
+                } @else if $breakpoint <= 576px {
+                    @media only screen and (max-width: $breakpoint) {
+                        @include all-padding(0px, 0px, 0px, 0px);
+                        width: 90vw !important;
+                        height: auto !important;
                     }
                 }
             }
@@ -159,11 +180,17 @@ body {
             height: auto;
         }
         @each $breakpoint in $component_breakpoints {
-            @if $breakpoint <= 768px {
+            @if $breakpoint == 768px {
                 @media only screen and (max-width: $breakpoint) {
                     @include all-padding(0px, 0px, 0px, 0px);
-                    @include width($breakpoint - 20px);
+                    @include width($breakpoint - 192px);
                     height: auto;
+                }
+            } @else if $breakpoint <= 576px {
+                @media only screen and (max-width: $breakpoint) {
+                    @include all-padding(0px, 0px, 0px, 0px);
+                    width: 90vw !important;
+                    height: auto !important;
                 }
             }
         }
@@ -176,10 +203,16 @@ body {
         flex-direction: column;
     }
     @each $breakpoint in $component_breakpoints {
-        @if $breakpoint <= 768px {
+        @if $breakpoint == 768px {
             @media only screen and (max-width: $breakpoint) {
-                @include width($breakpoint - 20px);
+                @include width($breakpoint - 192px);
                 flex-direction: column;
+            }
+        } @else if $breakpoint <= 576px {
+            @media only screen and (max-width: $breakpoint) {
+                width: 90vw !important;
+                height: auto !important;
+                flex-direction: column !important;
             }
         }
     }
@@ -201,15 +234,29 @@ body {
         border-color: #FFFFFF;
         @include flex-center();
         user-select: none;
+        @media only screen and (max-width: 475px) and (min-width: 320px) {
+            font-size: font-size(16px);
+        }
     }
-    // @each $breakpoint in $component_breakpoints {
-    //     @if $breakpoint <= 1024px {
-    //         @media only screen and (max-width: $breakpoint) {
-    //             @include width($breakpoint);
-    //             flex-direction: column;
-    //         }
-    //     }
-    // }
+    @media only screen and (max-width: 1200px) and (min-width: 993px) {
+        @include width(992px - 50px);
+    }
+    @media only screen and (max-width: 992px) and (min-width: 769px) {
+        @include width(768px - 50px);
+    }
+    @each $breakpoint in $component_breakpoints {
+        @if $breakpoint == 768px {
+            @media only screen and (max-width: $breakpoint) {
+                @include width($breakpoint - 192px);
+                flex-direction: column;
+            }
+        } @else if $breakpoint <= 576px {
+            @media only screen and (max-width: $breakpoint) {
+                width: 90vw !important;
+                height: auto !important;
+            }
+        }
+    }
 }
 .images {
     @include width(1024px);
@@ -229,27 +276,26 @@ body {
             @include right-border-radius(0px, 0px);
             @include width(1024px);
             @include height(660px);
-            // @each $breakpoint in $component_breakpoints {
-            //     @media only screen and (max-width: $breakpoint) and (orientation: portrait) {
-            //         @include height(660px);
-            //     }
-            //     @if $breakpoint < 600px {
-            //         @media only screen and (max-width: $breakpoint) and (orientation: portrait) {
-            //             @include width($breakpoint);
-            //             @include height(250px);
-            //         }
-            //     } @else if $breakpoint == 600px {
-            //         @media only screen and (max-width: $breakpoint) and (orientation: portrait) {
-            //             @include width($breakpoint);
-            //             @include height(600px);
-            //         }
-            //     } @else if $breakpoint >= 768px or $breakpoint <= 962px {
-            //         @media only screen and (max-width: $breakpoint) and (orientation: portrait) {
-            //             @include width($breakpoint);
-            //             @include height(660px);
-            //         }
-            //     }
-            // }
+            @media only screen and (max-width: 1200px) and (min-width: 993px) {
+                @include width(992px - 50px);
+            }
+            @media only screen and (max-width: 992px) and (min-width: 769px) {
+                @include width(769px - 50px);
+                height: auto;
+            }
+            @each $breakpoint in $component_breakpoints {
+                @if $breakpoint == 768px {
+                    @media only screen and (max-width: $breakpoint) {
+                        @include width($breakpoint - 192px);
+                        height: auto;
+                    }
+                } @else if $breakpoint <= 576px {
+                    @media only screen and (max-width: $breakpoint) {
+                        width: 90vw !important;
+                        height: auto !important;
+                    }
+                }
+            }
         }
         & .card__body {
             @include horizontal-vertical-padding(0px, 10px, 0px, 10px);
@@ -273,37 +319,71 @@ body {
                 font-size: font-size(20px);
                 text-align: center;
             }
-            // @each $breakpoint in $component_breakpoints {
-            //     @media only screen and (max-width: $breakpoint) and (orientation: portrait) {
-            //         @include width(1004px);
-            //     }
-            //     @if $breakpoint <= 1024px {
-            //         @media only screen and (max-width: $breakpoint) and (orientation: portrait) {
-            //             @include width($breakpoint - 20px);
-            //             height: auto;
-            //         }
-            //     }
-            // }
+            @media only screen and (max-width: 1200px) and (min-width: 993px) {
+                @include all-padding(0px, 0px, 0px, 0px);
+                @include width(992px - 50px);
+            }
+            @media only screen and (max-width: 992px) and (min-width: 769px) {
+                @include all-padding(0px, 0px, 0px, 0px);
+                @include width(769px - 50px);
+                height: auto;
+            }
+            @each $breakpoint in $component_breakpoints {
+                @if $breakpoint == 768px {
+                    @media only screen and (max-width: $breakpoint) {
+                        @include all-padding(0px, 0px, 0px, 0px);
+                        @include width($breakpoint - 192px);
+                        height: auto;
+                    }
+                } @else if $breakpoint <= 576px {
+                    @media only screen and (max-width: $breakpoint) {
+                        width: 90vw !important;
+                        height: auto !important;
+                    }
+                }
+            }
         }
-        // @each $breakpoint in $component_breakpoints {
-        //     @if $breakpoint <= 1024px {
-        //         @media only screen and (max-width: $breakpoint) and (orientation: portrait) {
-        //             @include width($breakpoint);
-        //             height: auto;
-        //         }
-        //     }
-        // }
+        @media only screen and (max-width: 1200px) and (min-width: 993px) {
+            @include width(992px - 50px);
+        }
+        @media only screen and (max-width: 992px) and (min-width: 769px) {
+            @include width(769px - 50px);
+            height: auto;
+        }
+        @each $breakpoint in $component_breakpoints {
+            @if $breakpoint == 768px {
+                @media only screen and (max-width: $breakpoint) {
+                    @include width($breakpoint - 192px);
+                    height: auto;
+                }
+            } @else if $breakpoint <= 576px {
+                @media only screen and (max-width: $breakpoint) {
+                    width: 90vw !important;
+                    height: auto !important;
+                }
+            }
+        }
     }
-    // @each $breakpoint in $component_breakpoints {
-    //     @media only screen and (max-width: $breakpoint) and (orientation: portrait) {
-    //         @include width(1024px);
-    //     }
-    //     @if $breakpoint <= 1024px {
-    //         @media only screen and (max-width: $breakpoint) and (orientation: portrait) {
-    //             @include width($breakpoint);
-    //         }
-    //     }
-    // }
+    @media only screen and (max-width: 1200px) and (min-width: 993px) {
+        @include width(992px - 50px);
+    }
+    @media only screen and (max-width: 992px) and (min-width: 769px) {
+        @include width(769px - 50px);
+        height: auto;
+    }
+    @each $breakpoint in $component_breakpoints {
+        @if $breakpoint == 768px {
+            @media only screen and (max-width: $breakpoint) {
+                @include width($breakpoint - 192px);
+                height: auto;
+            }
+        } @else if $breakpoint <= 576px {
+            @media only screen and (max-width: $breakpoint) {
+                width: 90vw !important;
+                height: auto !important;
+            }
+        }
+    }
 }
 .footer {
     @include horizontal-vertical-padding(30px, 0px, 30px, 0px);
@@ -323,11 +403,24 @@ body {
         text-align: center;
         user-select: none;
     }
-    // @each $breakpoint in $component_breakpoints {
-    //     @if $breakpoint <= 1024px {
-    //         @media only screen and (max-width: $breakpoint) and (orientation: portrait) {
-    //             @include width($breakpoint);
-    //         }
-    //     }
-    // }
+    @media only screen and (max-width: 1200px) and (min-width: 993px) {
+        @include width(992px - 50px);
+    }
+    @media only screen and (max-width: 992px) and (min-width: 769px) {
+        @include width(768px - 50px);
+        height: auto;
+    }
+    @each $breakpoint in $component_breakpoints {
+        @if $breakpoint == 768px {
+            @media only screen and (max-width: $breakpoint) {
+                @include width($breakpoint - 192px);
+                height: auto;
+            }
+        } @else if $breakpoint <= 576px {
+            @media only screen and (max-width: $breakpoint) {
+                width: 90vw !important;
+                height: auto !important;
+            }
+        }
+    }
 }
