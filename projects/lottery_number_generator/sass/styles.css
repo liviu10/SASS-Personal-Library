@@ -1,0 +1,285 @@
+/* INCLUDING THE RESET FILE */
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0rem;
+  padding: 0rem;
+  border-width: 0rem;
+}
+
+blockquote, q {
+  quotes: none;
+}
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: "";
+  content: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0rem;
+}
+
+/* INCLUDING ALL THE BOX MODEL MIXINS */
+/* INCLUDING ALL THE HTML COMPONENTS */
+/* INCLUDING ALL THE GLOBAL FUNCTIONS */
+/* INCLUDING ALL THE GLOBAL VARIABLES */
+/* INCLUDING ALL THE FLEXBOX MIXINS */
+/* INCLUDING ALL THE TYPOGRAPHY MIXINS */
+body {
+  width: auto;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.container {
+  border-width: 0.0625rem;
+  border-style: solid;
+  border-color: #000000;
+  border-radius: 0.3125rem;
+  padding: 0.625rem;
+  width: 37.5rem;
+  height: 30rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+@media only screen and (max-width: 768px) and (min-width: 576px) {
+  .container {
+    margin: 0rem 0.625rem;
+    padding: 0.3125rem;
+    width: 100%;
+  }
+}
+@media only screen and (max-width: 575px) and (min-width: 320px) {
+  .container {
+    border-width: 0rem;
+    border-radius: 0rem;
+    padding: 0rem;
+    width: 100%;
+    height: 100%;
+  }
+}
+
+.title {
+  width: 37.5rem;
+  height: 6.25rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.title .h1-typography {
+  margin: 0.6875rem 0rem;
+  padding: 0rem;
+  width: 100%;
+  height: 2.5rem;
+  font-family: "Times New Roman", Times, serif;
+  font-style: normal;
+  font-variant: normal;
+  font-weight: normal;
+  text-align: left;
+  text-decoration: none;
+  white-space: normal;
+  word-break: normal;
+  word-spacing: normal;
+  font-size: 2.1875rem;
+  text-align: center;
+  text-indent: 0rem;
+}
+@media only screen and (max-width: 320px) {
+  .title .h1-typography {
+    height: auto;
+    text-align: center;
+  }
+}
+@media only screen and (max-width: 768px) and (min-width: 320px) {
+  .title {
+    width: 100%;
+  }
+}
+
+.lotto-numbers {
+  width: 37.5rem;
+  height: 14.375rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.lotto-numbers .random-numbers {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.lotto-numbers .random-numbers .number {
+  margin: 0rem 0.3125rem;
+  border-width: 0.0625rem;
+  border-style: solid;
+  border-color: #000000;
+  border-radius: 3.125rem;
+  width: 5rem;
+  height: 5rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+@media only screen and (max-width: 575px) and (min-width: 321px) {
+  .lotto-numbers .random-numbers {
+    width: 50%;
+    flex-wrap: wrap;
+  }
+}
+@media only screen and (max-width: 320px) {
+  .lotto-numbers .random-numbers {
+    flex-wrap: wrap;
+  }
+}
+@media only screen and (max-width: 768px) and (min-width: 375px) {
+  .lotto-numbers {
+    margin: 1.25rem 0rem;
+    width: 100%;
+    height: auto;
+  }
+}
+@media only screen and (max-width: 374px) and (min-width: 320px) {
+  .lotto-numbers {
+    margin: 1.25rem 0rem;
+    width: 100%;
+    height: auto;
+  }
+}
+
+.button-generate, .button-reset {
+  width: 37.5rem;
+  height: 3.125rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.button-generate .btn, .button-reset .btn {
+  margin: 0rem;
+  padding: 0rem;
+  width: 9.375rem;
+  height: 3.125rem;
+}
+.button-generate .btn__text, .button-reset .btn__text {
+  font-family: "Times New Roman", Times, serif;
+  font-style: normal;
+  font-variant: normal;
+  font-weight: normal;
+  text-align: left;
+  text-decoration: none;
+  white-space: normal;
+  word-break: normal;
+  word-spacing: normal;
+  font-size: 1rem;
+  letter-spacing: 0.125rem;
+  text-indent: 0rem;
+  user-select: none;
+}
+.button-generate .btn--standard, .button-reset .btn--standard {
+  color: #000000;
+  border-width: 0.0625rem;
+  border-style: solid;
+  border-color: #000000;
+  background-color: #E6E6E6;
+  border-color: #CCCCCC;
+}
+.button-generate .btn--primary, .button-reset .btn--primary {
+  color: #FFFFFF;
+  border-width: 0.0625rem;
+  border-style: solid;
+  border-color: #000000;
+  background-color: #007BFF;
+  border-color: #007BFF;
+}
+.button-generate .btn--secondary, .button-reset .btn--secondary {
+  color: #FFFFFF;
+  border-width: 0.0625rem;
+  border-style: solid;
+  border-color: #000000;
+  background-color: #6C757D;
+  border-color: #6C757D;
+}
+.button-generate .btn--success, .button-reset .btn--success {
+  color: #FFFFFF;
+  border-width: 0.0625rem;
+  border-style: solid;
+  border-color: #000000;
+  background-color: #28A745;
+  border-color: #28A745;
+}
+.button-generate .btn--danger, .button-reset .btn--danger {
+  color: #FFFFFF;
+  border-width: 0.0625rem;
+  border-style: solid;
+  border-color: #000000;
+  background-color: #DC3545;
+  border-color: #DC3545;
+}
+.button-generate .btn--warning, .button-reset .btn--warning {
+  border-width: 0.0625rem;
+  border-style: solid;
+  border-color: #000000;
+  background-color: #FFC107;
+  border-color: #FFC107;
+}
+.button-generate .btn--info, .button-reset .btn--info {
+  color: #FFFFFF;
+  border-width: 0.0625rem;
+  border-style: solid;
+  border-color: #000000;
+  background-color: #17A2B8;
+  border-color: #17A2B8;
+}
+.button-generate .btn--light, .button-reset .btn--light {
+  border-width: 0.0625rem;
+  border-style: solid;
+  border-color: #000000;
+  background-color: #F8F9FA;
+  border-color: #F8F9FA;
+}
+.button-generate .btn--dark, .button-reset .btn--dark {
+  color: #FFFFFF;
+  border-width: 0.0625rem;
+  border-style: solid;
+  border-color: #000000;
+  background-color: #343A40;
+  border-color: #343A40;
+}
+.button-generate .btn:hover, .button-reset .btn:hover {
+  cursor: pointer;
+  opacity: 0.85;
+}
+.button-generate .btn:focus, .button-reset .btn:focus {
+  outline: none;
+}
+.button-generate .btn--standard, .button-generate .btn--primary, .button-reset .btn--standard, .button-reset .btn--primary {
+  border-radius: 0.3125rem;
+}
+@media only screen and (max-width: 768px) and (min-width: 320px) {
+  .button-generate, .button-reset {
+    width: 100%;
+  }
+}
+
+.button-generate {
+  margin-bottom: 0.625rem;
+  margin-top: 0rem;
+}
+
+/*# sourceMappingURL=styles.css.map */
