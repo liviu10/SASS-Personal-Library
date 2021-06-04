@@ -1,0 +1,93 @@
+@import '../../../main-styles.scss';
+
+body {
+    width: auto;
+    height: 100vh;
+    @include flex-center();
+}
+.container {
+    @include all-border(1px, 1px, 1px, 1px);
+    @include border-radius(5px, 5px, 5px, 5px);
+    @include all-padding(10px, 10px, 10px, 10px);
+    @include width(600px);
+    @include height(480px);
+    @include flex-center();
+    flex-direction: column;
+    @media only screen and (max-width: 768px) and (min-width: 576px) {
+        @include horizontal-vertical-margin(0px, 10px, 0px, 10px);
+        @include all-padding(5px, 5px, 5px, 5px);
+        width: 100%;
+    }
+    @media only screen and (max-width: 575px) and (min-width: 320px) {
+        @include all-border(0px, 0px, 0px, 0px);
+        @include border-radius(0px, 0px, 0px, 0px);
+        @include all-padding(0px, 0px, 0px, 0px);
+        width: 100%;
+        height: 100%;
+    }
+}
+.title {
+    @include width(600px);
+    @include height(100px);
+    @include flex-center();
+    .h1-typography {
+        @include h1-typography();
+        @media only screen and (max-width: 320px) {
+            height: auto;
+            text-align: center;
+        }
+    }
+    @media only screen and (max-width: 768px) and (min-width: 320px) {
+        width: 100%;
+    }
+}
+.lotto-numbers {
+    @include width(600px);
+    @include height(230px);
+    @include flex-center();
+    & .random-numbers {
+        @include flex-center();
+        & .number {
+            @include horizontal-vertical-margin(0px, 5px, 0px, 5px);
+            @include all-border(1px, 1px, 1px, 1px);
+            @include border-radius(50px, 50px, 50px, 50px);
+            @include width(80px);
+            @include height(80px);
+            @include flex-center();
+        }
+        @media only screen and (max-width: 575px) and (min-width: 321px) {
+            width: 50%;
+            flex-wrap: wrap;
+        }
+        @media only screen and (max-width: 320px) {
+            flex-wrap: wrap;
+        }
+    }
+    @media only screen and (max-width: 768px) and (min-width: 375px) {
+        @include horizontal-vertical-margin(20px, 0px, 20px, 0px);
+        width: 100%;
+        height: auto;
+    }
+    @media only screen and (max-width: 374px) and (min-width: 320px) {
+        @include horizontal-vertical-margin(20px, 0px, 20px, 0px);
+        width: 100%;
+        height: auto;
+    }
+}
+.button-generate, .button-reset {
+    @include width(600px);
+    @include height(50px);
+    @include flex-center();
+    .btn {
+        @include btn-filled;
+        &--standard, &--primary {
+            @include border-radius(5px, 5px, 5px, 5px);
+        }
+    }
+    @media only screen and (max-width: 768px) and (min-width: 320px) {
+        width: 100%;
+    }
+}
+.button-generate {
+    @include all-margin(0px, 0px, 10px, 0px);
+}
